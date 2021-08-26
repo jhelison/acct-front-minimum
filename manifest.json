@@ -8,10 +8,12 @@
     "docs": "0.x",
     "react": "3.x",
     "messages": "1.x",
-    "admin": "0.x"
+    "admin": "0.x",
+    "node": "6.x"
   },
   "scripts": {
-    "postreleasy": "vtex publish --verbose"
+    "postreleasy": "vtex publish --verbose",
+    "prereleasy": "bash lint.sh"
   },
   "dependencies": {
     "vtex.store": "2.x",
@@ -49,5 +51,28 @@
     "vtex.sticky-layout": "0.x",
     "vtex.add-to-cart-button": "0.x"
   },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "httpstat.us",
+        "path": "*"
+      }
+    },
+    {
+      "name": "aws-access",
+      "attrs": {
+        "host": "https://g0deojz10k.execute-api.us-east-2.amazonaws.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    }
+  ],
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
