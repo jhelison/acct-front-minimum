@@ -1,11 +1,14 @@
 {
+  "name": "admin-example",
   "vendor": "vtex",
-  "name": "minimumtheme",
-  "version": "0.1.1",
+  "version": "0.0.1",
   "builders": {
     "styles": "2.x",
     "store": "0.x",
-    "docs": "0.x"
+    "docs": "0.x",
+    "react": "3.x",
+    "messages": "1.x",
+    "admin": "0.x"
   },
   "scripts": {
     "postreleasy": "vtex publish --verbose"
