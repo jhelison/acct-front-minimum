@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Open+Sans:wght@400;600;700&display=swap);
 
+/* ----------------- contacts page -----------------*/
 .infoCardContainer--contacts-banner{
   min-height: 300px;
   justify-content: center;
@@ -18,3 +19,4 @@
   border-bottom: 10px solid #fcc200;
   margin-bottom: 20px;
 }
+/* ----------------- contacts page -----------------*/

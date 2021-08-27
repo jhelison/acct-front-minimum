@@ -164,7 +164,7 @@
   },
   "rich-text#container2-title":{
     "props":{
-      "text": "Operações Globais | Presença Local",
+      "text": "Operações Globais **|** Presença Local",
       "textAlignment": "CENTER",
       "textPosition": "CENTER",
       "font": "t-heading-3",
@@ -178,7 +178,7 @@
       "image#container2-row-col3"
     ],
     "props":{
-      "blockClass": "contacts-container2-row"
+      "blockClass": "contacts-content"
     }
   },
   "flex-layout.col#container2-row-col1":{
@@ -199,13 +199,13 @@
   },
   "rich-text#bloco3-lista1":{ // Deveria ser uma lista <ul><li>Brasil</ul></li>
     "props":{
-      "text": "Argentina\nBrasil\nChile\nColômbia\nEUA\nFrance\nAlemanha\nÍndia\nItália",
+      "text": "\n - Argentina \n - Brasil \n - Chile \n - Colômbia \n - EUA\n - France\n - Alemanha\n - Índia\n - Itália",
       "blockClass": "contacts-country-list"
     }
   },
   "rich-text#bloco3-lista2":{
     "props":{
-      "text": "Argentina\nBrasil\nChile\nColômbia\nEUA\nFrance\nAlemanha\nÍndia\nItália",
+      "text": "\n - México \n - Paraguai \n - Peru \n - Portugal \n - Romênia\n - Arábia Saudita\n - Coreia do Sul\n - Espanha\n - Reino Unido",
       "blockClass": "contacts-country-list"
     }
   },
