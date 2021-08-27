@@ -1,15 +1,22 @@
 {
   "store.home": { 
     "blocks": [
-      "rich-text"
+      "list-context.product-list#blublu"
     ]
   },
-  "rich-text": { 
-    "props": { 
-      "text": "VTEX Store Framework",
-      "textAlignment": "CENTER",
-      "textPosition": "CENTER",
-      "font": "t-heading-1"
+  "list-context.product-list#blublu": {
+    "blocks": ["product-summary.shelf#blublu"],
+    "children":["slider-layout#blublu"],
+    "props":{
+      "hideUnavailableItems":false,
+      "maxItems":4,
+      "category":"1"
+    }
+  },
+
+  "slider-layout#blublu":{
+    "props":{
+      "blockClass":"flip-outer"
     }
   }
 }
