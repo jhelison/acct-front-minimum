@@ -7,16 +7,17 @@ export default class Leads extends ExternalClient {
   }
 
   public async getLeads(): Promise<string> {
-    return this.http.get("/items", {
+    return this.http.get("/leads", {
       metric: 'leads-get',
     })
   }
 
-  public async getLeadsWithHeaders(): Promise<IOResponse<string>> {
-    return this.http.getRaw("/items", {
+  public async getLeadsWithHeaders(ctx: Context): Promise<IOResponse<string>> {
+    return this.http.getRaw("/leads", {
       metric: 'leads-get-raw',
       headers: {
-        "X-VTEX-Use-Https": true
+        "X-VTEX-Use-Https": true,
+        "Proxy-Authorization": ctx.authToken,
       }
     })
   }

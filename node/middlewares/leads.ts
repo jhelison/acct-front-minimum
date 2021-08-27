@@ -11,7 +11,7 @@ export async function leads(ctx: Context, next: () => Promise<any>) {
     headers,
     data,
     status: responseStatus,
-  } = await leadsClient.getLeadsWithHeaders()
+  } = await leadsClient.getLeadsWithHeaders(ctx)
 
   console.info('Leads headers', headers)
   console.info('Leads data:', data)
