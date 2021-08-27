@@ -146,6 +146,73 @@
   },
   // Container 2
   "flex-layout.row#container2":{
-
+    "children": [
+      "flex-layout.col#container2-col"
+    ],
+    "props": {
+      "blockClass": "contacts-container2"
+    }
+  },
+  "flex-layout.col#container2-col":{
+    "children": [
+      "rich-text#container2-title",
+      "flex-layout.row#container2-row"
+    ],
+    "props": {
+      "blockClass": "contacts-container2-col"
+    }
+  },
+  "rich-text#container2-title":{
+    "props":{
+      "text": "Operações Globais | Presença Local",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "font": "t-heading-3",
+      "blockClass": "contacts-container2-title"
+    }
+  },
+  "flex-layout.row#container2-row":{
+    "children": [
+      "flex-layout.col#container2-row-col1",
+      "flex-layout.col#container2-row-col2",
+      "image#container2-row-col3"
+    ],
+    "props":{
+      "blockClass": "contacts-container2-row"
+    }
+  },
+  "flex-layout.col#container2-row-col1":{
+    "children": [
+      "rich-text#bloco3-lista1"
+    ],
+    "props":{
+      "width": "20%"
+    }
+  },
+  "flex-layout.col#container2-row-col2":{
+    "children": [
+      "rich-text#bloco3-lista2"
+    ],
+    "props":{
+      "width": "20%"
+    }
+  },
+  "rich-text#bloco3-lista1":{ // Deveria ser uma lista <ul><li>Brasil</ul></li>
+    "props":{
+      "text": "Argentina\nBrasil\nChile\nColômbia\nEUA\nFrance\nAlemanha\nÍndia\nItália",
+      "blockClass": "contacts-country-list"
+    }
+  },
+  "rich-text#bloco3-lista2":{
+    "props":{
+      "text": "Argentina\nBrasil\nChile\nColômbia\nEUA\nFrance\nAlemanha\nÍndia\nItália",
+      "blockClass": "contacts-country-list"
+    }
+  },
+  "image#container2-row-col3":{
+    "props": {
+      "src": "https://acct.global/wp-content/uploads/2020/10/bg-map-contact.png",
+      "maxWidth": "100%"
+    }
   }
 }
