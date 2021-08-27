@@ -1,0 +1,45 @@
+{
+    /* Textos de apresentação e link na home page. */
+    "rich-text#home1": {
+        "props": {
+            "textAlignment": "CENTER",
+            "textPosition": "CENTER",
+            "textMode": "html",
+            "text": "Buscamos constantemente a liderança global\n quando se trata de soluções para comércio digital.",
+            "textColor": "black",
+            "font": "t-heading-5",
+            "blockClass": "presentation1"
+        }
+    },
+    "rich-text#home2": {
+        "props": {
+            "textAlignment": "CENTER",
+            "textPosition": "CENTER",
+            "textMode": "html",
+            "text": "Quando o assunto é e-commerce, somos líderes! Desenvolvemos soluções para empresas que buscam crescimento. Seja a criação de um\n aplicativo móvel, um site totalmente novo ou aumentar o desempenho e a inteligência da sua organização, nós oferecemos o suporte necessário\n às empresas na era digital.",
+            "blockClass": "presentation2"
+        }
+    },
+    "link#1": {
+        "props": {
+            "href": "",
+            "label": "Saiba mais sobre nós",
+            "displayMode": "button",
+            "buttonProps": {
+                "variant": "primary",
+                "size": "regular"
+            },
+            "blockClass": "presentation-button"
+        }
+    },
+    /* Texto para a abertura para o flex layout com imagens de marcas importantes para a empresa . */
+    "rich-text#home3": {
+        "props": {
+            "textAlignment": "CENTER",
+            "textPosition": "CENTER",
+            "textMode": "html",
+            "text": "Trusted by_",
+            "blockClass": "trust"
+        }
+    }
+}
