@@ -1,0 +1,26 @@
+.container--contacts-city-title{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: left;
+  width: 100%;
+  height: auto;
+}
+
+.container--contacts-city-description{
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+  padding-right: 15px;
+}
+
+.container--title-global-operation{
+  font-size: 32px;
+  line-height: 45px;
+  margin-bottom: 50px;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+.paragraph--country-list{
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+

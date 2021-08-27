@@ -1,0 +1,22 @@
+.flexRow--contacts-container{
+  width: 100%;
+  align-items: center;
+}
+
+.flexRow--contacts-content{
+  max-width: 1300px;
+  align-items: center;
+}
+
+.flexRow--contacts-list-city-cards{
+  margin-left: 50px;
+}
+
+.flexRowContent--contacts-list-city-cards{
+  justify-content: space-between;
+}
+
+.flexCol--contacts-city-card{
+  align-items: left;
+  height: min-content;
+}
