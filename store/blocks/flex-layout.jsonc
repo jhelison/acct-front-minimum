@@ -1,0 +1,133 @@
+{
+    /* Flex layout na home page com imagens de logos de marcas importantes. */
+    "flex-layout.row#home1": {
+        "props": {
+            "blockClass": "flexR1"
+        },
+        "children": [
+            "flex-layout.col#spacer1",
+            "flex-layout.col#home1",
+            "flex-layout.col#home2",
+            "flex-layout.col#home3",
+            "flex-layout.col#home4",
+            "flex-layout.col#home5",
+            "flex-layout.col#spacer2"
+        ]
+    },
+    "flex-layout.col#spacer1": {
+        "props": {
+            "width": "14.28%"
+        }
+    },
+    "flex-layout.col#home1": {
+        "props": {
+            "width": "14.28%"
+        },
+        "children": [
+            "image#logo1",
+            "image#logo2"
+        ]
+    },
+    "flex-layout.col#home2": {
+        "props": {
+            "width": "14.28%"
+        },
+        "children": [
+            "image#logo3",
+            "image#logo4"
+        ]
+    },
+    "flex-layout.col#home3": {
+        "props": {
+            "width": "14.28%"
+        },
+        "children": [
+            "image#logo5",
+            "image#logo6"
+        ]
+    },
+    "flex-layout.col#home4": {
+        "props": {
+            "width": "14.28%"
+        },
+        "children": [
+            "image#logo7",
+            "image#logo8"
+        ]
+    },
+    "flex-layout.col#home5": {
+        "props": {
+            "width": "14.28%"
+        },
+        "children": [
+            "image#logo9",
+            "image#logo10"
+        ]
+    },
+    "flex-layout.col#spacer2": {
+        "props": {
+            "width": "14.28%"
+        }
+    },
+    "image#logo1": {
+        "props": {
+            "src": "https://acct.global/wp-content/uploads/2020/09/clients_carrefour.svg",
+            "width": 150
+        }
+    },
+    "image#logo2": {
+        "props": {
+            "src": "https://acct.global/wp-content/uploads/2020/09/clients_unilever.svg",
+            "width": 150
+        }
+    },
+    "image#logo3": {
+        "props": {
+            "src": "https://acct.global/wp-content/uploads/2020/09/clients_samsung.svg",
+            "width": 150
+        }
+    },
+    "image#logo4": {
+        "props": {
+            "src": "https://acct.global/wp-content/uploads/2020/09/clients_whirlpool.svg",
+            "width": 150
+        }
+    },
+    "image#logo5": {
+        "props": {
+            "src": "https://acct.global/wp-content/uploads/2020/09/clients_abinbev.svg",
+            "width": 150
+        }
+    },
+    "image#logo6": {
+        "props": {
+            "src": "https://acct.global/wp-content/uploads/2020/09/clients_universal-mg.svg",
+            "width": 150
+        }
+    },
+    "image#logo7": {
+        "props": {
+            "src": "https://acct.global/wp-content/uploads/2020/09/clients_stanley-black-decker.svg",
+            "width": 150
+        }
+    },
+    "image#logo8": {
+        "props": {
+            "src": "https://acct.global/wp-content/uploads/2020/09/clients_decathlon.svg",
+            "width": 150
+        }
+    },
+    "image#logo9": {
+        "props": {
+            "src": "https://acct.global/wp-content/uploads/2020/09/clients_motorola.svg",
+            "width": 150
+        }
+    },
+    "image#logo10": {
+        "props": {
+            "src": "https://acct.global/wp-content/uploads/2020/09/clients_cea.svg",
+            "width": 150
+        }
+    }
+    /* Final do flex layout na home page com imagens de logos de marcas importantes. */
+}
