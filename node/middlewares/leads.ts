@@ -3,9 +3,9 @@ export async function leads(ctx: Context, next: () => Promise<any>) {
     clients: { leads: leadsClient },
   } = ctx
 
-  const leadsResponse = await leadsClient.getLeads()
+  // const leadsResponse = await leadsClient.getLeads()
 
-  console.info('Status response:', leadsResponse)
+  // console.info('Status response:', leadsResponse)
 
   const {
     headers,

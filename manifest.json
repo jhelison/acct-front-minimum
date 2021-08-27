@@ -1,6 +1,6 @@
 {
-  "name": "admin-example",
-  "vendor": "vtex",
+  "name": "app-acct-group19",
+  "vendor": "hiringcoders202119",
   "version": "0.0.1",
   "builders": {
     "styles": "2.x",
@@ -63,7 +63,7 @@
     {
       "name": "aws-access",
       "attrs": {
-        "host": "https://g0deojz10k.execute-api.us-east-2.amazonaws.com",
+        "host": "g0deojz10k.execute-api.us-east-2.amazonaws.com",
         "path": "*"
       }
     },
