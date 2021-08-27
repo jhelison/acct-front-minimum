@@ -1,0 +1,45 @@
+/* ----------------- contacts page -----------------*/
+.container--contacts-city-title{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: left;
+  width: 100%;
+  height: auto;
+}
+
+.container--contacts-city-description{
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+  padding-right: 15px;
+}
+
+.container--contacts-container2-title{
+  font-size: 2rem;
+  line-height: 1.4;
+  margin-bottom: 50px;
+  color: #040404;
+  font-family: 'Open Sans Condensed';
+}
+
+.strong--contacts-container2-title{
+  color: #fcc200;
+}
+
+.paragraph--country-list{
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.list--contacts-country-list{
+  line-height: 1.5;
+}
+
+.listItem--contacts-country-list{
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  color: #1d1d1d;
+}
+
+/* ----------------- contacts page -----------------*/
