@@ -1,0 +1,88 @@
+{
+  /*
+    Título dos depoimentos.
+  */
+
+  "rich-text#testimonialsTitle": {
+    "props": {
+      "text": "Depoimentos**_**",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "font": "t-heading-3",
+      "blockClass": "title"
+    }
+  },
+
+  /*
+    Textos referentes aos depoimentos dos clientes e parceiros.
+  */
+
+  "rich-text#testimonial1": {
+    "props": {
+      "text": "A Tok & Stok precisava evoluir sua experiência de compra online. Nossas lojas já estão bastante consolidadas e somos referência em experiência em móveis e decoração. Nosso desafio era fazer exatamente esse mesmo movimento no digital, de forma bastante acelerada.",
+      "textPosition": "CENTER",
+      "textAlignment": "CENTER",
+      "blockClass": "testimonial"
+    }
+  },
+  "rich-text#testimonial2": {
+    "props": {
+      "text": "A ACCT e Empório da Cerveja trabalharam em conjunto com nossa equipe interna para que eles pudessem ser treinados para liderar as operações posteriormente. Na minha opinião, tivemos uma parceria muito rica, feita em equipe, que incluiu troca de conhecimento e comunicação transparente.",
+      "textPosition": "CENTER",
+      "textAlignment": "CENTER",
+      "blockClass": "testimonial"
+    }
+  },
+  "rich-text#testimonial3": {
+    "props": {
+      "text": "Foi gratificante ter um parceiro que concordou com esse projeto, pois sabíamos que as regras do negócio poderiam gerar várias mudanças ao longo do caminho. A equipe da ACCT foi flexível o suficiente para lidar com as mudanças no planejamento e se adaptou ao processo.",
+      "textPosition": "CENTER",
+      "textAlignment": "CENTER",
+      "blockClass": "testimonial"
+    }
+  },
+
+  /*
+    Textos referentes aos nomes e trabalhos dos clientes e parceiros.
+  */
+
+  "rich-text#name1": {
+    "props": {
+      "text": "**ADRIANO DI BELLA TAVOLLASSI**",
+      "blockClass": "name"
+    }
+  },
+  "rich-text#job1": {
+    "props": {
+      "text": "Ex-Diretor de E-commerce e Digital - Tok & Stok",
+      "blockClass": "job"
+    }
+  },
+
+  "rich-text#name2": {
+    "props": {
+      "text": "**NELSON DE MOURA**",
+      "blockClass": "name"
+ 
+    }
+  },
+  "rich-text#job2": {
+    "props": {
+      "text": "Ex-gerente de Produto - Empório da Cerveja",
+      "blockClass": "job"
+    }
+  },
+
+  "rich-text#name3": {
+    "props": {
+      "text": "**GUSTAVO RIOS**",
+      "blockClass": "name"
+    }
+  },
+  "rich-text#job3": {
+    "props": {
+      "text": "Diretor de Clientes - VTEX",
+      "blockClass": "job"
+    }
+  }
+}

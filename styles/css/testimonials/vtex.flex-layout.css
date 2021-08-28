@@ -1,0 +1,21 @@
+.flexColChild .container {
+  vertical-align: middle;
+}
+
+.stretchChildrenWidth {
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.flexRow--rowTestimonials {
+  background-color: #f1f1f1;
+}
+
+.flexCol--nameAndJob {
+  max-height: 2rem;
+}
+
+.flexRow--writer {
+  max-width: 50%;
+  margin: auto;
+}

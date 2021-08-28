@@ -1,0 +1,24 @@
+{
+  /*
+    Criação de um slider-layout para exibição de vários depoimentos na
+    mesma página.
+  */
+
+  "slider-layout#testimonials": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "mobileOnly",
+      "blockClass": "sliderTestimonials"
+    },
+    "children": [
+      "flex-layout.col#testimonial1",
+      "flex-layout.col#testimonial2",
+      "flex-layout.col#testimonial3"
+    ]
+  }
+}

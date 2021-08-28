@@ -1,0 +1,136 @@
+{
+  /*
+    Definição dos blocos referentes aos depoimentos feitos por
+    clientes e parceiros da ACCT.
+  */
+
+  "flex-layout.row#testimonials": {
+    "children": [
+      "flex-layout.col#testimonials"
+    ],
+    "props": {
+      "blockClass": "rowTestimonials"
+    }
+  },
+  "flex-layout.col#testimonials": {
+    "children": [
+      "rich-text#testimonialsTitle",
+      "slider-layout#testimonials"
+    ]
+  },
+
+  /*
+    Criação dos blocos de cada depoimento relatado.
+  */
+
+  "image#quote": {
+    "props": {
+      "src": "assets/images/icon-quote.png",
+      "alt": "Quote Icon",
+      "maxWidth": "32px",
+      "blockClass": "imageQuote"
+    }
+  },
+  "flex-layout.col#testimonial1": {
+    "children": [
+      "image#quote",
+      "rich-text#testimonial1",
+      "flex-layout.row#writer1"
+    ]
+  },
+  "flex-layout.row#writer1": {
+    "children": [
+      "image#writer1",
+      "flex-layout.col#nameAndJob1"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "horizontalAlign": "center",
+      "blockClass": "writer"
+    }
+  },
+  "image#writer1": {
+    "props": {
+      "src": "assets/images/adriano-tok-stok.jpg",
+      "blockClass": "imageWriter"
+    }
+  },
+  "flex-layout.col#nameAndJob1": {
+    "children": [
+      "rich-text#name1",
+      "rich-text#job1"
+    ],
+    "props": {
+      "horizontalAlign": "left",
+      "blockClass": "nameAndJob"
+    }
+  },
+
+  "flex-layout.col#testimonial2": {
+    "children": [
+      "image#quote",
+      "rich-text#testimonial2",
+      "flex-layout.row#writer2"
+    ]
+  },
+  "flex-layout.row#writer2": {
+    "children": [
+      "image#writer2",
+      "flex-layout.col#nameAndJob2"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "horizontalAlign": "center",
+      "blockClass": "writer"
+    }
+  },
+  "image#writer2": {
+    "props": {
+      "src": "assets/images/nelson-emporio-da-cerveja.jpg",
+      "blockClass": "imageWriter"
+    }
+  },
+  "flex-layout.col#nameAndJob2": {
+    "children": [
+      "rich-text#name2",
+      "rich-text#job2"
+    ],
+    "props": {
+      "blockClass": "nameAndJob"
+    }
+  },
+
+  "flex-layout.col#testimonial3": {
+    "children": [
+      "image#quote",
+      "rich-text#testimonial3",
+      "flex-layout.row#writer3"
+    ]
+  },
+  "flex-layout.row#writer3": {
+    "children": [
+      "image#writer3",
+      "flex-layout.col#nameAndJob3"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "horizontalAlign": "center",
+      "blockClass": "writer"
+    }
+  },
+  "image#writer3": {
+    "props": {
+      "src": "assets/images/gustavo-rios-vtex.jpg",
+      "blockClass": "imageWriter"
+    }
+  },
+  "flex-layout.col#nameAndJob3": {
+    "children": [
+      "rich-text#name3",
+      "rich-text#job3"
+    ],
+    "props": {
+      "blockClass": "nameAndJob"
+    }
+  }
+}

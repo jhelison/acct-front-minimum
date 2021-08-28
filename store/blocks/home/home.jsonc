@@ -1,0 +1,7 @@
+{
+  "store.home": { 
+    "blocks": [
+      "flex-layout.row#testimonials"
+    ]
+  }
+}
