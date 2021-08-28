@@ -1,0 +1,8 @@
+{
+  "contactsform": {
+    "component": "ContactsForm"
+  },
+  "banner": {
+    "component": "Banner"
+  }
+}

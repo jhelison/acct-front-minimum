@@ -1,0 +1,125 @@
+/* -------------------- Banner --------------------*/
+.contactsContainerBanner{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  /* background-image: url("https://dev-acct.pantheonsite.io/wp-content/uploads/2020/10/cover-contact.jpg"); */
+  background-position: center center;
+  background-size: cover;
+  padding: 6rem 0rem 6rem 0rem;
+}
+
+.contactsContentBanner{
+  display: flex;
+  max-width: 1300px;
+}
+
+.contactsBannerTitle{
+  /* width: 100%; */
+  width: 1300px;
+  font-size: 36px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+}
+
+.blink{
+  color: #fcc200;
+  margin: 0 0 0 -5px;
+  display: inline-block;
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+/* -------------------- Banner --------------------*/
+/* -------------------- Formulário --------------------*/
+.contacts-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  font-family: "Open Sans";
+  font-weight: 400;
+}
+
+.contacts-content{
+  padding: 6rem 0;
+  display: flex;
+  width: 1140px;
+  justify-content: space-between;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contactsFormTitle{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #040404;
+  margin: 12px 0 24px;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.half{
+  display: flex;
+  flex-direction: column;
+  width: 48.93617%;
+}
+
+.contactsLabel{
+  color: #292929;
+  margin-bottom: 5px;
+  line-height: 1.2;
+}
+
+.contactsFormInput, .contactsFormTextarea{
+  min-height: 34px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  color: #292929;
+  border: 1px solid #ddd;
+  padding: 0 0.375rem;
+  font: inherit;
+  box-sizing: inherit;
+}
+.contactsFormTextarea{
+  padding: 0.375rem 0.375rem;
+  min-height: 5rem;
+  resize: vertical;
+  width: 100%;
+}
+
+.contactsFormSubmit{
+  font-size: 110%;
+  font-weight: bold;
+
+  padding: 5px 19px !important;
+  background: transparent !important;
+  border: 2px solid #5974c7 !important;
+  margin-top: 10px !important;
+  color: #5974c7 !important;
+  text-transform: uppercase !important;
+  width: auto !important;
+}
+/* -------------------- Formulário --------------------*/

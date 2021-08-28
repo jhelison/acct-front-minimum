@@ -1,0 +1,5 @@
+{
+    "store.custom#about-us": {
+        "blocks": ["store.custom#contacts"]
+    }
+}
