@@ -1,5 +1,5 @@
 {
-    "store.custom#about-us": {
+    "store.custom#contact-us": {
         "blocks": ["store.custom#contacts"]
     }
 }
