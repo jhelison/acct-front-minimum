@@ -6,7 +6,7 @@ interface BannerProps {
   urlImage: String
 }
 
-const Banner: StorefrontFunctionComponent<BannerProps> = ({title, urlImage}:BannerProps) => {
+const Banner = ({title, urlImage}:BannerProps) => {
   return (
     <div className={styleModule.contactsContainerBanner} style={{backgroundImage: `url(${urlImage})`}}>
       <div className={styleModule.contactsContentBanner}>

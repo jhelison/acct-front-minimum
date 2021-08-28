@@ -1,10 +1,7 @@
 import React from 'react'
 import styleModule from './style.module.css'
 
-interface ContactsFormProps {
-}
-
-const ContactsForm: StorefrontFunctionComponent<ContactsFormProps> = () => {
+const ContactsForm = () => {
 
   return (
         <form className={styleModule.form}>
