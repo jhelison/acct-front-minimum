@@ -14,5 +14,11 @@
       "path": "/_v/leads",
       "public": true
     }    
+  },
+  "events": {
+    "orderCreated": {
+      "sender": "vtex.orders-broadcast",
+      "topics": ["order-created"]
+    }
   }
 }

@@ -69,6 +69,16 @@
       }
     },
     {
+      "name": "OMSViewer"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "/api/oms/*"
+      }
+    },
+    {
       "name": "colossus-fire-event"
     },
     {
