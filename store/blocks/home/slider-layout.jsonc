@@ -15,6 +15,10 @@
                 "tablet": 1,
                 "phone": 1
             },
+            "autoplay": {
+                "timeout": 6500,
+                "stopOnHover": true
+            },
             "infinite": "true"
         }
     },
@@ -104,6 +108,10 @@
         "desktop": 1,
         "tablet": 1,
         "phone": 1
+      },
+      "autoplay": {
+        "timeout": 7000,
+        "stopOnHover": true
       },
       "showNavigationArrows": "desktopOnly",
       "showPaginationDots": "mobileOnly",
