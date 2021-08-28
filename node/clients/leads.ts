@@ -13,11 +13,12 @@ export default class Leads extends ExternalClient {
   }
 
   public async getLeadsWithHeaders(ctx: Context): Promise<IOResponse<string>> {
+    console.log("authToken:", ctx.vtex.authToken)
     return this.http.getRaw("/leads", {
       metric: 'leads-get-raw',
       headers: {
         "X-VTEX-Use-Https": true,
-        "Proxy-Authorization": ctx.authToken,
+        "Proxy-Authorization": ctx.vtex.authToken,
       }
     })
   }

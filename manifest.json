@@ -61,6 +61,13 @@
       }
     },
     {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "g0deojz10k.execute-api.us-east-2.amazonaws.com",
+        "path": "*"
+      }
+    },
+    {
       "name": "colossus-fire-event"
     },
     {
