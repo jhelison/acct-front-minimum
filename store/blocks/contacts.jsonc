@@ -2,10 +2,16 @@
   // Eu dividi o layout em 3 partes: o banner e + 2 containers
   "store.custom#contacts":{
     "blocks": [
-      "info-card#banner",
+      "banner",
       "flex-layout.row#container1",
       "flex-layout.row#container2"
     ]
+  },
+  "banner":{
+    "props":{
+      "title": "Contato",
+      "urlImage": "https://dev-acct.pantheonsite.io/wp-content/uploads/2020/10/cover-contact.jpg"
+    }
   },
   // Banner - Info Card
   "info-card#banner": {
@@ -37,7 +43,8 @@
       "blockClass": "contacts-content"
     }
   },
-  "flex-layout.col#container1-linha1-col1": { // A coluna 1 deveria ter um formulário 
+  "flex-layout.col#container1-linha1-col1": {
+    "children":["contactsform"],
     "props": {
       "width": "40%"
     }
