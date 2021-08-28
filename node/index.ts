@@ -4,9 +4,11 @@ import { method, Service } from '@vtex/api'
 
 import { Clients } from './clients'
 import { status } from './middlewares/status'
-import { validate } from './middlewares/validate'
+import { validate } from './middlewares/validade'
 import { leads } from './middlewares/leads'
 import { orderCreated } from './middlewares/orderCreated'
+import { validateLead } from './middlewares/validadeLead'
+import { leadByEmail } from './middlewares/leadByEmail'
 
 const TIMEOUT_MS = 1800
 
@@ -65,6 +67,9 @@ export default new Service({
     // `status` is the route ID from service.json. It maps to an array of middlewares (or a single handler).
     leads: method({
       GET: [leads],
+    }),
+    lead: method({
+      GET: [validateLead, leadByEmail],
     }),
   },
   events: {

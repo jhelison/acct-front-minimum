@@ -13,7 +13,11 @@
     "leads": {
       "path": "/_v/leads",
       "public": true
-    }    
+    },
+    "lead": {
+      "path": "/_v/lead/:email",
+      "public": true
+    }     
   },
   "events": {
     "orderCreated": {
