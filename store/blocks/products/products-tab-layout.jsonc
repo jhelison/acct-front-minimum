@@ -50,7 +50,7 @@
         ]
     },
     "tab-content.item#quality-assurance": {
-        "children": ["rich-text#tab-content-title", "product-cards"],
+        "children": ["rich-text#tab-content-title", "flex-layout.row#tab-content-items"],
         "props": {
             "tabId": "quality-assurance"
         }
@@ -80,5 +80,11 @@
             "textPosition": "CENTER",
             "textAlignment": "CENTER"
         }
+    },
+
+    "flex-layout.row#tab-content-items": {
+        "children": [
+            "product-cards"
+        ]
     }
 }

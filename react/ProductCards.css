@@ -4,4 +4,12 @@
     padding: 24px;
     display: flex;
     justify-content: center;
+    box-shadow: rgb(66 66 66 / 15%) 0px 8px 16px;
+    border-radius: 8px;
+}
+
+.mainProductCardContainer {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
 }
