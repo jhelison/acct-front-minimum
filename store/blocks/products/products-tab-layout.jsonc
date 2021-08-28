@@ -50,7 +50,7 @@
         ]
     },
     "tab-content.item#quality-assurance": {
-        "children": ["rich-text#tab-content-title"],
+        "children": ["rich-text#tab-content-title", "product-cards"],
         "props": {
             "tabId": "quality-assurance"
         }

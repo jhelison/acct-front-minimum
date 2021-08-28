@@ -1,0 +1,7 @@
+.productCard {
+    width: 240px;
+    background-color: white;
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+}
