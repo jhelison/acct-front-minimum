@@ -9,13 +9,5 @@
       "rich-text#home3",
       "flex-layout.row#home1"
     ]
-  },
-  "rich-text": { 
-    "props": { 
-      "text": "VTEX Store Framework",
-      "textAlignment": "CENTER",
-      "textPosition": "CENTER",
-      "font": "t-heading-1"
-    }
   }
 }
