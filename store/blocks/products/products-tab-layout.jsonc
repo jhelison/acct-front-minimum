@@ -1,0 +1,87 @@
+{
+    "tab-layout#products" : {
+        "children": [
+            "tab-list#products",
+            "tab-content#products"
+        ],
+        "props": {
+            "blockClass": "products",
+            "defaultActiveTabId": "quality-assurance"
+        }
+    },
+    "tab-list#products": {
+        "children": [
+            "tab-list.item#quality-assurance",
+            "tab-list.item#data-growth",
+            "tab-list.item#experience-design",
+            "tab-list.item#tecnologia"
+        ]
+    },
+
+    "tab-list.item#quality-assurance": {
+        "props": {
+            "tabId": "quality-assurance",
+            "label": "Quality Assurance",
+            "defaultActiveTab": true
+        }
+    },
+    "tab-list.item#data-growth": {
+        "props": {
+            "tabId": "data-growth",
+            "label": "Data Growth"
+        }
+    },
+    "tab-list.item#experience-design": {
+        "props": {
+            "tabId": "experience-design",
+            "label": "Experience & Design"
+        }
+    },
+    "tab-list.item#tecnologia": {
+        "props": {
+            "tabId": "tecnologia",
+            "label": "Tecnologia"
+        }
+    },
+
+    "tab-content#products": {
+        "children": [
+            "tab-content.item#quality-assurance",
+            "tab-content.item#data-growth",
+            "tab-content.item#experience-design",
+            "tab-content.item#tecnologia"
+        ]
+    },
+    "tab-content.item#quality-assurance": {
+        "children": [
+            "rich-text#products-title"
+        ],
+        "props": {
+            "tabId": "quality-assurance"
+        }
+    },
+    "tab-content.item#data-growth": {
+        "children": [
+            "rich-text#products-title"
+        ],
+        "props": {
+            "tabId": "data-growth"
+        }
+    },
+    "tab-content.item#experience-design": {
+        "children": [
+            "rich-text#products-title"
+        ],
+        "props": {
+            "tabId": "experience-design"
+        }
+    },
+    "tab-content.item#tecnologia": {
+        "children": [
+            "rich-text#products-title"
+        ],
+        "props": {
+            "tabId": "tecnologia"
+        }
+    }
+}

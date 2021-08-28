@@ -1,7 +1,8 @@
 {
     "store.custom#products": {
       "blocks": [
-        "flex-layout.row#products-title-layout"
+        "flex-layout.row#products-title-layout",
+        "tab-layout#products"
       ]
     }
    }

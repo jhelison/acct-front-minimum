@@ -1,0 +1,36 @@
+/* ---------------------- Products page ---------------------- */
+.listItem {
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #f1f1f1;
+}
+.listItem :global(.vtex-button) {
+    border-width: 0;
+    color: #737373;
+}
+.listItem :global(.vtex-button):hover {
+    background-color: white !important;
+}
+
+.listItemActive {
+    background-color: #f5f5f5;
+    border: 1px solid #f1f1f1;
+    border-bottom: 4px solid #fcc200;
+}
+
+.listItemActive :global(.vtex-button) {
+    background-color: #f5f5f5;
+    border-color: #f5f5f5;
+    color: #737373;
+}
+.listItemActive :global(.vtex-button):hover {
+    background-color: #f1f1f1 !important;
+}
+
+.listContainer {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+:global(.vtex-tab-layout-0-x-contentContainer) {
+    background-color: #f1f1f1;
+}
