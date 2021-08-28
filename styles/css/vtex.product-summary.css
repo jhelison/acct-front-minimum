@@ -1,0 +1,31 @@
+.container {
+    padding: 10px
+}
+
+.brandName {
+    font-family: 'Open Sans Condensed';
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: white;
+}
+
+.element--oneClick {
+    background: linear-gradient(90deg, #FCC22C 0%, #E3A911 99.99%, rgba(252, 194, 44, 0) 100%);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.element--oneClick .nameContainer,
+.element--oneClick .priceContainer {
+    bottom: 0;
+    color: white;
+    margin: 3%;
+}
+
+.element--oneClick .image {
+    max-width: max-content;
+}
+
+.element--oneClick .imageContainer {
+    overflow: hidden;
+    right: 15%;
+}

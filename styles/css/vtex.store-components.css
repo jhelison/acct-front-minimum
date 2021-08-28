@@ -1,4 +1,5 @@
 /* Customização do info card da home page. */
+
 .infoCardContainer--info-card1-home {
     background-color: rgb(97, 29, 74);
 }
@@ -38,7 +39,7 @@
     font-weight: 800;
 }
 
-.strong--info-card2-home{
+.strong--info-card2-home {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #fcc200;
     font-size: 290%;
@@ -103,7 +104,6 @@
     position: relative;
     left: -140px;
     border-radius: 10px;
-    
 }
 
 .wrapper--info-card2-home {
@@ -233,27 +233,49 @@
     font-weight: 300;
 }
 
+
 /* Final da customização do info card da home page. */
 
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Open+Sans:wght@400;600;700&display=swap);
 
 /* ----------------- contacts page -----------------*/
-.infoCardContainer--contacts-banner{
-  min-height: 300px;
-  justify-content: center;
+
+.infoCardContainer--contacts-banner {
+    min-height: 300px;
+    justify-content: center;
 }
 
-.infoCardTextContainer--contacts-banner{
-  width: 1300px;
+.infoCardTextContainer--contacts-banner {
+    width: 1300px;
 }
 
-.infoCardHeadline--contacts-banner{
-  font-family: 'Open Sans Condensed', sans-serif;
-  color: white;
+.infoCardHeadline--contacts-banner {
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: white;
 }
 
-.imageElement--contacts-city-image{
-  border-bottom: 10px solid #fcc200;
-  margin-bottom: 20px;
+.imageElement--contacts-city-image {
+    border-bottom: 10px solid #fcc200;
+    margin-bottom: 20px;
 }
+
+
 /* ----------------- contacts page -----------------*/
+
+.imageElement--imageQuote {
+    color: #ccc;
+    text-align: center;
+    align-items: center;
+    display: block;
+    margin: auto;
+    margin-bottom: 1rem;
+    background: none;
+    width: auto;
+    height: auto;
+}
+
+.imageElement--imageWriter {
+    border-radius: 50%;
+    max-width: 64px;
+    margin: 1rem 1rem 5rem auto;
+}

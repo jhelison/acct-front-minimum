@@ -1,46 +1,77 @@
 /* ----------------- contacts page -----------------*/
-.flexRow--contacts-container{
-  width: 100%;
-  align-items: center;
+
+.flexRow--contacts-container {
+    width: 100%;
+    align-items: center;
 }
 
-.flexRow--contacts-content{
-  max-width: 1300px;
-  align-items: center;
+.flexRow--contacts-content {
+    max-width: 1300px;
+    align-items: center;
 }
 
-.flexRowContent--contacts-content{
-  align-items: center;
-  padding: 50px 0;
+.flexRowContent--contacts-content {
+    align-items: center;
+    padding: 50px 0;
 }
 
-.flexRow--contacts-list-city-cards{
-  margin-left: 50px;
+.flexRow--contacts-list-city-cards {
+    margin-left: 50px;
 }
 
-.flexRowContent--contacts-list-city-cards{
-  justify-content: space-between;
+.flexRowContent--contacts-list-city-cards {
+    justify-content: space-between;
 }
 
-.flexCol--contacts-city-card{
-  align-items: left;
-  height: min-content;
+.flexCol--contacts-city-card {
+    align-items: left;
+    height: min-content;
 }
 
-.flexRow--contacts-container2{
-  background-color: #f1f1f1;
+.flexRow--contacts-container2 {
+    background-color: #f1f1f1;
 }
 
-.flexRow--contacts-container2{
-  padding: 150px 0;
+.flexRow--contacts-container2 {
+    padding: 150px 0;
 }
 
-.flexCol--contacts-container2-col{
-  align-items: center;
-  width: 1300px;
+.flexCol--contacts-container2-col {
+    align-items: center;
+    width: 1300px;
 }
 
-.flexRowContent--contacts-container2-row{
-  align-items: center;
+.flexRowContent--contacts-container2-row {
+    align-items: center;
 }
+
+
 /* ----------------- contacts page -----------------*/
+
+
+/* ----------------- testmonials -----------------*/
+
+.flexColChild .container {
+    vertical-align: middle;
+}
+
+.stretchChildrenWidth {
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.flexRow--rowTestimonials {
+    background-color: #f1f1f1;
+}
+
+.flexCol--nameAndJob {
+    max-height: 2rem;
+}
+
+.flexRow--writer {
+    max-width: 50%;
+    margin: auto;
+}
+
+
+/* ----------------- testmonials -----------------*/
