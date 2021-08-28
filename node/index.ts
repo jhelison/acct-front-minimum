@@ -4,10 +4,9 @@ import { method, Service } from '@vtex/api'
 
 import { Clients } from './clients'
 import { status } from './middlewares/status'
-import { validate } from './middlewares/validade'
+import { validate } from './middlewares/validate'
 import { leads } from './middlewares/leads'
 import { orderCreated } from './middlewares/orderCreated'
-import { validateLead } from './middlewares/validadeLead'
 import { leadByEmail } from './middlewares/leadByEmail'
 
 const TIMEOUT_MS = 1800
@@ -69,7 +68,7 @@ export default new Service({
       GET: [leads],
     }),
     lead: method({
-      GET: [validateLead, leadByEmail],
+      GET: [leadByEmail],
     }),
   },
   events: {

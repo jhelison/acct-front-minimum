@@ -6,7 +6,9 @@ export async function status(ctx: Context, next: () => Promise<any>) {
 
   console.info('Received code:', code)
 
-  const statusResponse = await statusClient.getStatus(code)
+  const statusResponse = await statusClient.getStatus(code).catch((reason) => {
+    return reason?.response?.data
+  })
 
   console.info('Status response:', statusResponse)
 
@@ -21,8 +23,8 @@ export async function status(ctx: Context, next: () => Promise<any>) {
   // console.log('Status data:', data)
 
   ctx.status = responseStatus
-  ctx.body = data
-  ctx.set('Cache-Control', headers['cache-control'])
+  ctx.body = statusResponse
+  ctx.set('Cache-Control', 'no-cache no-store')
 
   await next()
 }

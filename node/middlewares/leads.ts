@@ -20,7 +20,7 @@ export async function leads(ctx: Context, next: () => Promise<any>) {
 
   ctx.status = responseStatus
   ctx.body = data
-  ctx.set('Cache-Control', headers['cache-control'])
+  ctx.set('Cache-Control', 'no-cache no-store')
 
   await next()
 }
