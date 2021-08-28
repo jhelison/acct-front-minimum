@@ -24,16 +24,22 @@
 
   "product-summary.shelf": {
     "children": [
-      "product-summary-add-to-list-button",
+      "product-summary-image",
       "product-summary-name",
-      "product-rating-inline",
-      "product-summary-space",
       "product-summary-price",
-      "product-identifier.summary",
-      "add-to-cart-button"
+      "add-to-cart-button#oneClick"
     ]
   },
+
+
+  "add-to-cart-button#oneClick": {
+    "props":{
+      "text":"Assinar",
+      "isOneClickBuy":true
+    }
+  },
   
+  // teste flip
   "product-summary.shelf#blublu": {
     "props":{
       "blockClass":"blublu"

@@ -1,3 +1,22 @@
+.container {
+    padding: 10px
+}
+
+.element {
+    background: linear-gradient(90deg, #FCC22C 0%, #E3A911 99.99%, rgba(252, 194, 44, 0) 100%);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.nameContainer,
+.priceContainer {
+    /*position: absolute;*/
+    bottom: 0;
+}
+
+.imageContainer {
+    height: 100%;
+}
+
 .container--blublu {
     background-color: transparent;
     perspective: 2000px;

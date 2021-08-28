@@ -1,22 +1,28 @@
 {
   "store.home": { 
     "blocks": [
-      "list-context.product-list#blublu"
+      "list-context.product-list"
     ]
   },
-  "list-context.product-list#blublu": {
-    "blocks": ["product-summary.shelf#blublu"],
-    "children":["slider-layout#blublu"],
+
+  "list-context.product-list": {
+    "blocks": ["product-summary.shelf"],
+    "children":["slider-layout#summary"],
     "props":{
       "hideUnavailableItems":false,
       "maxItems":4,
       "category":"1"
     }
   },
-
-  "slider-layout#blublu":{
+  "slider-layout#summary":{
     "props":{
-      "blockClass":"flip-outer"
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 2,
+        "phone": 1
+      },
+      "infinite":true,
+      "fullWidth": false
     }
   }
 }
