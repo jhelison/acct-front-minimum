@@ -7,6 +7,7 @@
     "store": "0.x",
     "docs": "0.x",
     "react": "3.x",
+    "assets": "0.x",
     "messages": "1.x",
     "admin": "0.x",
     "node": "6.x"

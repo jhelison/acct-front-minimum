@@ -1,0 +1,268 @@
+{
+    /* Flex layout na home page com imagens de logos de marcas importantes. */
+    "flex-layout.row#home1": {
+        "props": {
+            "blockClass": "flexR1"
+        },
+        "children": [
+            "flex-layout.col#spacer1",
+            "flex-layout.col#home1",
+            "flex-layout.col#home2",
+            "flex-layout.col#home3",
+            "flex-layout.col#home4",
+            "flex-layout.col#home5",
+            "flex-layout.col#spacer2"
+        ]
+    },
+    "flex-layout.col#spacer1": {
+        "props": {
+            "width": "14.28%"
+        }
+    },
+    "flex-layout.col#home1": {
+        "props": {
+            "width": "14.28%"
+        },
+        "children": [
+            "image#logo1",
+            "image#logo2"
+        ]
+    },
+    "flex-layout.col#home2": {
+        "props": {
+            "width": "14.28%"
+        },
+        "children": [
+            "image#logo3",
+            "image#logo4"
+        ]
+    },
+    "flex-layout.col#home3": {
+        "props": {
+            "width": "14.28%"
+        },
+        "children": [
+            "image#logo5",
+            "image#logo6"
+        ]
+    },
+    "flex-layout.col#home4": {
+        "props": {
+            "width": "14.28%"
+        },
+        "children": [
+            "image#logo7",
+            "image#logo8"
+        ]
+    },
+    "flex-layout.col#home5": {
+        "props": {
+            "width": "14.28%"
+        },
+        "children": [
+            "image#logo9",
+            "image#logo10"
+        ]
+    },
+    "flex-layout.col#spacer2": {
+        "props": {
+            "width": "14.28%"
+        }
+    },
+    "image#logo1": {
+        "props": {
+            "src": "https://acct.global/wp-content/uploads/2020/09/clients_carrefour.svg",
+            "width": 150
+        }
+    },
+    "image#logo2": {
+        "props": {
+            "src": "https://acct.global/wp-content/uploads/2020/09/clients_unilever.svg",
+            "width": 150
+        }
+    },
+    "image#logo3": {
+        "props": {
+            "src": "https://acct.global/wp-content/uploads/2020/09/clients_samsung.svg",
+            "width": 150
+        }
+    },
+    "image#logo4": {
+        "props": {
+            "src": "https://acct.global/wp-content/uploads/2020/09/clients_whirlpool.svg",
+            "width": 150
+        }
+    },
+    "image#logo5": {
+        "props": {
+            "src": "https://acct.global/wp-content/uploads/2020/09/clients_abinbev.svg",
+            "width": 150
+        }
+    },
+    "image#logo6": {
+        "props": {
+            "src": "https://acct.global/wp-content/uploads/2020/09/clients_universal-mg.svg",
+            "width": 150
+        }
+    },
+    "image#logo7": {
+        "props": {
+            "src": "https://acct.global/wp-content/uploads/2020/09/clients_stanley-black-decker.svg",
+            "width": 150
+        }
+    },
+    "image#logo8": {
+        "props": {
+            "src": "https://acct.global/wp-content/uploads/2020/09/clients_decathlon.svg",
+            "width": 150
+        }
+    },
+    "image#logo9": {
+        "props": {
+            "src": "https://acct.global/wp-content/uploads/2020/09/clients_motorola.svg",
+            "width": 150
+        }
+    },
+    "image#logo10": {
+        "props": {
+            "src": "https://acct.global/wp-content/uploads/2020/09/clients_cea.svg",
+            "width": 150
+        }
+    },
+    /* Final do flex layout na home page com imagens de logos de marcas importantes. */
+
+  /*
+    Definição dos blocos referentes aos depoimentos feitos por
+    clientes e parceiros da ACCT.
+  */
+
+  "flex-layout.row#testimonials": {
+    "children": [
+      "flex-layout.col#testimonials"
+    ],
+    "props": {
+      "blockClass": "rowTestimonials"
+    }
+  },
+  "flex-layout.col#testimonials": {
+    "children": [
+      "rich-text#testimonialsTitle",
+      "slider-layout#testimonials"
+    ]
+  },
+
+  /*
+    Criação dos blocos de cada depoimento relatado.
+  */
+
+  "image#quote": {
+    "props": {
+      "src": "assets/images/icon-quote.png",
+      "alt": "Quote Icon",
+      "maxWidth": "32px",
+      "blockClass": "imageQuote"
+    }
+  },
+  "flex-layout.col#testimonial1": {
+    "children": [
+      "image#quote",
+      "rich-text#testimonial1",
+      "flex-layout.row#writer1"
+    ]
+  },
+  "flex-layout.row#writer1": {
+    "children": [
+      "image#writer1",
+      "flex-layout.col#nameAndJob1"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "horizontalAlign": "center",
+      "blockClass": "writer"
+    }
+  },
+  "image#writer1": {
+    "props": {
+      "src": "assets/images/adriano-tok-stok.jpg",
+      "blockClass": "imageWriter"
+    }
+  },
+  "flex-layout.col#nameAndJob1": {
+    "children": [
+      "rich-text#name1",
+      "rich-text#job1"
+    ],
+    "props": {
+      "horizontalAlign": "left",
+      "blockClass": "nameAndJob"
+    }
+  },
+
+  "flex-layout.col#testimonial2": {
+    "children": [
+      "image#quote",
+      "rich-text#testimonial2",
+      "flex-layout.row#writer2"
+    ]
+  },
+  "flex-layout.row#writer2": {
+    "children": [
+      "image#writer2",
+      "flex-layout.col#nameAndJob2"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "horizontalAlign": "center",
+      "blockClass": "writer"
+    }
+  },
+  "image#writer2": {
+    "props": {
+      "src": "assets/images/nelson-emporio-da-cerveja.jpg",
+      "blockClass": "imageWriter"
+    }
+  },
+  "flex-layout.col#nameAndJob2": {
+    "children": [
+      "rich-text#name2",
+      "rich-text#job2"
+    ],
+    "props": {
+      "blockClass": "nameAndJob"
+    }
+  },
+
+  "flex-layout.col#testimonial3": {
+    "children": [
+      "image#quote",
+      "rich-text#testimonial3",
+      "flex-layout.row#writer3"
+    ]
+  },
+  "flex-layout.row#writer3": {
+    "children": [
+      "image#writer3",
+      "flex-layout.col#nameAndJob3"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "horizontalAlign": "center",
+      "blockClass": "writer"
+    }
+  },
+  "image#writer3": {
+    "props": {
+      "src": "assets/images/gustavo-rios-vtex.jpg",
+      "blockClass": "imageWriter"
+    }
+  },
+  "flex-layout.col#nameAndJob3": {
+    "children": [
+      "rich-text#name3",
+      "rich-text#job3"
+    ],
+    "props": {
+      "blockClass": "nameAndJob"
+    }
+  }
+}

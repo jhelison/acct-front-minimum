@@ -1,0 +1,225 @@
+{
+  // Eu dividi o layout em 3 partes: o banner e + 2 containers
+  "store.custom#contacts":{
+    "blocks": [
+      "banner",
+      "flex-layout.row#container1",
+      "flex-layout.row#container2"
+    ]
+  },
+  "banner":{
+    "props":{
+      "title": "Contato",
+      "urlImage": "https://dev-acct.pantheonsite.io/wp-content/uploads/2020/10/cover-contact.jpg"
+    }
+  },
+  // Banner - Info Card
+  "info-card#banner": {
+    "props": {
+      "isFullModeStyle": true,
+      "textPosition": "left",
+      "imageUrl": "https://acct.global/wp-content/uploads/2020/10/cover-contact.jpg",
+      "headline": "CONTATO",
+      "textAlignment": "center",
+      "callToActionMode": "none",
+      "blockClass": "contacts-banner"
+    }
+  },
+  // Container 1
+  "flex-layout.row#container1":{
+    "children": ["flex-layout.row#container1-linha1"],
+    "props": {
+      "blockClass": "contacts-container"
+    }
+  },
+  "flex-layout.row#container1-linha1": {
+    "children": [
+      "flex-layout.col#container1-linha1-col1", 
+      "flex-layout.col#container1-linha1-col2"
+    ],
+    "props": {
+      "marginTop": 10,
+      "marginBottom": 10,
+      "blockClass": "contacts-content"
+    }
+  },
+  "flex-layout.col#container1-linha1-col1": {
+    "children":["contactsform"],
+    "props": {
+      "width": "40%"
+    }
+  },
+  "flex-layout.col#container1-linha1-col2":{
+    "children": [
+      "flex-layout.row#container1-linha1-col2-linha1"
+    ],
+    "props": {
+      "width": "60%"
+    }
+  },
+  "flex-layout.row#container1-linha1-col2-linha1":{
+    "children": [
+      "flex-layout.col#container1-linha1-col2-saopaulo", 
+      "flex-layout.col#container1-linha1-col2-newyork", 
+      "flex-layout.col#container1-linha1-col2-barcelona"
+    ],
+    "props":{
+      "blockClass": "contacts-list-city-cards"
+    }
+  },
+  "flex-layout.col#container1-linha1-col2-saopaulo":{
+    "children": ["image#sao-paulo", "rich-text#sao-paulo", "rich-text#sao-paulo-description1", "rich-text#sao-paulo-description2"],
+    "props": {
+      "width": "31%",
+      "blockClass": "contacts-city-card"
+    }
+  },
+  "flex-layout.col#container1-linha1-col2-newyork": {
+    "children": ["image#new-york", "rich-text#new-york", "rich-text#new-york-description"],
+    "props": {
+      "width": "31%",
+      "blockClass": "contacts-city-card"
+    }
+  },
+  "flex-layout.col#container1-linha1-col2-barcelona": {
+    "children": ["image#barcelona", "rich-text#barcelona", "rich-text#barcelona-description"],
+    "props": {
+      "width": "31%",
+      "blockClass": "contacts-city-card"
+    }
+  },
+  "image#sao-paulo": {
+    "props": {
+      "src": "https://acct.global/wp-content/uploads/2020/10/contact-saopaulo.jpg",
+      "maxWidth": "100%",
+      "blockClass": "contacts-city-image"
+    }
+  },
+  "rich-text#sao-paulo": {
+    "props": {
+      "text": "São Paulo",
+      "blockClass": "contacts-city-title"
+    }
+  },
+  "rich-text#sao-paulo-description1": {
+    "props": {
+      "text": "Al. Professor Lucas Nogueira Garcez, 1395 Atibaia/SP",
+      "blockClass": "contacts-city-description"
+    }
+  },
+  "rich-text#sao-paulo-description2": {
+    "props": {
+      "text": "Av. das Nações Unidas, 11.857 - 8ºA - Brooklin São Paulo/SP",
+      "blockClass": "contacts-city-description"
+    }
+  },
+  "image#new-york": {
+    "props": {
+      "src": "https://acct.global/wp-content/uploads/2020/10/contact-newyork.jpg",
+      "maxWidth": "100%",
+      "blockClass": "contacts-city-image"
+    }
+  },
+  "rich-text#new-york": {
+    "props": {
+      "text": "Nova York",
+      "blockClass": "contacts-city-title"
+    }
+  },
+  "rich-text#new-york-description": {
+    "props": {
+      "text": "12 East 49th Street NY 10017",
+      "blockClass": "contacts-city-description"
+    }
+  },
+  "image#barcelona": {
+    "props": {
+      "src": "https://acct.global/wp-content/uploads/2020/10/contact-barcelona.jpg",
+      "maxWidth": "100%",
+      "blockClass": "contacts-city-image"
+    }
+  },
+  "rich-text#barcelona": {
+    "props": {
+      "text": "Barcelona",
+      "blockClass": "contacts-city-title"
+    }
+  },
+  "rich-text#barcelona-description": {
+    "props": {
+      "text": "Carrer Provença, 339 - 08037",
+      "blockClass": "contacts-city-description"
+    }
+  },
+  // Container 2
+  "flex-layout.row#container2":{
+    "children": [
+      "flex-layout.col#container2-col"
+    ],
+    "props": {
+      "blockClass": "contacts-container2"
+    }
+  },
+  "flex-layout.col#container2-col":{
+    "children": [
+      "rich-text#container2-title",
+      "flex-layout.row#container2-row"
+    ],
+    "props": {
+      "blockClass": "contacts-container2-col"
+    }
+  },
+  "rich-text#container2-title":{
+    "props":{
+      "text": "Operações Globais **|** Presença Local",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "font": "t-heading-3",
+      "blockClass": "contacts-container2-title"
+    }
+  },
+  "flex-layout.row#container2-row":{
+    "children": [
+      "flex-layout.col#container2-row-col1",
+      "flex-layout.col#container2-row-col2",
+      "image#container2-row-col3"
+    ],
+    "props":{
+      "blockClass": "contacts-content"
+    }
+  },
+  "flex-layout.col#container2-row-col1":{
+    "children": [
+      "rich-text#bloco3-lista1"
+    ],
+    "props":{
+      "width": "20%"
+    }
+  },
+  "flex-layout.col#container2-row-col2":{
+    "children": [
+      "rich-text#bloco3-lista2"
+    ],
+    "props":{
+      "width": "20%"
+    }
+  },
+  "rich-text#bloco3-lista1":{ // Deveria ser uma lista <ul><li>Brasil</ul></li>
+    "props":{
+      "text": "\n - Argentina \n - Brasil \n - Chile \n - Colômbia \n - EUA\n - France\n - Alemanha\n - Índia\n - Itália",
+      "blockClass": "contacts-country-list"
+    }
+  },
+  "rich-text#bloco3-lista2":{
+    "props":{
+      "text": "\n - México \n - Paraguai \n - Peru \n - Portugal \n - Romênia\n - Arábia Saudita\n - Coreia do Sul\n - Espanha\n - Reino Unido",
+      "blockClass": "contacts-country-list"
+    }
+  },
+  "image#container2-row-col3":{
+    "props": {
+      "src": "https://acct.global/wp-content/uploads/2020/10/bg-map-contact.png",
+      "maxWidth": "100%"
+    }
+  }
+}

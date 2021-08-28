@@ -1,0 +1,14 @@
+{
+  "store.home": { 
+    "blocks": [
+      "rich-text",
+      "slider-layout#home-infocards",
+      "rich-text#home1",
+      "rich-text#home2",
+      // "link#1",
+      "rich-text#home3",
+      "flex-layout.row#home1",
+      "flex-layout.row#testimonials"
+    ]
+  }
+}
