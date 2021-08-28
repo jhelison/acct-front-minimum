@@ -1,0 +1,9 @@
+/* Customização do link da apresentação da home page. */
+
+.link--presentation-button {
+    position: relative;
+    left: 635px;
+    top: -50px;
+}
+
+/* Customização do link da apresentação da home page. */

@@ -20,75 +20,7 @@
       "defaultOption": 1,
       "showPasswordVerificationIntoTooltip": true
     }
-  },
-
-  "product-summary.shelf": {
-    "children": [
-      "product-summary-image",
-      "product-summary-name",
-      "product-summary-price",
-      "add-to-cart-button#oneClick"
-    ]
-  },
-
-
-  "add-to-cart-button#oneClick": {
-    "props":{
-      "text":"Assinar",
-      "isOneClickBuy":true
-    }
-  },
-  
-  // teste flip
-  "product-summary.shelf#blublu": {
-    "props":{
-      "blockClass":"blublu"
-    },
-    "children": [
-      "flex-layout.row#blublu-0",
-      "flex-layout.row#blublu"
-    ]
-  },
-
-  "flex-layout.row#blublu-0":{
-    "children":[
-      "flex-layout.col#blublu"
-    ],
-    "props":{
-      "blockClass":"blublu-0"
-    }
-  },
-
-  "flex-layout.col#blublu":{
-    "children":[
-      "product-summary-image",
-      "product-summary-name",
-      "product-summary-price",
-      "add-to-cart-button#blublu"
-    ],
-    "props":{
-      "blockClass":"blublu"
-    }
-  },
-
-  "add-to-cart-button#blublu": {
-    "props":{
-      "isOneClickBuy":true
-    }
-
-  },
-
-  "flex-layout.row#blublu":{
-    "children":["product-description#blublu"],
-    "props":{
-      "blockClass":"blublu"
-    }
-  },
-
-  "product-description#blublu":{
-    "props":{
-      "collapseContent":false,
-      "showTitle":false
-    }
   }
+
+
 }
