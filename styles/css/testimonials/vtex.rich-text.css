@@ -1,0 +1,37 @@
+.wrapper--testimonial .paragraph {
+  width: 45rem;
+  color: #666;
+  text-align: justify;
+  font-weight: 100;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 24px;
+}
+
+.wrapper--title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #040404;
+  line-height: 1.4;
+}
+
+.wrapper--title .strong {
+  color: #fcc200;
+}
+
+.paragraph--name {
+  letter-spacing: 0;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  clear: none;
+  font-size: 15px;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+
+.paragraph--job {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #888;
+}
