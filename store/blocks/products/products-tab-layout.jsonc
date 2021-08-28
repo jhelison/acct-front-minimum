@@ -1,9 +1,6 @@
 {
-    "tab-layout#products" : {
-        "children": [
-            "tab-list#products",
-            "tab-content#products"
-        ],
+    "tab-layout#products": {
+        "children": ["tab-list#products", "tab-content#products"],
         "props": {
             "blockClass": "products",
             "defaultActiveTabId": "quality-assurance"
@@ -53,35 +50,35 @@
         ]
     },
     "tab-content.item#quality-assurance": {
-        "children": [
-            "rich-text#products-title"
-        ],
+        "children": ["rich-text#tab-content-title"],
         "props": {
             "tabId": "quality-assurance"
         }
     },
     "tab-content.item#data-growth": {
-        "children": [
-            "rich-text#products-title"
-        ],
+        "children": ["rich-text#tab-content-title"],
         "props": {
             "tabId": "data-growth"
         }
     },
     "tab-content.item#experience-design": {
-        "children": [
-            "rich-text#products-title"
-        ],
+        "children": ["rich-text#tab-content-title"],
         "props": {
             "tabId": "experience-design"
         }
     },
     "tab-content.item#tecnologia": {
-        "children": [
-            "rich-text#products-title"
-        ],
+        "children": ["rich-text#tab-content-title"],
         "props": {
             "tabId": "tecnologia"
+        }
+    },
+
+    "rich-text#tab-content-title": {
+        "props": {
+            "text": "Planos com descontos de até 20% na assinatura anual",
+            "textPosition": "CENTER",
+            "textAlignment": "CENTER"
         }
     }
 }
