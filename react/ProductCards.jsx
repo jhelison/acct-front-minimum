@@ -20,13 +20,13 @@ import { FiCommand } from "react-icons/fi"
 //         price: "349.99",
 //         Icon: FiActivity,
 const caracteristics = [
-            { label: "Estudo de Conversão", status: true },
-            { label: "Elaboração de Dashboard", status: false },
-            {
-                label: "Participações em discussões de estratégia",
-                status: false,
-        },
-            { label: "Configuração do Analytics", status: false },
+    { label: "Estudo de Conversão", status: true },
+    { label: "Elaboração de Dashboard", status: false },
+    {
+        label: "Participações em discussões de estratégia",
+        status: false,
+    },
+    { label: "Configuração do Analytics", status: false },
 ]
 //     {
 //         id: "2",
@@ -65,51 +65,54 @@ const caracteristics = [
 // ]
 
 const ProductCards = ({ categoryId }) => {
-    const [products, setProducts] = useState(null)
+    const [products, setProducts] = useState([])
 
-    useEffect(async () => {
+    useEffect(() => {
         getItems()
     }, [])
 
     const getItems = async () => {
-        const res = await fetch('/api/catalog_system/pub/products/search/')
+        const res = await fetch("/api/catalog_system/pub/products/search/")
         const resJson = await res.json()
 
-        if(resJson){
+        if (resJson) {
             const productsOnSection = filterItemsByCategory(resJson)
-
             setProducts(sortItemsByPrice(productsOnSection))
-
-
         }
     }
 
     const filterItemsByCategory = (items) => {
-        return items.filter(value => {
+        return items.filter((value) => {
             return value.categoryId === String(categoryId)
         })
     }
 
     const sortItemsByPrice = (items) => {
         return items.sort((a, b) => {
-            return a.items[0].sellers[0].commertialOffer.Price - b.items[0].sellers[0].commertialOffer.Price
+            return (
+                a.items[0].sellers[0].commertialOffer.Price -
+                b.items[0].sellers[0].commertialOffer.Price
+            )
         })
     }
 
     const renderProducts = () => {
-        if(products){
-            return (
-                products.map((product) => {
-                    return <ProductCard key={product.productId}
-                    title={product.productName}
-                    description={product.description}
-                    price={product.items[0].sellers[0].commertialOffer.Price}
-                    caracteristics={caracteristics}
-                    img={product.items[0].images[0]}
-                    toCartLink={product.items[0].sellers[0].addToCartLink}
+        if (products) {
+            return products.map((product) => {
+                return (
+                    <ProductCard
+                        key={product.productId}
+                        title={product.productName}
+                        description={product.description}
+                        price={
+                            product.items[0].sellers[0].commertialOffer.Price
+                        }
+                        caracteristics={caracteristics}
+                        img={product.items[0].images[0]}
+                        toCartLink={product.items[0].sellers[0].addToCartLink}
                     />
-                })
-            )
+                )
+            })
         }
     }
 
@@ -126,7 +129,15 @@ const ProductCards = ({ categoryId }) => {
     )
 }
 
-const ProductCard = ({ title, description, price, caracteristics, img, key, toCartLink }) => {
+const ProductCard = ({
+    title,
+    description,
+    price,
+    caracteristics,
+    img,
+    key,
+    toCartLink,
+}) => {
     return (
         <div
             key={key}
@@ -182,7 +193,7 @@ const ProductCard = ({ title, description, price, caracteristics, img, key, toCa
                     cStyles.mt20,
                     cStyles.mb40,
                     cStyles.dFlex,
-                    cStyles.flexCenter
+                    cStyles.flexCenter,
                 ])}
                 href={toCartLink}
             >
@@ -210,7 +221,7 @@ const ProductCard = ({ title, description, price, caracteristics, img, key, toCa
     )
 }
 
-const ProductCaracteristic = ({ label, status, index }) => {
+const ProductCaracteristic = ({ label, status, key }) => {
     const getIcon = () => {
         const baseSize = 20
         return status ? (
@@ -221,16 +232,14 @@ const ProductCaracteristic = ({ label, status, index }) => {
     }
 
     return (
-        <div className={styles.caracContainer}>
+        <div className={styles.caracContainer} key={key}>
             <div className={join([cStyles.dFlex, cStyles.alignCenter])}>
                 <FiAlertCircle className={cStyles.colorDarkGray} />
             </div>
             <div className={join([cStyles.dFlex, cStyles.alignCenter])}>
                 <span className={cStyles.colorDarkGray}>{label}</span>
             </div>
-            <div
-                className={join([cStyles.dFlex, cStyles.flexCenter])}
-            >
+            <div className={join([cStyles.dFlex, cStyles.flexCenter])}>
                 {getIcon()}
             </div>
         </div>

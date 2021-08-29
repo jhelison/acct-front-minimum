@@ -3,13 +3,13 @@
         "children": ["tab-list#products", "tab-content#products"],
         "props": {
             "blockClass": "products",
-            "defaultActiveTabId": "quality-assurance"
+            "defaultActiveTabId": "data-growth"
         }
     },
     "tab-list#products": {
         "children": [
-            "tab-list.item#quality-assurance",
             "tab-list.item#data-growth",
+            "tab-list.item#quality-assurance",
             "tab-list.item#experience-design",
             "tab-list.item#tecnologia"
         ]
@@ -43,32 +43,32 @@
 
     "tab-content#products": {
         "children": [
-            "tab-content.item#quality-assurance",
             "tab-content.item#data-growth",
+            "tab-content.item#quality-assurance",
             "tab-content.item#experience-design",
             "tab-content.item#tecnologia"
         ]
     },
-    "tab-content.item#quality-assurance": {
-        "children": ["rich-text#tab-content-title", "flex-layout.row#tab-content-items"],
-        "props": {
-            "tabId": "quality-assurance"
-        }
-    },
     "tab-content.item#data-growth": {
-        "children": ["rich-text#tab-content-title"],
+        "children": ["rich-text#tab-content-title", "flex-layout.row#tab-content-items-growth"],
         "props": {
             "tabId": "data-growth"
         }
     },
+    "tab-content.item#quality-assurance": {
+        "children": ["rich-text#tab-content-title", "flex-layout.row#tab-content-items-quality-assurance"],
+        "props": {
+            "tabId": "quality-assurance"
+        }
+    },
     "tab-content.item#experience-design": {
-        "children": ["rich-text#tab-content-title"],
+        "children": [],
         "props": {
             "tabId": "experience-design"
         }
     },
     "tab-content.item#tecnologia": {
-        "children": ["rich-text#tab-content-title"],
+        "children": [],
         "props": {
             "tabId": "tecnologia"
         }
@@ -82,7 +82,7 @@
         }
     },
 
-    "flex-layout.row#tab-content-items": {
+    "flex-layout.row#tab-content-items-growth": {
         "children": [
             "product-cards#growth"
         ]
@@ -91,7 +91,17 @@
         "props":{
             "categoryId": 3
         }
+    },
+
+    "flex-layout.row#tab-content-items-quality-assurance": {
+        "children": [
+            "product-cards#quality-assurance"
+        ]
+    },
+    "product-cards#quality-assurance": {
+        "props":{
+            "categoryId": 4
+        }
     }
-    
 
 }
