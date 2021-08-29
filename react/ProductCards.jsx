@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import styles from "./ProductCards.css"
 import cStyles from "./CommonStyles.css"
 
@@ -12,65 +12,106 @@ import { FiActivity } from "react-icons/fi"
 import { FiCloudDrizzle } from "react-icons/fi"
 import { FiCommand } from "react-icons/fi"
 
-const testData = [
-    {
-        id: "1",
-        title: "CRO",
-        description: "Data Analytics com foco em CRO",
-        price: "349.99",
-        Icon: FiActivity,
-        caracteristics: [
+// const testData = [
+//     {
+//         id: "1",
+//         title: "CRO",
+//         description: "Data Analytics com foco em CRO",
+//         price: "349.99",
+//         Icon: FiActivity,
+const caracteristics = [
             { label: "Estudo de Conversão", status: true },
             { label: "Elaboração de Dashboard", status: false },
             {
                 label: "Participações em discussões de estratégia",
                 status: false,
-            },
+        },
             { label: "Configuração do Analytics", status: false },
-        ],
-    },
-    {
-        id: "2",
-        title: "GOLIVE",
-        description:
-            "Acompanhar os principais ofensores e oportunidades do Funil",
-        price: "549.99",
-        Icon: FiCloudDrizzle,
-        caracteristics: [
-            { label: "Estudo de Conversão", status: true },
-            { label: "Elaboração de Dashboard", status: true },
-            {
-                label: "Participações em discussões de estratégia",
-                status: false,
-            },
-            { label: "Configuração do Analytics", status: true },
-        ],
-    },
-    {
-        id: "3",
-        title: "TESTE AB",
-        description:
-            "Realizar Testes entre Layouts, Versões de Site, Landing Pages",
-        price: "1099.99",
-        Icon: FiCommand,
-        caracteristics: [
-            { label: "Estudo de Conversão", status: true },
-            { label: "Elaboração de Dashboard", status: true },
-            {
-                label: "Participações em discussões de estratégia",
-                status: true,
-            },
-            { label: "Configuração do Analytics", status: true },
-        ],
-    },
 ]
+//     {
+//         id: "2",
+//         title: "GOLIVE",
+//         description:
+//             "Acompanhar os principais ofensores e oportunidades do Funil",
+//         price: "549.99",
+//         Icon: FiCloudDrizzle,
+//         caracteristics: [
+//             { label: "Estudo de Conversão", status: true },
+//             { label: "Elaboração de Dashboard", status: true },
+//             {
+//                 label: "Participações em discussões de estratégia",
+//                 status: false,
+//             },
+//             { label: "Configuração do Analytics", status: true },
+//         ],
+//     },
+//     {
+//         id: "3",
+//         title: "TESTE AB",
+//         description:
+//             "Realizar Testes entre Layouts, Versões de Site, Landing Pages",
+//         price: "1099.99",
+//         Icon: FiCommand,
+//         caracteristics: [
+//             { label: "Estudo de Conversão", status: true },
+//             { label: "Elaboração de Dashboard", status: true },
+//             {
+//                 label: "Participações em discussões de estratégia",
+//                 status: true,
+//             },
+//             { label: "Configuração do Analytics", status: true },
+//         ],
+//     },
+// ]
 
-const ProductCards = (props) => {
+const ProductCards = ({ categoryId }) => {
+    const [products, setProducts] = useState(null)
 
-    useEffect(() => {
-        // fetch('/api/catalog_system/pub/products/search/').then(response => console.log(response)).then(data => console.log(data))
-        fetch('/api/catalog/pvt/category/1').then(response => console.log(response)).then(data => console.log(data))
+    useEffect(async () => {
+        getItems()
     }, [])
+
+    const getItems = async () => {
+        const res = await fetch('/api/catalog_system/pub/products/search/')
+        const resJson = await res.json()
+
+        if(resJson){
+            const productsOnSection = filterItemsByCategory(resJson)
+
+            setProducts(sortItemsByPrice(productsOnSection))
+
+
+        }
+    }
+
+    const filterItemsByCategory = (items) => {
+        return items.filter(value => {
+            return value.categoryId === String(categoryId)
+        })
+    }
+
+    const sortItemsByPrice = (items) => {
+        return items.sort((a, b) => {
+            return a.items[0].sellers[0].commertialOffer.Price - b.items[0].sellers[0].commertialOffer.Price
+        })
+    }
+
+    const renderProducts = () => {
+        if(products){
+            return (
+                products.map((product) => {
+                    return <ProductCard key={product.productId}
+                    title={product.productName}
+                    description={product.description}
+                    price={product.items[0].sellers[0].commertialOffer.Price}
+                    caracteristics={caracteristics}
+                    img={product.items[0].images[0]}
+                    toCartLink={product.items[0].sellers[0].addToCartLink}
+                    />
+                })
+            )
+        }
+    }
 
     return (
         <div
@@ -80,17 +121,15 @@ const ProductCards = (props) => {
                 cStyles.flexCenter,
             ])}
         >
-            {testData.map((item) => {
-                return <ProductCard {...item} key={item.id} />
-            })}
+            {renderProducts()}
         </div>
     )
 }
 
-const ProductCard = ({ title, description, price, caracteristics, Icon, id }) => {
+const ProductCard = ({ title, description, price, caracteristics, img, key, toCartLink }) => {
     return (
         <div
-            key={id}
+            key={key}
             className={join([
                 styles.productCard,
                 cStyles.dFlex,
@@ -98,9 +137,10 @@ const ProductCard = ({ title, description, price, caracteristics, Icon, id }) =>
                 cStyles.bgWhite,
             ])}
         >
-            <Icon
-                className={join([cStyles.mb20, cStyles.colorYellow])}
-                size={60}
+            <img
+                src={img.imageUrl}
+                alt={img.imageLabel}
+                className={styles.imgIcon}
             />
             <h2>{title}</h2>
             <div
@@ -124,7 +164,7 @@ const ProductCard = ({ title, description, price, caracteristics, Icon, id }) =>
                 A partir de
             </span>
             <label className={join([cStyles.colorYellow, cStyles.textCenter])}>
-                R$ <b className={cStyles.bigText}>{price}</b>
+                R$ <b className={cStyles.bigText}>{price.toFixed(2)}</b>
             </label>
             <span
                 className={join([
@@ -135,16 +175,19 @@ const ProductCard = ({ title, description, price, caracteristics, Icon, id }) =>
             >
                 Por mês
             </span>
-            <button
+            <a
                 className={join([
                     styles.productCardBuyButton,
                     cStyles.bgYellow,
                     cStyles.mt20,
                     cStyles.mb40,
+                    cStyles.dFlex,
+                    cStyles.flexCenter
                 ])}
+                href={toCartLink}
             >
                 Assinar
-            </button>
+            </a>
             <span
                 className={join([
                     cStyles.selfFlexStart,
@@ -157,6 +200,7 @@ const ProductCard = ({ title, description, price, caracteristics, Icon, id }) =>
             {caracteristics.map((item) => {
                 return (
                     <ProductCaracteristic
+                        key={item.label}
                         label={item.label}
                         status={item.status}
                     />
@@ -166,7 +210,7 @@ const ProductCard = ({ title, description, price, caracteristics, Icon, id }) =>
     )
 }
 
-const ProductCaracteristic = ({ label, status }) => {
+const ProductCaracteristic = ({ label, status, index }) => {
     const getIcon = () => {
         const baseSize = 20
         return status ? (

@@ -84,7 +84,14 @@
 
     "flex-layout.row#tab-content-items": {
         "children": [
-            "product-cards"
+            "product-cards#growth"
         ]
+    },
+    "product-cards#growth": {
+        "props":{
+            "categoryId": 3
+        }
     }
+    
+
 }

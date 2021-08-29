@@ -20,6 +20,7 @@
     border: none;
     text-decoration: none;
     cursor: pointer;
+    color: black;
 }
 .productCardBuyButton:hover {
     filter: brightness(.9);
@@ -33,4 +34,11 @@
     height: 60px;
     display: grid;
     grid-template-columns: 1fr 4fr 2fr;
+}
+
+.imgIcon {
+    width: auto;
+    height: 100px;
+    transform: translateZ(0);
+    filter: invert(74%) sepia(96%) saturate(2102%) hue-rotate(3deg) brightness(105%) contrast(104%);
 }
