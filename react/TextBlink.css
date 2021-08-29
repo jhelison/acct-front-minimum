@@ -1,0 +1,27 @@
+.title {
+    font-size: 36px;
+    text-align: left;
+    text-transform: uppercase;
+    color: black;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+}
+
+.blink{
+    color: #fcc200;
+    margin: 0 0 0 -5px;
+    display: inline-block;
+    font-size: 36px;
+    animation: blink-animation 1.5s steps(3, start) infinite;
+    -webkit-animation: blink-animation 1.5s steps(3, start) infinite;
+  }
+  @keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }

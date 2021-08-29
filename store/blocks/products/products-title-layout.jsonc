@@ -6,16 +6,16 @@
     },
     "flex-layout.col#products-title-layout": {
         "children": [
-          "rich-text#products-title",
+          "text-blink",
           "rich-text#products-subtitle"
         ]
       },
-     "rich-text#products-title": {
+     "text-blink": {
         "props": {
           "text":
-          "## Planos e preços",
-          "textPosition": "CENTER",
-          "textAlignment": "CENTER"
+          "Planos e preços",
+          "textAlign":
+          "center"
         }
       },
       "rich-text#products-subtitle": {
