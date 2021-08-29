@@ -8,7 +8,8 @@
       // "link#1",
       "rich-text#home3",
       "slider-layout-group#trustedBy",
-      "flex-layout.row#testimonials"
+      "flex-layout.row#testimonials",
+      "leadsForm"
     ]
   },
   "stack-layout#home-infocards":{
