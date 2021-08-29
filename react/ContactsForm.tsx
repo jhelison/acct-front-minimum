@@ -11,31 +11,31 @@ const ContactsForm = () => {
 
           <div className={styleModule.row}>
             <div className={styleModule.half}>
-              <label className={styleModule.contactsLabel}>Nome*</label>
+              <label className={styleModule.contactsLabel}>Nome<span>*</span></label>
               <input className={styleModule.contactsFormInput} type="text"/>
             </div>
 
             <div className={styleModule.half}>
-              <label className={styleModule.contactsLabel}>E-mail*</label>
-              <input className={styleModule.contactsFormInput} type="text"/>
-            </div>
-          </div>
-
-          <div className={styleModule.row}>
-            <div className={styleModule.half}>
-              <label className={styleModule.contactsLabel}>Telefone*</label>
-              <input className={styleModule.contactsFormInput} type="text"/>
-            </div>
-
-            <div className={styleModule.half}>
-              <label className={styleModule.contactsLabel}>País*</label>
+              <label className={styleModule.contactsLabel}>E-mail<span>*</span></label>
               <input className={styleModule.contactsFormInput} type="text"/>
             </div>
           </div>
 
           <div className={styleModule.row}>
             <div className={styleModule.half}>
-              <label className={styleModule.contactsLabel}>Empresa*</label>
+              <label className={styleModule.contactsLabel}>Telefone<span>*</span></label>
+              <input className={styleModule.contactsFormInput} type="text"/>
+            </div>
+
+            <div className={styleModule.half}>
+              <label className={styleModule.contactsLabel}>País<span>*</span></label>
+              <input className={styleModule.contactsFormInput} type="text"/>
+            </div>
+          </div>
+
+          <div className={styleModule.row}>
+            <div className={styleModule.half}>
+              <label className={styleModule.contactsLabel}>Empresa<span>*</span></label>
               <input className={styleModule.contactsFormInput} type="text"/>
             </div>
 
@@ -58,10 +58,10 @@ const ContactsForm = () => {
           </div>
           
           <div className={styleModule.row}>
-            <label className={styleModule.contactsLabel}>Como podemos ajudar?</label>
-          </div>
-          <div className={styleModule.row}>
-            <textarea className={styleModule.contactsFormTextarea}/>
+            <div className={styleModule.rowFull}>
+              <label className={styleModule.contactsLabel}>Como podemos ajudar?<span>*</span></label>
+              <textarea className={styleModule.contactsFormTextarea}/>
+            </div>
           </div>
 
           <div className={styleModule.row}>
