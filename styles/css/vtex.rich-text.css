@@ -79,7 +79,7 @@
 
 /* ------ Contacts Page ------ */
 
-.container--contacts-city-title {
+.paragraph--contacts-city-title {
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: bold;
     font-size: 24px;
@@ -88,15 +88,16 @@
     height: auto;
 }
 
-.container--contacts-city-description {
+.paragraph--contacts-city-description {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.5;
     padding-right: 15px;
 }
 
-.container--contacts-container2-title {
+.paragraph--contacts-container2-title {
     font-size: 2rem;
     line-height: 1.4;
+    margin-top: 0;
     margin-bottom: 50px;
     color: #040404;
     font-family: 'Open Sans Condensed';

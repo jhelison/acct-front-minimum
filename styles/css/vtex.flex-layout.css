@@ -1,31 +1,36 @@
 /* ------ Contacts Page ------ */
 
-.flexRow--contacts-container {
-    width: 100%;
-    align-items: center;
-}
-
-.flexRow--contacts-content {
-    max-width: 1300px;
-    align-items: center;
-}
-
-.flexRowContent--contacts-content {
-    align-items: center;
-    padding: 50px 0;
-}
-
-.flexRow--contacts-list-city-cards {
-    margin-left: 50px;
-}
-
 .flexRowContent--contacts-list-city-cards {
     justify-content: space-between;
+    padding: 0 24px;
 }
 
 .flexCol--contacts-city-card {
     align-items: left;
     height: min-content;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.flexColChild--contacts-city-card:first-child {
+    border-bottom: 10px solid #fcc200;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.flexCol--contacts-city-card :global(.vtex-store-components-3-x-imageElement) {
+    height: 300px;
+    width: 100%;
+    transition: all ease 200ms;
+    object-fit: cover;
+}
+
+.flexCol--contacts-city-card:hover :global(.vtex-store-components-3-x-imageElement) {
+    transform: scale(1.2);
+}
+
+.flexCol--contacts-city-card :global(.vtex-rich-text-0-x-paragraph--contacts-city-title) {
+    margin: 0;
 }
 
 .flexRow--contacts-container2 {
@@ -33,16 +38,47 @@
 }
 
 .flexRow--contacts-container2 {
-    padding: 150px 0;
+    padding: 0 24px;
 }
 
 .flexCol--contacts-container2-col {
     align-items: center;
     width: 1300px;
+    padding: 70px 0;
 }
 
 .flexRowContent--contacts-container2-row {
     align-items: center;
+}
+
+.flexCol--contacts-container2-col :global(.vtex-store-components-3-x-imageElement) {
+    object-fit: contain;
+}
+
+
+
+@media(min-width: 800px) {
+    .flexRowContent--contacts-list-city-cards, .flexRow--contacts-container2 {
+      padding: 0 48px;
+    }
+}
+
+@media(min-width: 1024px) {
+    .flexRowContent--contacts-list-city-cards, .flexRow--contacts-container2 {
+    padding: 0 150px;
+    }
+}
+
+@media(min-width: 1250px) {
+    .flexRowContent--contacts-list-city-cards, .flexRow--contacts-container2 {
+    padding: 0 240px;
+    }
+}
+
+@media(min-width: 1440px) {
+    .flexRowContent--contacts-list-city-cards, .flexRow--contacts-container2 {
+    padding: 0 calc((100% - 850px)/2);;
+    }
 }
 
 /* ------ Testimonials ------ */
@@ -55,13 +91,14 @@
     height: auto !important;
 }
 
-.stretchChildrenWidth {
+.flexColChild--nameAndJob .stretchChildrenWidth {
     padding-right: 0;
     margin-right: 0;
     margin-right: 25px;
 }
 
 .flexRow--rowTestimonials {
+    margin-top: 50px;
     padding: 60px 24px;
     background-color: #f1f1f1;
 }

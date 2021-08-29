@@ -3,7 +3,8 @@
   "store.custom#contacts":{
     "blocks": [
       "banner",
-      "flex-layout.row#container1",
+      "contactsform", 
+      "flex-layout.row#containerCities",
       "flex-layout.row#container2"
     ]
   },
@@ -26,45 +27,15 @@
     }
   },
   // Container 1
-  "flex-layout.row#container1":{
-    "children": ["flex-layout.row#container1-linha1"],
-    "props": {
-      "blockClass": "contacts-container"
-    }
-  },
-  "flex-layout.row#container1-linha1": {
-    "children": [
-      "flex-layout.col#container1-linha1-col1", 
-      "flex-layout.col#container1-linha1-col2"
-    ],
-    "props": {
-      "marginTop": 10,
-      "marginBottom": 10,
-      "blockClass": "contacts-content"
-    }
-  },
-  "flex-layout.col#container1-linha1-col1": {
-    "children":["contactsform"],
-    "props": {
-      "width": "40%"
-    }
-  },
-  "flex-layout.col#container1-linha1-col2":{
-    "children": [
-      "flex-layout.row#container1-linha1-col2-linha1"
-    ],
-    "props": {
-      "width": "60%"
-    }
-  },
-  "flex-layout.row#container1-linha1-col2-linha1":{
+  "flex-layout.row#containerCities":{
     "children": [
       "flex-layout.col#container1-linha1-col2-saopaulo", 
       "flex-layout.col#container1-linha1-col2-newyork", 
       "flex-layout.col#container1-linha1-col2-barcelona"
     ],
     "props":{
-      "blockClass": "contacts-list-city-cards"
+      "blockClass": "contacts-list-city-cards",
+      "padding": 0
     }
   },
   "flex-layout.col#container1-linha1-col2-saopaulo":{

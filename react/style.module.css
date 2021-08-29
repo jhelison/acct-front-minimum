@@ -1,22 +1,19 @@
-/* -------------------- Banner --------------------*/
+/* ------ Banner ------ */
+
 .contactsContainerBanner{
   display: flex;
   width: 100%;
   justify-content: center;
-  /* background-image: url("https://dev-acct.pantheonsite.io/wp-content/uploads/2020/10/cover-contact.jpg"); */
   background-position: center center;
   background-size: cover;
   padding: 6rem 0rem 6rem 0rem;
 }
 
 .contactsContentBanner{
-  display: flex;
-  max-width: 1300px;
+  padding: 0 24px;
 }
 
 .contactsBannerTitle{
-  /* width: 100%; */
-  width: 1300px;
   font-size: 36px;
   text-align: left;
   text-transform: uppercase;
@@ -42,9 +39,47 @@
     visibility: hidden;
   }
 }
-/* -------------------- Banner --------------------*/
-/* -------------------- Formulário --------------------*/
-.contacts-container{
+
+@media(min-width: 800px) {
+  .contactsContentBanner{
+    padding-left: 48px;
+  }
+  .contactsContainerBanner{
+    justify-content: initial;
+  }
+}
+
+
+@media(min-width: 1024px) {
+  .contactsContentBanner{
+    padding-left: 150px;
+  }
+}
+
+
+@media(min-width: 1250px) {
+  .contactsContentBanner{
+    padding-left: 240px;
+  }
+}
+
+@media(min-width: 1440px) {
+  .contactsContentBanner{
+    padding-left: calc((100% - 850px)/2);;
+  }
+}
+
+/* ------ Formulário ------ */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 40px 0 80px;
+  padding: 0 24px;
+}
+
+.form .contacts-container{
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -53,20 +88,15 @@
   font-weight: 400;
 }
 
-.contacts-content{
+.form .contacts-content{
   padding: 6rem 0;
   display: flex;
   width: 1140px;
   justify-content: space-between;
 }
 
-.form{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
 
-.contactsFormTitle{
+.form .contactsFormTitle{
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 24px;
   font-weight: bold;
@@ -74,23 +104,21 @@
   margin: 12px 0 24px;
 }
 
-.row{
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-between;
-}
-
-.half{
+.form .half{
   display: flex;
   flex-direction: column;
-  width: 48.93617%;
+  margin-bottom: 10px;
 }
 
 .contactsLabel{
   color: #292929;
   margin-bottom: 5px;
   line-height: 1.2;
+  display: inline-block;
+}
+
+.contactsLabel span {
+  color: #5974c7;
 }
 
 .contactsFormInput, .contactsFormTextarea{
@@ -103,6 +131,7 @@
   font: inherit;
   box-sizing: inherit;
 }
+
 .contactsFormTextarea{
   padding: 0.375rem 0.375rem;
   min-height: 5rem;
@@ -112,17 +141,68 @@
 
 .contactsFormSubmit{
   font-size: 110%;
-  font-weight: bold;
+  font-weight: 500;
+  font-family: "Open Sans Condensed", sans-serif;
 
-  padding: 5px 19px !important;
-  background: transparent !important;
-  border: 2px solid #5974c7 !important;
-  margin-top: 10px !important;
-  color: #5974c7 !important;
-  text-transform: uppercase !important;
-  width: auto !important;
+  padding: 5px 19px;
+  background: transparent;
+  border: 2px solid #5974c7;
+  margin-top: 10px;
+  color: #5974c7;
+  text-transform: uppercase;
+  width: auto;
+  transition: all ease 200ms;
+  cursor: pointer;
 }
-/* -------------------- Formulário --------------------*/
+
+.contactsFormSubmit:hover{
+  background-color: #5974c7;
+  color: #fff;
+}
+
+@media(min-width: 600px) {
+  .form .row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .form .half{
+    display: flex;
+    flex-direction: column;
+    width: 48.93617%;
+  }
+  .form .rowFull {
+    width: 100%;
+  }
+}
+
+
+@media(min-width: 800px) {
+  .form {
+    padding: 0 48px;
+  }
+}
+
+
+@media(min-width: 1024px) {
+  .form {
+    padding: 0 150px;
+  }
+}
+
+
+@media(min-width: 1250px) {
+  .form {
+    padding: 0 240px;
+  }
+}
+
+@media(min-width: 1440px) {
+  .form {
+    padding: 0 calc((100% - 850px)/2);;
+  }
+}
 
 /* --------------------Formulário de Leads --------------------*/
 .leadsForm {
@@ -187,19 +267,11 @@
 
 .servicesContainer {
   margin: 30px auto 80px;
-  height: 250px;
 }
 
 .servicesContainer .serviceItem {
   position: relative;
-}
-
-.servicesContainer .serviceItem:hover .serviceTitle {
-  display: none;
-}
-
-.servicesContainer .serviceItem:hover img {
-  filter: brightness(0.4);
+  height: 250px;
 }
 
 .servicesContainer .serviceItem img {
@@ -207,7 +279,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.8);
+  filter: brightness(0.4);
 }
 
 .servicesContainer .serviceContent {
@@ -222,6 +294,7 @@
   z-index: 1;
   top: 40%;
   left: 50%;
+  display: none;
   position: absolute;
   color: #fff;
   text-align: center;
@@ -238,7 +311,7 @@
 }
 
 .servicesContainer .serviceItem .serviceContent {
-  opacity: 0;
+  opacity: 1;
   max-width: 350px;
   margin: 0 auto;
   transition: all 100ms ease;
@@ -252,20 +325,35 @@
   .servicesContainer {
     display: flex;
     flex-wrap: wrap;
-    height: 280px;
   }
   .servicesContainer .serviceItem {
-    height: 100%;
+    height: 280px;
     width: 50%;
     min-width: 50%;
     transition: all linear 150ms 50ms;
+  }
+  .servicesContainer .serviceItem .serviceTitle {
+    display: initial;
+  }
+  .servicesContainer .serviceItem:hover .serviceTitle {
+    display: none;
+  }
+  .servicesContainer .serviceItem .serviceContent {
+    opacity: 0;
+  }
+  .servicesContainer .serviceItem:hover .serviceContent {
+    opacity: 1;
+  }
+  .servicesContainer .serviceItem img {
+    filter: initial;
+  }
+  .servicesContainer .serviceItem:hover img {
+    filter: brightness(0.4);
   }
 }
 
 @media(min-width: 1024px) {
   .servicesContainer {
-    display: flex;
-    height: 280px;
     max-width: 1000px;
   }
 
