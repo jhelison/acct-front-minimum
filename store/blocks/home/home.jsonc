@@ -6,6 +6,7 @@
       "rich-text#home2",
       "flex-layout.row#oneClick",
       // "link#1",
+      "flex-layout.row#cases",
       "rich-text#home3",
       "slider-layout-group#trustedBy",
       "flex-layout.row#testimonials"

@@ -107,6 +107,7 @@
 
 /* ----------------- contacts page -----------------*/
 
+.wrapper--trust .paragraph,
 .wrapper--testimonial .paragraph {
     width: 45rem;
     color: #666;

@@ -144,6 +144,26 @@
         }
     },
 
+
+    "slider-layout#cases":{
+      "children":[
+        "flex-layout.col#case1",
+        "flex-layout.col#case2",
+        "flex-layout.col#case3",
+        "flex-layout.col#case4"
+      ],
+      "props":{
+        "itemsPerPage": {
+          "desktop": 4,
+          "tablet": 3,
+          "phone": 1
+          },
+          "showNavigationArrows": "always",
+          "showPaginationDots": "mobileOnly",
+          "blockClass": "rowCases"
+  
+      }
+    },
   /*
     Criação de um slider-layout para exibição de vários depoimentos na
     mesma página.
