@@ -38,7 +38,7 @@
             "textAlignment": "CENTER",
             "textPosition": "CENTER",
             "textMode": "html",
-            "text": "Trusted by_",
+            "text": "Trusted by**_**",
             "blockClass": "trust"
         }
     },

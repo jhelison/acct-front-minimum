@@ -1,5 +1,7 @@
 .stackItem--oneClick {
     width: 100%;
+    top: auto;
+    bottom: 5%;
 }
 
 .stackItem--infocardCurve {

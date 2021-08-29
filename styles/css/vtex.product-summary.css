@@ -17,9 +17,9 @@
 
 .element--oneClick .nameContainer,
 .element--oneClick .priceContainer {
-    bottom: 0;
     color: white;
     margin: 3%;
+    padding: 0;
 }
 
 .element--oneClick .image {
