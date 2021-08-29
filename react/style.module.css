@@ -124,6 +124,60 @@
 }
 /* -------------------- Formulário --------------------*/
 
+/* --------------------Formulário de Leads --------------------*/
+.leadsForm {
+  font-family: 'Open Sans Condensed', sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  align-items: center;
+}
+
+.leadsFormTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #040404;
+  margin: 12px 0 24px;
+}
+
+.leadsHalf {
+  margin-bottom: 1rem;
+}
+
+.leadsFormInput {
+  text-align: center;
+  width: 25rem;
+  background: #fff;
+  border: none;
+  border-bottom: 1px solid #040404;
+}
+
+.leadsFormInput:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+.leadsFormSubmit {
+  font: inherit;
+  font-size: 110%;
+  font-weight: bold;
+
+  padding: 5px 19px !important;
+  border: 2px solid #5974c7 !important;
+  margin-top: 10px !important;
+  margin-bottom: 10px;
+  background: #fff !important;
+  color: #5974c7 !important;
+  text-transform: capitalize !important;
+  width: auto !important;
+  cursor: pointer !important;
+}
+
+.leadsFormSubmit:hover {
+  color: #fff !important;
+  background: #5974c7 !important;
+}
+
 /* ------ Services ------*/
 
 .services {
