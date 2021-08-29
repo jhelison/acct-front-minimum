@@ -6,4 +6,7 @@
 
 .sliderLayoutContainer--oneClick {
     max-width: 960px;
+  
+.sliderArrows--trustedBy {
+    top: 0;
 }

@@ -1,4 +1,11 @@
 {
+  
+  "image#infocard-curve":{
+    "props":{
+      "src":"assets/infocard-curve.svg",
+      "blockClass":"infocardCurve"
+    }
+  },
     /* Flex layout na home page com imagens de logos de marcas importantes. */
     "flex-layout.row#home1": {
         "props": {
