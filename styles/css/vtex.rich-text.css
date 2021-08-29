@@ -6,10 +6,6 @@
 
 .paragraph--presentation1 {
     font-size: 32px;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 175%;
-    font-style: normal;
-    text-decoration: none;
     text-align: center;
     font-weight: 700;
     color: #040404;
@@ -27,14 +23,6 @@
     font-weight: 700;
     line-height: 1.25;
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 125%;
-    font-style: normal;
-    text-decoration: none;
-    text-align: center;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    font-weight: 500;
     color: #040404;
 }
 
@@ -51,6 +39,11 @@
     color: #040404;
 }
 
+.strong--presentation1,
+.strong--trust,
+.strong--title {
+    color: #fcc200;
+}
 
 @media(min-width: 800px) {
     .container--presentation1,.container--presentation2 {
@@ -67,11 +60,6 @@
         padding-left: 150px;
         padding-right: 150px;
     }
-}
-.strong--presentation1,
-.strong--trust,
-.strong--title {
-    color: #fcc200;
 }
 
 
