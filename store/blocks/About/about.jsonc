@@ -102,7 +102,7 @@
   "rich-text#about-container2-title":{
     "props":{
       "text": "Por que a ACCT?**_**",
-      "blockClass": "about-container1-title"
+      "blockClass": "about-container1-title2"
     }
   },
   "flex-layout.row#about-container2-row":{
@@ -237,7 +237,7 @@
   "rich-text#about-container3-title":{
     "props":{
       "text": "Trusted by**_**",
-      "blockClass": "about-container1-title"
+      "blockClass": "about-container1-title2"
     }
   },
   "flex-layout.row#about-container3-row":{

@@ -77,7 +77,6 @@
 /* ----------------- testmonials -----------------*/
 
 /* ----------------- about page -----------------*/
-
 .flexCol--about-container1-col{
     align-items: center;
     width: 100%;
@@ -86,17 +85,16 @@
 
 .flexColChild--about-container1-col{
     width: 100%;
-
 }
 
 .flexCol--about-container3-col{
     align-items: center;
-
     justify-content: center;
 }
 
 .flexRow--about-container1-row{
     width: 100%;
+    margin-bottom: 50px;
 }
 
 .flexRowContent--about-container1-row{
@@ -105,7 +103,13 @@
 
 .flexCol--about-container2-row-col{
     float: left;
-    margin-left: 20px;
+    margin: 20px 0 0 20px;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.flexCol--about-container2-row-col:hover{
+    -webkit-transform: scale(0.9, 0.9);
+    transform: scale(0.9, 0.9);
 }
 
 .flexColChild--about-container2-row-col{
