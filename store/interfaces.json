@@ -4,5 +4,8 @@
   },
   "banner": {
     "component": "Banner"
+  },
+  "leadsForm": {
+    "component": "LeadsForm"
   }
 }
