@@ -1,3 +1,10 @@
 .stackItem--oneClick {
     width: 100%;
 }
+
+.stackItem--infocardCurve {
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    top: auto;
+}

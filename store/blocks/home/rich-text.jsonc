@@ -5,7 +5,7 @@
             "textAlignment": "CENTER",
             "textPosition": "CENTER",
             "textMode": "html",
-            "text": "Buscamos constantemente a liderança global\n quando se trata de soluções para comércio digital.",
+            "text": "Buscamos constantemente a **liderança global**\n quando se trata de **soluções para comércio digital.**",
             "textColor": "black",
             "font": "t-heading-5",
             "blockClass": "presentation1"
@@ -16,7 +16,7 @@
             "textAlignment": "CENTER",
             "textPosition": "CENTER",
             "textMode": "html",
-            "text": "Quando o assunto é e-commerce, somos líderes! Desenvolvemos soluções para empresas que buscam crescimento. Seja a criação de um\n aplicativo móvel, um site totalmente novo ou aumentar o desempenho e a inteligência da sua organização, nós oferecemos o suporte necessário\n às empresas na era digital.",
+            "text": "Quando o assunto é e-commerce, somos líderes! Desenvolvemos soluções para empresas que buscam crescimento. Seja a criação de um aplicativo móvel, um site totalmente novo ou aumentar o desempenho e a inteligência da sua organização, nós oferecemos o suporte necessário às empresas na era digital.",
             "blockClass": "presentation2"
         }
     },
