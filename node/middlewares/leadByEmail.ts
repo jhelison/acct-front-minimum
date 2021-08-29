@@ -28,7 +28,9 @@ export async function leadByEmail(ctx: Context, next: () => Promise<any>) {
     headers,
     data,
     status: responseStatus,
-  } = await leadByEmailClient.getLeadWithHeaders(ctx, emailAddress)
+  } = await leadByEmailClient.getLeadWithHeaders(ctx, emailAddress).catch((reason) => {
+    return { headers: reason.response.headers, data: reason.response.data, status: reason.response.status}
+  })
 
   console.info("status que retornou = ", responseStatus)
 

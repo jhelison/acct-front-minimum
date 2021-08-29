@@ -3,15 +3,17 @@ export async function leads(ctx: Context, next: () => Promise<any>) {
     clients: { leads: leadsClient },
   } = ctx
 
-  const leadsResponse = await leadsClient.getLeads()
+  // const leadsResponse = await leadsClient.getLeads()
 
-  console.info('Status response:', leadsResponse)
+  // console.info('Status response:', leadsResponse)
 
   const {
     headers,
     data,
     status: responseStatus,
-  } = await leadsClient.getLeadsWithHeaders(ctx)
+  } = await leadsClient.getLeadsWithHeaders(ctx).catch((reason) => {
+    return { headers: reason.response.headers, data: reason.response.data, status: reason.response.status}
+  })
 
   console.info('Leads headers', headers)
   console.info('Leads data:', data)
