@@ -62,13 +62,13 @@
         }
     },
     "tab-content.item#experience-design": {
-        "children": [],
+        "children": ["rich-text#tab-content-title", "flex-layout.row#tab-content-items-experience-design"],
         "props": {
             "tabId": "experience-design"
         }
     },
     "tab-content.item#tecnologia": {
-        "children": [],
+        "children": ["rich-text#tab-content-title", "flex-layout.row#tab-content-items-tecnologia"],
         "props": {
             "tabId": "tecnologia"
         }
@@ -101,6 +101,28 @@
     "product-cards#quality-assurance": {
         "props":{
             "categoryId": 4
+        }
+    },
+
+    "flex-layout.row#tab-content-items-experience-design": {
+        "children": [
+            "product-cards#experience-design"
+        ]
+    },
+    "product-cards#experience-design": {
+        "props":{
+            "categoryId": 5
+        }
+    },
+
+    "flex-layout.row#tab-content-items-tecnologia": {
+        "children": [
+            "product-cards#tecnologia"
+        ]
+    },
+    "product-cards#tecnologia": {
+        "props":{
+            "categoryId": 6
         }
     }
 
