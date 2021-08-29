@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styles from "./ProductCards.css"
 import cStyles from "./CommonStyles.css"
 
@@ -14,6 +14,7 @@ import { FiCommand } from "react-icons/fi"
 
 const testData = [
     {
+        id: "1",
         title: "CRO",
         description: "Data Analytics com foco em CRO",
         price: "349.99",
@@ -29,6 +30,7 @@ const testData = [
         ],
     },
     {
+        id: "2",
         title: "GOLIVE",
         description:
             "Acompanhar os principais ofensores e oportunidades do Funil",
@@ -45,6 +47,7 @@ const testData = [
         ],
     },
     {
+        id: "3",
         title: "TESTE AB",
         description:
             "Realizar Testes entre Layouts, Versões de Site, Landing Pages",
@@ -63,6 +66,12 @@ const testData = [
 ]
 
 const ProductCards = (props) => {
+
+    useEffect(() => {
+        // fetch('/api/catalog_system/pub/products/search/').then(response => console.log(response)).then(data => console.log(data))
+        fetch('/api/catalog/pvt/category/1').then(response => console.log(response)).then(data => console.log(data))
+    }, [])
+
     return (
         <div
             className={join([
@@ -72,15 +81,16 @@ const ProductCards = (props) => {
             ])}
         >
             {testData.map((item) => {
-                return <ProductCard {...item} />
+                return <ProductCard {...item} key={item.id} />
             })}
         </div>
     )
 }
 
-const ProductCard = ({ title, description, price, caracteristics, Icon }) => {
+const ProductCard = ({ title, description, price, caracteristics, Icon, id }) => {
     return (
         <div
+            key={id}
             className={join([
                 styles.productCard,
                 cStyles.dFlex,
