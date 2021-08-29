@@ -1,8 +1,7 @@
 {
     "flex-layout.row#consultor": {
         "children": [
-            "flex-layout.col#consultor",
-            ""
+            "flex-layout.col#consultor"
         ]
     },
 
