@@ -138,7 +138,7 @@
             "tablet": 3,
             "phone": 1
             },
-            "showNavigationArrows": "never",
+            "showNavigationArrows": "mobileOnly",
             "showPaginationDots": "mobileOnly",
             "blockClass": "trustedBy"
         }

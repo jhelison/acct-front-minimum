@@ -1,7 +1,7 @@
 /* Customização do rich text da apresentação da home page. */
 
 .paragraph--presentation1 {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
     font-size: 175%;
     font-style: normal;
     text-decoration: none;
@@ -16,7 +16,7 @@
 }
 
 .paragraph--presentation2 {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
     font-size: 125%;
     font-style: normal;
     text-decoration: none;
@@ -29,7 +29,7 @@
 }
 
 .paragraph--trust {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
     font-size: 200%;
     font-style: normal;
     text-decoration: none;
@@ -49,7 +49,9 @@
     height: 300px;
 }
 
-.strong--presentation1 {
+.strong--presentation1,
+.strong--trust,
+.strong--title {
     color: #fcc200;
 }
 
