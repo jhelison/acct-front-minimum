@@ -1,12 +1,26 @@
-import React from 'react'
-import styles from './TextBlink.css'
+import React from "react"
+import styles from "./TextBlink.css"
+import cStyles from "./CommonStyles.css"
 
-const TextBlink = ({text, textAlign}) => {
+import { join } from "./util"
+
+const TextBlink = ({ text, textAlign }) => {
     return (
-        <h1 className={styles.title} style={{textAlign:textAlign}}>
-        {text + " "}
-        <span className={styles.blink}>_</span>
-      </h1>
+        <h1
+            className={join([cStyles.bigText, cStyles.textUpper])}
+            style={{ textAlign: textAlign }}
+        >
+            {text + " "}
+            <span
+                className={join([
+                    styles.blink,
+                    cStyles.colorYellow,
+                    cStyles.bigText,
+                ])}
+            >
+                _
+            </span>
+        </h1>
     )
 }
 

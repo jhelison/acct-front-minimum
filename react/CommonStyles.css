@@ -1,0 +1,89 @@
+
+
+.dFlex {
+    display: flex;
+}
+
+.flexCenter {
+    justify-content: center;
+    align-items: center;
+}
+
+.justifyCenter {
+    justify-content: center;
+}
+
+.alignCenter {
+    align-items: center;
+}
+
+.selfFlexStart {
+    align-self: flex-start;
+}
+
+.colorGray {
+    color: gray;
+}
+
+.colorDarkGray {
+    color: darkgray;
+}
+.colorRed {
+    color: red;
+}
+.colorGreen {
+    color: green;
+}
+
+.colorYellow {
+    color: #fcc200;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+.mb20 {
+    margin-bottom: 20px;
+}
+.mb40 {
+    margin-bottom: 40px;
+}
+.mb60 {
+    margin-bottom: 60px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.gap20 {
+    gap: 20px;
+}
+
+.bgYellow {
+    background-color: #fcc200;
+}
+
+.bgWhite {
+    background-color: white;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.height60 {
+    height: 60px;
+}
+
+.smallText {
+    font-size: .7rem;
+}
+
+.bigText {
+    font-size: 2rem;
+}
+
+.textUpper {
+    text-transform: uppercase;
+}

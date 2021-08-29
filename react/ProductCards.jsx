@@ -1,5 +1,8 @@
 import React from "react"
 import styles from "./ProductCards.css"
+import cStyles from "./CommonStyles.css"
+
+import { join } from "./util"
 
 import { FiAlertCircle } from "react-icons/fi"
 import { FiCheck } from "react-icons/fi"
@@ -8,8 +11,6 @@ import { FiX } from "react-icons/fi"
 import { FiActivity } from "react-icons/fi"
 import { FiCloudDrizzle } from "react-icons/fi"
 import { FiCommand } from "react-icons/fi"
-
-
 
 const testData = [
     {
@@ -63,7 +64,13 @@ const testData = [
 
 const ProductCards = (props) => {
     return (
-        <div className={styles.mainProductCardContainer}>
+        <div
+            className={join([
+                styles.productCardsContainer,
+                cStyles.dFlex,
+                cStyles.flexCenter,
+            ])}
+        >
             {testData.map((item) => {
                 return <ProductCard {...item} />
             })}
@@ -73,31 +80,69 @@ const ProductCards = (props) => {
 
 const ProductCard = ({ title, description, price, caracteristics, Icon }) => {
     return (
-        <div className={styles.productCard}>
+        <div
+            className={join([
+                styles.productCard,
+                cStyles.dFlex,
+                cStyles.alignCenter,
+                cStyles.bgWhite,
+            ])}
+        >
             <Icon
-                className={styles.marginBottom}
+                className={join([cStyles.mb20, cStyles.colorYellow])}
                 size={60}
-                color="#fcc200"
             />
             <h2>{title}</h2>
             <div
-                style={{
-                    height: "60px",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                }}
+                className={join([
+                    cStyles.height60,
+                    cStyles.dFlex,
+                    cStyles.flexCenter,
+                ])}
             >
-                <span className={styles.subTitle}>{description}</span>
+                <span className={join([cStyles.colorGray, cStyles.textCenter])}>
+                    {description}
+                </span>
             </div>
-            <span className={styles.subTitlePrice}>A partir de</span>
-            <label className={styles.pricing}>{"R$ " + price}</label>
-            <span className={styles.subTitlePrice}>Por mês</span>
-            <button className={styles.productCardBuyButton}>
-                Assinar agora
+            <span
+                className={join([
+                    cStyles.colorGray,
+                    cStyles.textCenter,
+                    cStyles.smallText,
+                ])}
+            >
+                A partir de
+            </span>
+            <label className={join([cStyles.colorYellow, cStyles.textCenter])}>
+                R$ <b className={cStyles.bigText}>{price}</b>
+            </label>
+            <span
+                className={join([
+                    cStyles.colorGray,
+                    cStyles.textCenter,
+                    cStyles.smallText,
+                ])}
+            >
+                Por mês
+            </span>
+            <button
+                className={join([
+                    styles.productCardBuyButton,
+                    cStyles.bgYellow,
+                    cStyles.mt20,
+                    cStyles.mb40,
+                ])}
+            >
+                Assinar
             </button>
-            <span className={styles.productCaracteristics}>
-                Principais recursos
+            <span
+                className={join([
+                    cStyles.selfFlexStart,
+                    cStyles.colorDarkGray,
+                    cStyles.mb10,
+                ])}
+            >
+                <b>Principais recursos</b>
             </span>
             {caracteristics.map((item) => {
                 return (
@@ -115,26 +160,22 @@ const ProductCaracteristic = ({ label, status }) => {
     const getIcon = () => {
         const baseSize = 20
         return status ? (
-            <FiCheck color="green" size={baseSize} />
+            <FiCheck className={cStyles.colorGreen} size={baseSize} />
         ) : (
-            <FiX color="red" size={baseSize} />
+            <FiX className={cStyles.colorRed} size={baseSize} />
         )
     }
 
     return (
         <div className={styles.caracContainer}>
-            <div style={{ display: "flex", alignItems: "center" }}>
-                <FiAlertCircle color="darkgray" />
+            <div className={join([cStyles.dFlex, cStyles.alignCenter])}>
+                <FiAlertCircle className={cStyles.colorDarkGray} />
             </div>
-            <div style={{ display: "flex", alignItems: "center" }}>
-                <span className={styles.caracLabel}>{label}</span>
+            <div className={join([cStyles.dFlex, cStyles.alignCenter])}>
+                <span className={cStyles.colorDarkGray}>{label}</span>
             </div>
             <div
-                style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                }}
+                className={join([cStyles.dFlex, cStyles.flexCenter])}
             >
                 {getIcon()}
             </div>
