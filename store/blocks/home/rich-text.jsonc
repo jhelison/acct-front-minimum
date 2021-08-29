@@ -35,12 +35,60 @@
     /* Texto para a abertura para o flex layout com imagens de marcas importantes para a empresa . */
     "rich-text#home3": {
         "props": {
+            "text": "Trusted by**_**",
             "textAlignment": "CENTER",
             "textPosition": "CENTER",
-            "text": "Trusted by**_**",
-            "blockClass": "trust"
-        }
+            "blockClass": "title"
+          }
     },
+
+
+    // Cases
+
+    "rich-text#casesTitle": {
+      "props": {
+        "text": "Cases**_**",
+        "textAlignment": "CENTER",
+        "textPosition": "CENTER",
+        "font": "t-heading-3",
+        "blockClass": "title"
+      }
+    },
+
+    "rich-text#case1":{
+      "props": {
+        "text": "O grupo Carrefour é um dos maiores conglomerados de alimentos e varejo do mundo. O Grupo opera atualmente em 33 países com mais de 10.800 lojas",
+        "textPosition": "CENTER",
+        "textAlignment": "CENTER",
+        "blockClass": "rtCases"
+      }
+    },
+    "rich-text#case2":{
+      "props": {
+        "text": "Como parte da ZX Ventures, o braço de inovação global do maior grupo cervejeiro do mundo, a AB InBev.",
+        "textPosition": "CENTER",
+        "textAlignment": "CENTER",
+        "blockClass": "rtCases"
+      }
+    },
+    "rich-text#case3":{
+      "props": {
+        "text": "A Forma Turismo é uma agência especializada em viagens estudantis. Rapidamente se tornou um importante player no setor de turismo no Brasil.",
+        "textPosition": "CENTER",
+        "textAlignment": "CENTER",
+        "blockClass": "rtCases"
+      }
+    },
+    "rich-text#case4":{
+      "props": {
+        "text": "Presente em vários estados do Brasil, com lojas distribuídas em várias cidades brasileiras, a Tok&Stok é referência em móveis e decoração.",
+        "textPosition": "CENTER",
+        "textAlignment": "CENTER",
+        "blockClass": "rtCases"
+      }
+    },
+
+
 
   /*
     Título dos depoimentos.

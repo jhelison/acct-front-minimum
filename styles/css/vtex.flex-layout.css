@@ -63,6 +63,33 @@
     }
 }
 
+/* ----------------- cases -----------------*/
+
+.flexRow--rowCases {
+    background-color: #f1f1f1;
+}
+
+.flexCol--colCases {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+    max-width: 22%;
+    padding: 5%;
+}
+
+.flexColChild--colCases {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+    max-width: 22%;
+    padding: 5%;
+}
+
+
+/* ----------------- cases -----------------*/
+
+
+/* ----------------- testmonials -----------------*/
 @media(min-width: 1024px) {
     .flexRowContent--contacts-list-city-cards, .flexRow--contacts-container2 {
     padding: 0 150px;

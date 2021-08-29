@@ -6,6 +6,103 @@
       "blockClass":"infocardCurve"
     }
   },
+
+    /* ****** Flex layout Cases ****** */
+
+  "flex-layout.row#cases":{
+    "children":[
+      "flex-layout.col#cases"],
+
+    "props":{
+      "horizontalAlign":"center",
+      "colGap":"3",
+      "blockClass":"rowTestimonials"
+    }
+  },
+
+  "flex-layout.col#cases":{
+    "children":[
+      "rich-text#casesTitle",
+      "slider-layout#cases"],
+
+    "props":{
+      "horizontalAlign":"center",
+      "colGap":"3"
+    }
+  },
+
+  "flex-layout.col#case1":{
+    "children":[
+      "image#case1",
+      "rich-text#case1"
+    ],
+    "props":{
+      "horizontalAlign":"center",
+      "width":"22%",
+      "blockClass":"colCases"
+    }
+  },
+  "flex-layout.col#case2":{
+    "children":[
+      "image#case2",
+      "rich-text#case2"
+    ],
+    "props":{
+      "horizontalAlign":"center",
+      "width":"22%",
+      "blockClass":"colCases"
+    }
+  },
+  "flex-layout.col#case3":{
+    "children":[
+      "image#case3",
+      "rich-text#case3"
+    ],
+    "props":{
+      "horizontalAlign":"center",
+      "width":"22%",
+      "blockClass":"colCases"
+    }
+  },
+  "flex-layout.col#case4":{
+    "children":[
+      "image#case4",
+      "rich-text#case4"
+    ],
+    "props":{
+      "horizontalAlign":"center",
+      "width":"22%",
+      "blockClass":"colCases"
+    }
+  },
+  
+  "image#case1":{
+    "props":{
+      "src": "assets/client-stories-carrefour.jpg",
+      "blockClass":"imgCases"
+    }
+  },
+  "image#case2":{
+    "props":{
+      "src": "assets/client-stories-emporio.jpg",
+      "blockClass":"imgCases"
+    }
+  },
+  "image#case3":{
+    "props":{
+      "src": "assets/client-stories-forma-turismo.jpg",
+      "blockClass":"imgCases"
+    }
+  },
+  "image#case4":{
+    "props":{
+      "src": "assets/client-stories-tokstok.jpg",
+      "blockClass":"imgCases"
+    }
+  },
+
+
+
     /* Flex layout na home page com imagens de logos de marcas importantes. */
     "flex-layout.row#home1": {
         "props": {

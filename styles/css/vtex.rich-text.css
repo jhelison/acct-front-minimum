@@ -125,6 +125,7 @@
 
 /* ------ Testimonials ------ */
 
+.wrapper--trust .paragraph,
 .wrapper--testimonial .paragraph {
     color: #666;
     text-align: justify;
