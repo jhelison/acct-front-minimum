@@ -4,24 +4,22 @@ import styleModule from './style.module.css'
 const LeadsForm = () => {
 
   return (
-        <form className={styleModule.form}>
-          <div className={styleModule.row}>
+        <form className={styleModule.leadsForm} method="post">
+          <div className={styleModule.leadsRow}>
             <h3 className={styleModule.leadsFormTitle}>Fale com a gente!</h3>
           </div>
 
-          <div className={styleModule.row}>
-            <div className={styleModule.half}>
-              <label className={styleModule.leadsLabel}>Nome</label>
-              <input className={styleModule.leadsFormInput} type="text"/>
+          <div className={styleModule.leadsRow}>
+            <div className={styleModule.leadsHalf}>
+              <input className={styleModule.leadsFormInput} type="text" placeholder="nome"/>
             </div>
 
-            <div className={styleModule.half}>
-              <label className={styleModule.leadsLabel}>E-mail</label>
-              <input className={styleModule.leadsFormInput} type="text"/>
+            <div className={styleModule.leadsHalf}>
+              <input className={styleModule.leadsFormInput} type="e-mail" placeholder="e-mail"/>
             </div>
           </div>
 
-          <div className={styleModule.row}>
+          <div className={styleModule.leadsRow}>
             <input type="submit" value="Enviar" className={styleModule.leadsFormSubmit}/>
           </div>
         </form>
