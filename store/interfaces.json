@@ -5,7 +5,10 @@
   "banner": {
     "component": "Banner"
   },
-  "leadsForm": {
+  "services": {
+    "component": "Services"
+  },
+    "leadsForm": {
     "component": "LeadsForm"
   }
 }

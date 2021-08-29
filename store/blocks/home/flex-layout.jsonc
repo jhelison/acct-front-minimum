@@ -280,9 +280,9 @@
       "flex-layout.col#nameAndJob1"
     ],
     "props": {
-      "preventHorizontalStretch": true,
       "horizontalAlign": "center",
-      "blockClass": "writer"
+      "blockClass": "writer",
+      "colSizing": "auto"
     }
   },
   "image#writer1": {
@@ -315,9 +315,9 @@
       "flex-layout.col#nameAndJob2"
     ],
     "props": {
-      "preventHorizontalStretch": true,
       "horizontalAlign": "center",
-      "blockClass": "writer"
+      "blockClass": "writer",
+      "colSizing": "auto"
     }
   },
   "image#writer2": {
@@ -349,9 +349,9 @@
       "flex-layout.col#nameAndJob3"
     ],
     "props": {
-      "preventHorizontalStretch": true,
       "horizontalAlign": "center",
-      "blockClass": "writer"
+      "blockClass": "writer",
+      "colSizing": "auto"      
     }
   },
   "image#writer3": {

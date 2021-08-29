@@ -102,7 +102,10 @@
         "children": [
         "slider-layout#trusted1",
         "slider-layout#trusted2"
-        ]
+        ],
+        "props":{
+          "blockClass":"trusted-by-container"
+        }
     },
 
     "slider-layout#trusted1":{
@@ -138,7 +141,7 @@
             "tablet": 3,
             "phone": 1
             },
-            "showNavigationArrows": "mobileOnly",
+            "showNavigationArrows": "never",
             "showPaginationDots": "mobileOnly",
             "blockClass": "trustedBy"
         }
@@ -180,8 +183,8 @@
         "timeout": 7000,
         "stopOnHover": true
       },
-      "showNavigationArrows": "desktopOnly",
-      "showPaginationDots": "mobileOnly",
+      "showNavigationArrows": "never",
+      "showPaginationDots": "always",
       "blockClass": "sliderTestimonials"
     },
     "children": [
