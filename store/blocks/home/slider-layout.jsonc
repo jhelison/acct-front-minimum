@@ -160,8 +160,8 @@
         "timeout": 7000,
         "stopOnHover": true
       },
-      "showNavigationArrows": "desktopOnly",
-      "showPaginationDots": "mobileOnly",
+      "showNavigationArrows": "never",
+      "showPaginationDots": "always",
       "blockClass": "sliderTestimonials"
     },
     "children": [

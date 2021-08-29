@@ -123,3 +123,111 @@
   width: auto !important;
 }
 /* -------------------- Formulário --------------------*/
+
+/* ------ Services ------*/
+
+.services {
+  display: block;
+  text-decoration: none;
+}
+
+.servicesContainer {
+  margin: 30px auto 80px;
+  height: 250px;
+}
+
+.servicesContainer .serviceItem {
+  position: relative;
+}
+
+.servicesContainer .serviceItem:hover .serviceTitle {
+  display: none;
+}
+
+.servicesContainer .serviceItem:hover img {
+  filter: brightness(0.4);
+}
+
+.servicesContainer .serviceItem img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.8);
+}
+
+.servicesContainer .serviceContent {
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  padding: 20px 50px 30px;
+}
+
+.servicesContainer .serviceItem .serviceTitle {
+  z-index: 1;
+  top: 40%;
+  left: 50%;
+  position: absolute;
+  color: #fff;
+  text-align: center;
+  transition: all 200ms ease;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%);
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+.servicesContainer .serviceItem .serviceContent h2 {
+  font-family: "Open Sans Condensed", sans-serif;
+  text-transform: uppercase;
+  color: #fcc200;
+}
+
+.servicesContainer .serviceItem .serviceContent {
+  opacity: 0;
+  max-width: 350px;
+  margin: 0 auto;
+  transition: all 100ms ease;
+}
+
+.servicesContainer .serviceItem:hover .serviceContent {
+  opacity: 1;
+}
+
+@media(min-width: 600px) {
+  .servicesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    height: 280px;
+  }
+  .servicesContainer .serviceItem {
+    height: 100%;
+    width: 50%;
+    min-width: 50%;
+    transition: all linear 150ms 50ms;
+  }
+}
+
+@media(min-width: 1024px) {
+  .servicesContainer {
+    display: flex;
+    height: 280px;
+    max-width: 1000px;
+  }
+
+  .servicesContainer .serviceItem {
+    min-width: 25%;
+    width: 25%;
+  }
+
+  .servicesContainer:hover .serviceItem {
+    width: 23%;;
+    min-width: 23%;
+  }
+  
+  .servicesContainer .serviceItem:hover {
+    width: 31%;
+    min-width: 31%;
+  }
+
+}

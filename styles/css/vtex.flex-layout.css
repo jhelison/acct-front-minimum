@@ -1,4 +1,4 @@
-/* ----------------- contacts page -----------------*/
+/* ------ Contacts Page ------ */
 
 .flexRow--contacts-container {
     width: 100%;
@@ -45,33 +45,62 @@
     align-items: center;
 }
 
-
-/* ----------------- contacts page -----------------*/
-
-
-/* ----------------- testmonials -----------------*/
+/* ------ Testimonials ------ */
 
 .flexColChild .container {
     vertical-align: middle;
 }
 
+.flexColChild--nameAndJob {
+    height: auto !important;
+}
+
 .stretchChildrenWidth {
     padding-right: 0;
     margin-right: 0;
+    margin-right: 25px;
 }
 
 .flexRow--rowTestimonials {
+    padding: 60px 24px;
     background-color: #f1f1f1;
 }
 
-.flexCol--nameAndJob {
-    max-height: 2rem;
+.flexRowContent--writer {
+    margin-bottom: 40px;
+    justify-content: center;
+    display: flex !important;
 }
 
 .flexRow--writer {
-    max-width: 50%;
     margin: auto;
 }
 
+/* ------ Footer ------ */
 
-/* ----------------- testmonials -----------------*/
+.flexCol--col-logo, .flexCol--col-brazil, .flexCol--col-spain, .flexCol--col-eua {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.flexCol--col-logo :global(.vtex-store-components-3-x-imageElement) {
+    margin-bottom: 20px;
+}
+
+.flewRowContent--footer-row, .container {
+    display: block !important;
+    align-items: flex-start;
+    -webkit-box-align: flex-start;
+}
+
+@media(min-width: 600px) {
+    .flexCol--col-brazil, .flexCol--col-spain, .flexCol--col-eua {
+        margin-left: 20px;
+    }
+}
+
+@media(min-width: 1024px) {
+    .flexCol--col-brazil, .flexCol--col-spain, .flexCol--col-eua {
+        margin-left: 40px;
+    }
+}
