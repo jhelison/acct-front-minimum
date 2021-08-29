@@ -75,3 +75,42 @@
 
 
 /* ----------------- testmonials -----------------*/
+
+/* ----------------- about page -----------------*/
+
+.flexCol--about-container1-col{
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+}
+
+.flexColChild--about-container1-col{
+    width: 100%;
+
+}
+
+.flexCol--about-container3-col{
+    align-items: center;
+
+    justify-content: center;
+}
+
+.flexRow--about-container1-row{
+    width: 100%;
+}
+
+.flexRowContent--about-container1-row{
+    justify-content: space-between;
+}
+
+.flexCol--about-container2-row-col{
+    float: left;
+    margin-left: 20px;
+}
+
+.flexColChild--about-container2-row-col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ----------------- about page -----------------*/

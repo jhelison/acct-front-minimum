@@ -1,40 +1,331 @@
-{
-    "store.custom#about-us": {
-      "blocks": [
-        "flex-layout.row#about-us"
-      ]
-    },
-    "flex-layout.row#about-us": {
-      "children": [
-        "image#about-us",
-        "flex-layout.col#text-about-us"
-      ]
-    },
-    "flex-layout.col#text-about-us": {
-      "children": [
-        "rich-text#about-title",
-        "rich-text#about-content"
-      ],
-          "props": {
-        "preventVerticalStretch": true
-      }
-    },
-   "rich-text#about-title": {
-      "props": {
-        "text":
-        "# About us Title"
-      }
-    },
-    "rich-text#about-content": {
-      "props": {
-        "text":
-        " About us content - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
-      }
-    },
-    "image#about-us": {
-      "props": {
-        "src": "https://storecomponents.vteximg.com.br/arquivos/mobile-phone.png",
-        "maxHeight": "600px"
-      }
+{ 
+  "store.custom#about-us":{
+    "blocks": [
+      "banner#about",
+      "flex-layout.row#about-container1",
+      "flex-layout.row#about-container2",
+      "flex-layout.row#about-container3"
+    ]
+  },
+  // Banner 
+  "banner#about":{
+    "props":{
+      "title": "Sobre nós",
+      "urlImage": "https://acct.global/wp-content/uploads/2020/10/cover-about-us.jpg"      
     }
-   }
+  },
+  // Container 1 - Projetando o futuro do comercio digital
+  "flex-layout.row#about-container1":{
+    "children": ["flex-layout.col#about-container1-col"]
+  },
+  "flex-layout.col#about-container1-col":{
+    "children": [
+      "rich-text#about-container1-title",
+      "flex-layout.row#about-container1-row"
+    ],
+    "props":{"blockClass": "about-container1-col"}
+  },
+  "rich-text#about-container1-title": {
+    "props": {
+      "text": "Projetando o **futuro do comércio digital**",
+      "blockClass": "about-container1-title"
+    }
+  },
+  "flex-layout.row#about-container1-row":{
+    "children": [
+      "flex-layout.col#about-container1-row-col1", 
+      "flex-layout.col#about-container1-row-col2"
+    ],
+    "props":{
+      "blockClass": "about-container1-row"
+    }
+  },
+  "flex-layout.col#about-container1-row-col1":{
+    "children": [
+      "rich-text#about-container1-row-col1-text1",
+      "rich-text#about-container1-row-col1-text2",
+      "rich-text#about-container1-row-col1-text3",
+      "rich-text#about-container1-row-col1-text4"
+    ],
+    "props":{
+      "blockClass": "about-container1-row-col1",
+      "width": "45%"
+    }
+  },
+  "rich-text#about-container1-row-col1-text1": {
+    "props": {
+      "text": "Somos uma empresa de arquitetura e engenharia de software com 11 anos de história solucionando problemas de negócios com tecnologia.",
+      "blockClass": "about-container1-row-col1-text"
+    }
+  },
+  "rich-text#about-container1-row-col1-text2": {
+    "props": {
+      "text": "A **ACCT** passou por um rápido crescimento nos últimos 5 anos e hoje tem mais de 200 funcionários, em 3 países diferentes.",
+      "blockClass": "about-container1-row-col1-text"
+    }
+  },
+  "rich-text#about-container1-row-col1-text3": {
+    "props": {
+      "text": "Nós também temos o orgulho de dizer que a **ACCT** esteve envolvida em algumas das maiores implementações e projetos de e-commerce do mundo.",
+      "blockClass": "about-container1-row-col1-text"
+    }
+  },
+  "rich-text#about-container1-row-col1-text4": {
+    "props": {
+      "text": "Clientes globais como Unilever, Ab-Inbev, Carrefour e Whirpool nos escolheram para desenvolver seus produtos digitais porque confiam em nossa capacidade de fornecer soluções com a mais alta qualidade de design, engenharia e desenvolvimento",
+      "blockClass": "about-container1-row-col1-text"
+    }
+  },
+  "flex-layout.col#about-container1-row-col2":{
+    "children": ["image#about"],
+    "props":{
+      "blockClass": "about-container1-row-col2",
+      "width": "45%"
+    }
+  },
+  "image#about": {
+    "props": {
+      "src": "https://acct.global/wp-content/uploads/2020/10/img-about-us.jpg"
+    }
+  },
+  // Container 2 - Por que a ACCT?
+  "flex-layout.row#about-container2":{
+    "children": ["flex-layout.col#about-container2-col"]
+  },
+  "flex-layout.col#about-container2-col":{
+    "children": [
+      "rich-text#about-container2-title",
+      "flex-layout.row#about-container2-row"
+    ],
+    "props":{"blockClass": "about-container1-col"}
+  },
+  "rich-text#about-container2-title":{
+    "props":{
+      "text": "Por que a ACCT?**_**",
+      "blockClass": "about-container1-title"
+    }
+  },
+  "flex-layout.row#about-container2-row":{
+    "children": [
+      "flex-layout.col#about-container2-row-col1",
+      "flex-layout.col#about-container2-row-col2",
+      "flex-layout.col#about-container2-row-col3",
+      "flex-layout.col#about-container2-row-col4",
+      "flex-layout.col#about-container2-row-col5"
+    ],
+    "props":{
+      "blockClass": "about-container1-row"
+    }
+  },
+  "flex-layout.col#about-container2-row-col1":{
+    "children": [
+      "image#about-container2-row-col1-img1",
+      "rich-text#about-container2-row-col1-text1"
+    ],
+    "props":{
+      "blockClass": "about-container2-row-col"
+    }
+  },
+  "image#about-container2-row-col1-img1": {
+    "props": {
+      "src": "https://acct.global/wp-content/uploads/2020/10/icon_dashboard.svg",
+      "blockClass": "about-container2-row-col-img"
+    }
+  },
+  "rich-text#about-container2-row-col1-text1":{
+    "props":{
+      "text": "Engenharia de Dados de Alta Complexidade",
+      "blockClass": "about-container2-row-col-text"
+    }
+  },
+  "flex-layout.col#about-container2-row-col2":{
+    "children": [
+      "image#about-container2-row-col1-img2",
+      "rich-text#about-container2-row-col1-text2"
+    ],
+    "props":{
+      "blockClass": "about-container2-row-col"
+    }
+  },
+  "image#about-container2-row-col1-img2":{
+    "props": {
+      "src": "https://acct.global/wp-content/uploads/2020/09/icon_development.svg",
+      "blockClass": "about-container2-row-col-img"
+    }
+  },
+  "rich-text#about-container2-row-col1-text2":{
+    "props":{
+      "text": "Habilidades Técnicas",
+      "blockClass": "about-container2-row-col-text"
+    }
+  },
+  "flex-layout.col#about-container2-row-col3":{
+    "children": [
+      "image#about-container2-row-col1-img3",
+      "rich-text#about-container2-row-col1-text3"
+    ],
+    "props":{
+      "blockClass": "about-container2-row-col"
+    }
+  },
+  "image#about-container2-row-col1-img3":{
+    "props": {
+      "src": "https://acct.global/wp-content/uploads/2020/09/icon_integration.svg",
+      "blockClass": "about-container2-row-col-img"
+    }
+  },
+  "rich-text#about-container2-row-col1-text3":{
+    "props":{
+      "text": "Líder de Mercado em Implementações VTEX IO",
+      "blockClass": "about-container2-row-col-text"
+    }
+  },
+  "flex-layout.col#about-container2-row-col4":{
+    "children": [
+      "image#about-container2-row-col1-img4",
+      "rich-text#about-container2-row-col1-text4"
+    ],
+    "props":{
+      "blockClass": "about-container2-row-col"
+    }
+  },
+  "image#about-container2-row-col1-img4":{
+    "props": {
+      "src": "https://acct.global/wp-content/uploads/2020/10/icon_customer-service.svg",
+      "blockClass": "about-container2-row-col-img"
+    }
+  },
+  "rich-text#about-container2-row-col1-text4":{
+    "props":{
+      "text": "Excelente Suporte ao Cliente",
+      "blockClass": "about-container2-row-col-text"
+    }
+  },
+  "flex-layout.col#about-container2-row-col5":{
+    "children": [
+      "image#about-container2-row-col1-img5",
+      "rich-text#about-container2-row-col1-text5"
+    ],
+    "props":{
+      "blockClass": "about-container2-row-col"
+    }
+  },
+  "image#about-container2-row-col1-img5":{
+    "props": {
+      "src": "https://acct.global/wp-content/uploads/2020/10/icon_shield.svg",
+      "blockClass": "about-container2-row-col-img"
+    }
+  },
+  "rich-text#about-container2-row-col1-text5":{
+    "props":{
+      "text": "Segurança e Confiabilidade",
+      "blockClass": "about-container2-row-col-text"
+    }
+  },
+  // Container 3 - Trusted by_
+  "flex-layout.row#about-container3":{
+    "children": ["flex-layout.col#about-container3-col"]
+  },
+  "flex-layout.col#about-container3-col":{
+    "children": [
+      "rich-text#about-container3-title",
+      "flex-layout.row#home1"
+
+      // "flex-layout.row#about-container3-row"
+    ]
+  },
+  "rich-text#about-container3-title":{
+    "props":{
+      "text": "Trusted by**_**",
+      "blockClass": "about-container1-title"
+    }
+  },
+  "flex-layout.row#about-container3-row":{
+    "children": [
+      "image#about-container3-row-img1",
+      "image#about-container3-row-img2",
+      "image#about-container3-row-img3",
+      "image#about-container3-row-img4",
+      "image#about-container3-row-img5",
+      "image#about-container3-row-img6",
+      "image#about-container3-row-img7",
+      "image#about-container3-row-img8",
+      "image#about-container3-row-img9",
+      "image#about-container3-row-img10"
+    ]
+  },
+  "image#about-container3-row-img1":{
+    "props":{
+      "src": "https://acct.global/wp-content/uploads/2020/09/clients_carrefour.svg"
+    }
+  },
+  "image#about-container3-row-img2":{
+    "props":{
+      "src": "https://acct.global/wp-content/uploads/2020/09/clients_samsung.svg"
+    }
+  },
+  "image#about-container3-row-img3":{
+    "props":{
+      "src": "https://acct.global/wp-content/uploads/2020/09/clients_abinbev.svg"
+    }
+  },
+  "image#about-container3-row-img4":{
+    "props":{
+      "src": "https://acct.global/wp-content/uploads/2020/09/clients_stanley-black-decker.svg"
+    }
+  },
+  "image#about-container3-row-img5":{
+    "props":{
+      "src": "https://acct.global/wp-content/uploads/2020/09/clients_motorola.svg"
+    }
+  },
+  "image#about-container3-row-img6":{
+    "props":{
+      "src": "https://acct.global/wp-content/uploads/2020/09/clients_unilever.svg"
+    }
+  },
+  "image#about-container3-row-img7":{
+    "props":{
+      "src": "https://acct.global/wp-content/uploads/2020/09/clients_whirlpool.svg"
+    }
+  },
+  "image#about-container3-row-img8":{
+    "props":{
+      "src": "https://acct.global/wp-content/uploads/2020/09/clients_universal-mg.svg"
+    }
+  },
+  "image#about-container3-row-img9":{
+    "props":{
+      "src": "https://acct.global/wp-content/uploads/2020/09/clients_decathlon.svg"
+    }
+  },
+  "image#about-container3-row-img10":{
+    "props":{
+      "src": "https://acct.global/wp-content/uploads/2020/09/clients_cea.svg"
+    }
+  },
+  // Container 4 - Time_
+  "flex-layout.row#about-container4":{
+    "children": ["flex-layout.col#about-container4-col"]
+  },
+  "flex-layout.col#about-container4-col":{
+    "children": [
+      "rich-text#about-container4-title",
+      "rich-text#about-container4-description",
+      "flex-layout.row#about-container4-row"
+    ]
+  },
+  "rich-text#about-container4-title":{
+    "props":{
+      "text": "Time**_**"
+    }
+  },
+  "rich-text#about-container4-description":{
+    "props":{
+      "text": "**A ACCT tem uma equipe interna de alto desempenho** com recursos de 360 graus para fornecer soluções de tecnologia de alta complexidade."
+    }
+  },
+  "flex-layout.row#about-container4-row":{
+    "children": []
+  }
+}

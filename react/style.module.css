@@ -2,21 +2,23 @@
 .contactsContainerBanner{
   display: flex;
   width: 100%;
-  justify-content: center;
   /* background-image: url("https://dev-acct.pantheonsite.io/wp-content/uploads/2020/10/cover-contact.jpg"); */
   background-position: center center;
   background-size: cover;
-  padding: 6rem 0rem 6rem 0rem;
+  height: 250px;
+  justify-content: center;
+  align-items: center;
 }
 
 .contactsContentBanner{
-  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   max-width: 1300px;
 }
 
 .contactsBannerTitle{
-  /* width: 100%; */
-  width: 1300px;
+  width: 100%;
   font-size: 36px;
   text-align: left;
   text-transform: uppercase;

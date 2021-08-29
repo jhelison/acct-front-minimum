@@ -138,3 +138,44 @@
     line-height: 1.5;
     color: #888;
 }
+
+/* ----------------- about page -----------------*/
+
+.container--about-container1-title {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 100px;
+}
+
+.wrapper--about-container1-title {
+    width: 100%;
+}
+
+.strong--about-container1-title {
+    color: #fcc200;
+}
+
+.container--about-container1-row-col1-text{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    text-align: justify;
+    line-height: 24px;
+    color: #1d1d1d;  
+}
+
+.container--about-container2-row-col-text{
+    align-items: center;
+    justify-content: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    text-align: center;
+    line-height: 26px;
+    color: #717786;  
+}
+/* ----------------- about page -----------------*/
