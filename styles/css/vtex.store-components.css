@@ -282,142 +282,133 @@
     min-height: 64px;
 }
 
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap');
-        /* Customização do info card da home page. */
-        
-        .infoCardContainer--info-card1-home,
-        .infoCardContainer--info-card2-home {
-            background: linear-gradient(60.8deg, #C8145A 8.51%, #171C40 99.79%);
-        }
-        
-        .infoCardImageContainer--info-card1-home {
-            perspective: 2000px;
-            padding: 80px;
-        }
-        
-        .infoCardImage--info-card1-home {
-            transform: translate3d(-20px, 0px, 0px) rotateY(-15deg) rotateX(8deg);
-            transform-origin: 50% 80% 20px;
-            animation: card-animation 2s ease-in-out infinite alternate;
-            -webkit-animation: card-animation 2s ease-in-out infinite alternate;
-        }
-        
-        @keyframes card-animation {
-            0% {
-                transform: translate3d(-20px, 0px, 0px) rotateY(-15deg) rotateX(10deg);
-            }
-            100% {
-                transform: translate3d(20px, 0px, 0px) rotateY(15deg) rotateX(10deg);
-            }
-        }
-        
-        .infoCardContainer {
-            width: 100%;
-            height: 100%;
-        }
-        
-        .imageElement--infocardCurve {
-            align-self: stretch;
-            margin: 0;
-        }
-        
-        .strong--info-card1-home,
-        .strong--info-card2-home,
-        .strong--info-card3-home,
-        .strong--info-card4-home,
-        .strong--info-card5-home {
-            font-family: 'roboto';
-            color: #fcc200;
-            font-size: 290%;
-            line-height: 1;
-            text-shadow: none;
-            font-style: normal;
-            text-align: right;
-            letter-spacing: normal;
-            word-spacing: normal;
-            text-transform: none;
-            font-weight: 400;
-        }
-        
-        .strong--info-card2-home::before {
-            content: "";
-            background: url('assets/tetrix-logo.svg') no-repeat;
-            background-size: contain;
-            display: block;
-            width: 200px;
-            height: 50px
-        }
-        
-        .listItem--info-card1-home,
-        .listItem--info-card2-home,
-        .listItem--info-card3-home,
-        .listItem--info-card4-home,
-        .listItem--info-card5-home {
-            font-family: 'roboto';
-            color: #ffffff;
-            font-size: 112.5%;
-            font-style: normal;
-            text-decoration: none;
-            text-align: left;
-            letter-spacing: normal;
-            word-spacing: normal;
-            text-transform: none;
-            font-weight: 400;
-        }
-        
-        .paragraph--info-card1-home,
-        .paragraph--info-card2-home,
-        .paragraph--info-card3-home,
-        .paragraph--info-card4-home,
-        .paragraph--info-card5-home {
-            font-family: 'roboto';
-            color: #ffffff;
-            font-size: 112.5%;
-            font-style: normal;
-            text-decoration: none;
-            text-align: left;
-            letter-spacing: normal;
-            word-spacing: normal;
-            text-transform: none;
-            font-weight: 400;
-        }
-        /* Final da customização do info card da home page. */
-        /* ----------------- contacts page -----------------*/
-        
-        .infoCardContainer--contacts-banner {
-            min-height: 300px;
-            justify-content: center;
-        }
-        
-        .infoCardTextContainer--contacts-banner {
-            width: 1300px;
-        }
-        
-        .infoCardHeadline--contacts-banner {
-            font-family: 'roboto';
-            color: white;
-        }
-        
-        .imageElement--contacts-city-image {
-            border-bottom: 10px solid #fcc200;
-            margin-bottom: 20px;
-        }
-        /* ----------------- contacts page -----------------*/
-        
-        .imageElement--imageQuote {
-            color: #ccc;
-            text-align: center;
-            align-items: center;
-            display: block;
-            margin: auto;
-            margin-bottom: 1rem;
-            background: none;
-            width: auto;
-            height: auto;
-        }
-        
-        .imageElement--imageWriter {
-            border-radius: 50%;
-            max-width: 64px;
-            margin: 1rem 1rem 5rem auto;
-        }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap');
+/* Customização do info card da home page. */
+
+.infoCardContainer--info-card1-home,
+.infoCardContainer--info-card2-home {
+    background: linear-gradient(60.8deg, #C8145A 8.51%, #171C40 99.79%);
+}
+
+.infoCardImageContainer--info-card1-home {
+    perspective: 2000px;
+    padding: 80px;
+}
+
+.infoCardImage--info-card1-home {
+    transform: translate3d(-20px, 0px, 0px) rotateY(-15deg) rotateX(8deg);
+    transform-origin: 50% 80% 20px;
+    animation: card-animation 2s ease-in-out infinite alternate;
+    -webkit-animation: card-animation 2s ease-in-out infinite alternate;
+}
+
+@keyframes card-animation {
+    0% {
+        transform: translate3d(-20px, 0px, 0px) rotateY(-15deg) rotateX(10deg);
+    }
+    100% {
+        transform: translate3d(20px, 0px, 0px) rotateY(15deg) rotateX(10deg);
+    }
+}
+
+.infoCardContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.imageElement--infocardCurve {
+    align-self: stretch;
+    margin: 0;
+}
+
+.strong--info-card1-home,
+.strong--info-card2-home,
+.strong--info-card3-home,
+.strong--info-card4-home,
+.strong--info-card5-home {
+    font-family: 'roboto';
+    color: #fcc200;
+    font-size: 290%;
+    line-height: 1;
+    text-shadow: none;
+    font-style: normal;
+    text-align: right;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    font-weight: 400;
+}
+
+.listItem--info-card1-home,
+.listItem--info-card2-home,
+.listItem--info-card3-home,
+.listItem--info-card4-home,
+.listItem--info-card5-home {
+    font-family: 'roboto';
+    color: #ffffff;
+    font-size: 112.5%;
+    font-style: normal;
+    text-decoration: none;
+    text-align: left;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    font-weight: 400;
+}
+
+.paragraph--info-card1-home,
+.paragraph--info-card2-home,
+.paragraph--info-card3-home,
+.paragraph--info-card4-home,
+.paragraph--info-card5-home {
+    font-family: 'roboto';
+    color: #ffffff;
+    font-size: 112.5%;
+    font-style: normal;
+    text-decoration: none;
+    text-align: left;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    font-weight: 400;
+}
+/* Final da customização do info card da home page. */
+/* ----------------- contacts page -----------------*/
+
+.infoCardContainer--contacts-banner {
+    min-height: 300px;
+    justify-content: center;
+}
+
+.infoCardTextContainer--contacts-banner {
+    width: 1300px;
+}
+
+.infoCardHeadline--contacts-banner {
+    font-family: 'roboto';
+    color: white;
+}
+
+.imageElement--contacts-city-image {
+    border-bottom: 10px solid #fcc200;
+    margin-bottom: 20px;
+}
+/* ----------------- contacts page -----------------*/
+
+.imageElement--imageQuote {
+    color: #ccc;
+    text-align: center;
+    align-items: center;
+    display: block;
+    margin: auto;
+    margin-bottom: 1rem;
+    background: none;
+    width: auto;
+    height: auto;
+}
+
+.imageElement--imageWriter {
+    border-radius: 50%;
+    max-width: 64px;
+    margin: 1rem 1rem 5rem auto;
+}
