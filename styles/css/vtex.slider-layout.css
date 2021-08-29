@@ -1,3 +1,9 @@
+.sliderLayoutContainer--sliderTestimonials {
+    max-width: 750px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
 .sliderLayoutContainer--oneClick {
     max-width: 960px;
 }

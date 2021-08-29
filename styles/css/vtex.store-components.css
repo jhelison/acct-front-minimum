@@ -276,6 +276,8 @@
 
 .imageElement--imageWriter {
     border-radius: 50%;
-    max-width: 64px;
-    margin: 1rem 1rem 5rem auto;
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    min-height: 64px;
 }

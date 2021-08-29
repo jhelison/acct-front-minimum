@@ -5,7 +5,7 @@
       "slider-layout#home-infocards",
       "rich-text#home1",
       "rich-text#home2",
-      "flex-layout.row#oneClick",
+      "services",
       // "link#1",
       "rich-text#home3",
       "flex-layout.row#home1",
