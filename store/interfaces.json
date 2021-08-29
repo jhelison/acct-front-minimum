@@ -10,5 +10,11 @@
   },
   "text-blink": {
     "component": "TextBlink"
+  },
+  "services": {
+    "component": "Services"
+  },
+    "leadsForm": {
+    "component": "LeadsForm"
   }
 }

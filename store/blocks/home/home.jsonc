@@ -1,15 +1,23 @@
 {
   "store.home": { 
     "blocks": [
-      "rich-text",
-      "slider-layout#home-infocards",
+      "stack-layout#home-infocards",
       "rich-text#home1",
       "rich-text#home2",
-      "flex-layout.row#oneClick",
+      "services",
       // "link#1",
+      "flex-layout.row#cases",
       "rich-text#home3",
-      "flex-layout.row#home1",
-      "flex-layout.row#testimonials"
+      "slider-layout-group#trustedBy",
+      "flex-layout.row#testimonials",
+      "leadsForm"
+    ]
+  },
+  "stack-layout#home-infocards":{
+    "children":[ 
+      "slider-layout#home-infocards",
+      "image#infocard-curve"
+
     ]
   }
 }

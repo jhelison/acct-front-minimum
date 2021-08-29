@@ -1,35 +1,33 @@
-/* Customização do rich text da apresentação da home page. */
+/* ------ Home ------ */
+
+.container--presentation1 {
+    padding: 96px 24px 0;
+}
 
 .paragraph--presentation1 {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 175%;
-    font-style: normal;
-    text-decoration: none;
+    font-size: 32px;
     text-align: center;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
     font-weight: 700;
     color: #040404;
-    position: relative;
-    top: 50px;
+    margin: 0;
+}
+
+.container--presentation2 {
+    padding: 50px 24px 0;
+    margin-bottom: 50px;
 }
 
 .paragraph--presentation2 {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 125%;
-    font-style: normal;
-    text-decoration: none;
-    text-align: center;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    font-weight: 500;
+    font-size: 20px;
+    text-align: left;
+    font-weight: 700;
+    line-height: 1.25;
+    font-family: 'Open Sans Condensed', sans-serif;
     color: #040404;
 }
 
 .paragraph--trust {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
     font-size: 200%;
     font-style: normal;
     text-decoration: none;
@@ -41,21 +39,47 @@
     color: #040404;
 }
 
-.container--presentation1 {
-    height: 200px;
+.strong--presentation1,
+.strong--trust,
+.strong--title {
+    color: #fcc200;
 }
 
-.container--presentation2 {
-    height: 300px;
+@media(min-width: 800px) {
+    .container--presentation1,.container--presentation2 {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+}
+
+@media(min-width: 1024px) {
+    .container--presentation1 {
+        padding-top: 128px;
+    }
+    .container--presentation1,.container--presentation2 {
+        padding-left: 150px;
+        padding-right: 150px;
+    }
 }
 
 
-/* Customização do rich text da apresentação da home page. */
+@media(min-width: 1250px) {
+    .container--presentation1,.container--presentation2 {
+        padding-left: 240px;
+        padding-right: 240px;
+    }
+}
 
+@media(min-width: 1440px) {
+    .container--presentation1,.container--presentation2 {
+        padding-left: calc((100% - 850px)/2);
+        padding-right: calc((100% - 850px)/2);
+    }
+}
 
-/* ----------------- contacts page -----------------*/
+/* ------ Contacts Page ------ */
 
-.container--contacts-city-title {
+.paragraph--contacts-city-title {
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: bold;
     font-size: 24px;
@@ -64,15 +88,16 @@
     height: auto;
 }
 
-.container--contacts-city-description {
+.paragraph--contacts-city-description {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.5;
     padding-right: 15px;
 }
 
-.container--contacts-container2-title {
+.paragraph--contacts-container2-title {
     font-size: 2rem;
     line-height: 1.4;
+    margin-top: 0;
     margin-bottom: 50px;
     color: #040404;
     font-family: 'Open Sans Condensed';
@@ -98,11 +123,10 @@
     color: #1d1d1d;
 }
 
+/* ------ Testimonials ------ */
 
-/* ----------------- contacts page -----------------*/
-
+.wrapper--trust .paragraph,
 .wrapper--testimonial .paragraph {
-    width: 45rem;
     color: #666;
     text-align: justify;
     font-weight: 100;
@@ -122,19 +146,62 @@
     color: #fcc200;
 }
 
+.container--testimonial {
+    margin: 0 auto 30px;
+}
+
 .paragraph--name {
-    letter-spacing: 0;
     font-weight: bold;
     color: #333;
     text-transform: uppercase;
-    clear: none;
     font-size: 15px;
     line-height: 24px;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .paragraph--job {
-    font-size: 1.1rem;
-    line-height: 1.5;
+    font-size: 16px;
+    line-height: 1.1;
     color: #888;
+    margin: 0;
+}
+
+/* ------ Footer ------ */
+
+.wrapper--footer-link .link {
+    color: #5974c7 !important;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+}
+
+.container--footer-link {
+    justify-content: center;
+}
+
+.wrapper--col-title .paragraph {
+    color: #333 !important;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 10px;
+    text-transform: uppercase;    
+}
+
+.wrapper--col-address {
+    max-width: 270px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333 !important;
+}
+
+@media(min-width: 600px) {
+    .wrapper--col-title .paragraph, .wrapper--col-address{
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    .container--col-title {
+        justify-content: flex-start;
+    }
+    
 }

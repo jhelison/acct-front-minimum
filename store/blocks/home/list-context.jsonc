@@ -22,9 +22,11 @@
             "tablet": 2,
             "phone": 1
           },
-          "blockClass":"oneClick",
-          "infinite":true,
-          "fullWidth": false
+        "blockClass":"oneClick",
+        "infinite":true,
+        "fullWidth": false,
+        "showNavigationArrows": "always",
+        "showPaginationDots": "never"
         }
       }
 

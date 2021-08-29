@@ -1,3 +1,147 @@
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap');
+        /* Customização do info card da home page. */
+        
+        .infoCardContainer--info-card1-home,
+        .infoCardContainer--info-card2-home {
+            background: linear-gradient(60.8deg, #C8145A 8.51%, #171C40 99.79%);
+        }
+        
+        .infoCardImageContainer--info-card1-home {
+            perspective: 2000px;
+            padding: 80px;
+        }
+        
+        .infoCardImage--info-card1-home {
+            transform: translate3d(-20px, 0px, 0px) rotateY(-15deg) rotateX(8deg);
+            transform-origin: 50% 80% 20px;
+            animation: card-animation 2s ease-in-out infinite alternate;
+            -webkit-animation: card-animation 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes card-animation {
+            0% {
+                transform: translate3d(-20px, 0px, 0px) rotateY(-15deg) rotateX(10deg);
+            }
+            100% {
+                transform: translate3d(20px, 0px, 0px) rotateY(15deg) rotateX(10deg);
+            }
+        }
+        
+        .infoCardContainer {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .imageElement--infocardCurve {
+            align-self: stretch;
+            margin: 0;
+        }
+        
+        .strong--info-card1-home,
+        .strong--info-card2-home,
+        .strong--info-card3-home,
+        .strong--info-card4-home,
+        .strong--info-card5-home {
+            font-family: 'roboto';
+            color: #fcc200;
+            font-size: 290%;
+            line-height: 1;
+            text-shadow: none;
+            font-style: normal;
+            text-align: right;
+            letter-spacing: normal;
+            word-spacing: normal;
+            text-transform: none;
+            font-weight: 400;
+        }
+        
+        .strong--info-card2-home::before {
+            content: "";
+            background: url('assets/tetrix-logo.svg') no-repeat;
+            background-size: contain;
+            display: block;
+            width: 200px;
+            height: 50px
+        }
+        
+        .listItem--info-card1-home,
+        .listItem--info-card2-home,
+        .listItem--info-card3-home,
+        .listItem--info-card4-home,
+        .listItem--info-card5-home {
+            font-family: 'roboto';
+            color: #ffffff;
+            font-size: 112.5%;
+            font-style: normal;
+            text-decoration: none;
+            text-align: left;
+            letter-spacing: normal;
+            word-spacing: normal;
+            text-transform: none;
+            font-weight: 400;
+        }
+        
+        .paragraph--info-card1-home,
+        .paragraph--info-card2-home,
+        .paragraph--info-card3-home,
+        .paragraph--info-card4-home,
+        .paragraph--info-card5-home {
+            font-family: 'roboto';
+            color: #ffffff;
+            font-size: 112.5%;
+            font-style: normal;
+            text-decoration: none;
+            text-align: left;
+            letter-spacing: normal;
+            word-spacing: normal;
+            text-transform: none;
+            font-weight: 400;
+        }
+        /* Final da customização do info card da home page. */
+        /* ----------------- contacts page -----------------*/
+        
+        .infoCardContainer--contacts-banner {
+            min-height: 300px;
+            justify-content: center;
+        }
+        
+        .infoCardTextContainer--contacts-banner {
+            width: 1300px;
+        }
+        
+        .infoCardHeadline--contacts-banner {
+            font-family: 'roboto';
+            color: white;
+        }
+        
+        .imageElement--contacts-city-image {
+            border-bottom: 10px solid #fcc200;
+            margin-bottom: 20px;
+        }
+        /* ----------------- contacts page -----------------*/
+        
+        .imageElement--imageQuote {
+            color: #ccc;
+            text-align: center;
+            align-items: center;
+            display: block;
+            margin: auto;
+            margin-bottom: 1rem;
+            background: none;
+            width: auto;
+            height: auto;
+        }
+        
+        .imageElement--imageWriter {
+            border-radius: 50%;
+            max-width: 64px;
+            margin: 1rem 1rem 5rem auto;
+        }
+        /* ----------------- contacts page -----------------*/
+        
+        .imageElement--imgCases {
+            border-radius: 20px;
+        }
 /* Customização do info card da home page. */
 
 .infoCardContainer--info-card1-home {
@@ -25,76 +169,6 @@
     height: 100%;
 }
 
-.strong--info-card1-home {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #fcc200;
-    font-size: 337.5%;
-    line-height: 1.5;
-    text-shadow: none;
-    font-style: normal;
-    text-align: left;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    font-weight: 800;
-}
-
-.strong--info-card2-home {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #fcc200;
-    font-size: 290%;
-    line-height: 1.5;
-    text-shadow: none;
-    font-style: normal;
-    text-align: left;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    font-weight: 800;
-}
-
-.strong--info-card3-home {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #fcc200;
-    font-size: 337.5%;
-    line-height: 1.5;
-    text-shadow: none;
-    font-style: normal;
-    text-align: left;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    font-weight: 800;
-}
-
-.strong--info-card4-home {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #fcc200;
-    font-size: 337.5%;
-    line-height: 1.5;
-    text-shadow: none;
-    font-style: normal;
-    text-align: left;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    font-weight: 800;
-}
-
-.strong--info-card5-home {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #fcc200;
-    font-size: 337.5%;
-    line-height: 1.5;
-    text-shadow: none;
-    font-style: normal;
-    text-align: left;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    font-weight: 800;
-}
-
 .list--info-card1-home {
     position: relative;
     left: -20px;
@@ -116,60 +190,66 @@
     left: 100px;
 }
 
-.listItem--info-card1-home {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #ffffff;
-    font-size: 112.5%;
+.infoCardContainer--info-card1-home,
+.infoCardContainer--info-card2-home {
+    background: linear-gradient(60.8deg, #C8145A 8.51%, #171C40 99.79%);
+}
+
+.infoCardImageContainer--info-card1-home {
+    perspective: 2000px;
+    padding: 80px;
+}
+
+.infoCardImage--info-card1-home {
+    transform: translate3d(-20px, 0px, 0px) rotateY(-15deg) rotateX(8deg);
+    transform-origin: 50% 80% 20px;
+    animation: card-animation 2s ease-in-out infinite alternate;
+    -webkit-animation: card-animation 2s ease-in-out infinite alternate;
+}
+
+@keyframes card-animation {
+    0% {
+        transform: translate3d(-20px, 0px, 0px) rotateY(-15deg) rotateX(10deg);
+    }
+    100% {
+        transform: translate3d(20px, 0px, 0px) rotateY(15deg) rotateX(10deg);
+    }
+}
+
+.infoCardContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.imageElement--infocardCurve {
+    align-self: stretch;
+    margin: 0;
+}
+
+.strong--info-card1-home,
+.strong--info-card2-home,
+.strong--info-card3-home,
+.strong--info-card4-home,
+.strong--info-card5-home {
+    font-family: 'Open Sans Condensed';;
+    color: #fcc200;
+    font-size: 290%;
+    line-height: 1;
+    text-shadow: none;
     font-style: normal;
-    text-decoration: none;
-    text-align: left;
+    text-align: right;
     letter-spacing: normal;
     word-spacing: normal;
     text-transform: none;
-    font-weight: 300;
+    font-weight: 400;
 }
 
-.listItem--info-card2-home {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #ffffff;
-    font-size: 112.5%;
-    font-style: normal;
-    text-decoration: none;
-    text-align: left;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    font-weight: 300;
-}
-
-.listItem--info-card3-home {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #ffffff;
-    font-size: 112.5%;
-    font-style: normal;
-    text-decoration: none;
-    text-align: left;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    font-weight: 300;
-}
-
-.listItem--info-card4-home {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #ffffff;
-    font-size: 112.5%;
-    font-style: normal;
-    text-decoration: none;
-    text-align: left;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    font-weight: 300;
-}
-
+.listItem--info-card1-home,
+.listItem--info-card2-home,
+.listItem--info-card3-home,
+.listItem--info-card4-home,
 .listItem--info-card5-home {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans Condensed';;
     color: #ffffff;
     font-size: 112.5%;
     font-style: normal;
@@ -178,50 +258,15 @@
     letter-spacing: normal;
     word-spacing: normal;
     text-transform: none;
-    font-weight: 300;
+    font-weight: 400;
 }
 
-.paragraph--info-card2-home {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #ffffff;
-    font-size: 112.5%;
-    font-style: normal;
-    text-decoration: none;
-    text-align: left;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    font-weight: 300;
-}
-
-.paragraph--info-card3-home {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #ffffff;
-    font-size: 112.5%;
-    font-style: normal;
-    text-decoration: none;
-    text-align: left;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    font-weight: 300;
-}
-
-.paragraph--info-card4-home {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #ffffff;
-    font-size: 112.5%;
-    font-style: normal;
-    text-decoration: none;
-    text-align: left;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    font-weight: 300;
-}
-
+.paragraph--info-card1-home,
+.paragraph--info-card2-home,
+.paragraph--info-card3-home,
+.paragraph--info-card4-home,
 .paragraph--info-card5-home {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans Condensed';;
     color: #ffffff;
     font-size: 112.5%;
     font-style: normal;
@@ -230,14 +275,9 @@
     letter-spacing: normal;
     word-spacing: normal;
     text-transform: none;
-    font-weight: 300;
+    font-weight: 400;
 }
-
-
 /* Final da customização do info card da home page. */
-
-@import url(https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Open+Sans:wght@400;600;700&display=swap);
-
 /* ----------------- contacts page -----------------*/
 
 .infoCardContainer--contacts-banner {
@@ -249,18 +289,23 @@
     width: 1300px;
 }
 
+.container {
+    padding: 0;
+}
+
 .infoCardHeadline--contacts-banner {
     font-family: 'Open Sans Condensed', sans-serif;
     color: white;
 }
 
 .imageElement--contacts-city-image {
-    border-bottom: 10px solid #fcc200;
-    margin-bottom: 20px;
+    display: block;
+    font-size: 0;
 }
 
+/* ----------------- Contacts page -----------------*/
 
-/* ----------------- contacts page -----------------*/
+/* ----------------- Testimonials -----------------*/
 
 .imageElement--imageQuote {
     color: #ccc;
@@ -276,6 +321,11 @@
 
 .imageElement--imageWriter {
     border-radius: 50%;
-    max-width: 64px;
-    margin: 1rem 1rem 5rem auto;
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    min-height: 64px;
+    margin-right: 25px;
 }
+
+/* ----------------- Testimonials -----------------*/
