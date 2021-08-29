@@ -1,15 +1,81 @@
-.productCard {
-    width: 240px;
-    background-color: white;
-    padding: 24px;
-    display: flex;
-    justify-content: center;
-    box-shadow: rgb(66 66 66 / 15%) 0px 8px 16px;
-    border-radius: 8px;
-}
-
 .mainProductCardContainer {
     display: flex;
     justify-content: center;
-    margin: 20px;
+    margin: 10px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.productCard {
+    width: 300px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: rgb(66 66 66 / 15%) 0px 8px 16px;
+
+    border-bottom: 4px solid #fcc200;
+}
+
+
+.marginBottom {
+    margin-bottom: 20px;
+}
+
+.subTitle {
+    color: gray;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.subTitlePrice {
+    color: gray;
+    font-size: .7rem;
+    text-align: center;
+}
+
+.pricing {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fcc200;
+}
+
+.productCardBuyButton {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 100%;
+    height: 30px;
+    background-color: #fcc200;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    
+
+    font-weight: 600;
+}
+.productCardBuyButton:hover {
+    filter: brightness(.9);
+}
+.productCardBuyButton:active {
+    filter: brightness(.7);
+}
+
+.productCaracteristics {
+    align-self: flex-start;
+    color: darkgray;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.caracContainer {
+    width: 100%;
+    height: 50px;
+    
+    display: grid;
+    grid-template-columns: 1fr 4fr 2fr;
+}
+
+.caracLabel {
+    color: darkgray;
 }
