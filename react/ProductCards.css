@@ -23,10 +23,10 @@
     color: black;
 }
 .productCardBuyButton:hover {
-    filter: brightness(.9);
+    filter: brightness(0.9);
 }
 .productCardBuyButton:active {
-    filter: brightness(.7);
+    filter: brightness(0.7);
 }
 
 .caracContainer {
@@ -40,5 +40,41 @@
     width: auto;
     height: 100px;
     transform: translateZ(0);
-    filter: invert(74%) sepia(96%) saturate(2102%) hue-rotate(3deg) brightness(105%) contrast(104%);
+    filter: invert(74%) sepia(96%) saturate(2102%) hue-rotate(3deg)
+        brightness(105%) contrast(104%);
 }
+
+/* ----------------------Loading Animation---------------------- */
+.ldsDourglass {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.ldsDourglass:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid #fcc200;
+    border-color: #fcc200 transparent #fcc200 transparent;
+    animation: ldsDourglass 1.2s infinite;
+}
+@keyframes ldsDourglass {
+    0% {
+        transform: rotate(0);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+        transform: rotate(900deg);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+        transform: rotate(1800deg);
+    }
+}
+
+/* ----------------------Loading Animation---------------------- */
