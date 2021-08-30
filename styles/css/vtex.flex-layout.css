@@ -1,7 +1,3 @@
-.flexRowContent--products-title {
-    margin-top: 60px;
-}
-
 /* ------ Contacts Page ------ */
 
 .flexRowContent--contacts-list-city-cards {
@@ -65,7 +61,7 @@
     }
 }
 
-/* ----------------- cases -----------------*/
+/*  ------ Cases Section ------ */
 
 .flexCol--colCases {
     text-align: center;
@@ -123,11 +119,8 @@
     }
 }
 
+/* ------ Contacts ------ */
 
-/* ----------------- cases -----------------*/
-
-
-/* ----------------- testmonials -----------------*/
 @media(min-width: 1024px) {
     .flexRowContent--contacts-list-city-cards, .flexRow--contacts-container2 {
     padding: 0 150px;
@@ -146,9 +139,8 @@
     }
 }
 
-/* ----------------- testmonials -----------------*/
+/* ------ About Page ------ */
 
-/* ----------------- about page -----------------*/
 .flexCol--about-container1-col{
     align-items: center;
     width: 100%;
@@ -216,7 +208,7 @@
     }
 }
   
-/* ----------------- about page -----------------*/
+/* ------ Testimonials ------ */
 
 .flexColChild .container {
     vertical-align: middle;
@@ -277,7 +269,11 @@
     }
 }
 
-/* ------ products page ------ */
+/* ------ Products Page ------ */
+
+.flexRowContent--products-title {
+    margin-top: 60px;
+}
 
 .flexRow--products-consultor-container{
     margin-top: 50px;
@@ -325,4 +321,3 @@
         padding: 0 calc((100% - 850px)/2);
     }
 }
-/* ------ products page ------ */

@@ -1,79 +1,61 @@
 {
-    /* Textos de apresentação e link na home page. */
-    "rich-text#home1": {
-        "props": {
-            "textAlignment": "CENTER",
-            "textPosition": "CENTER",
-            "textMode": "html",
-            "text": "Buscamos constantemente a **liderança global**\n quando se trata de **soluções para comércio digital.**",
-            "textColor": "black",
-            "font": "t-heading-5",
-            "blockClass": "presentation1"
-        }
-    },
-    "rich-text#home2": {
-        "props": {
-            "textAlignment": "CENTER",
-            "textPosition": "CENTER",
-            "textMode": "html",
-            "text": "Quando o assunto é e-commerce, somos líderes! Desenvolvemos soluções para empresas que buscam crescimento. Seja a criação de um aplicativo móvel, um site totalmente novo ou aumentar o desempenho e a inteligência da sua organização, nós oferecemos o suporte necessário às empresas na era digital.",
-            "blockClass": "presentation2"
-        }
-    },
-    "text-blink#home3": {
+  /* Home Page */
+
+  "rich-text#home1": {
       "props": {
-        "text":
-        "Trusted by",
-        "textAlign":
-        "center"  
+          "textAlignment": "CENTER",
+          "textPosition": "CENTER",
+          "textMode": "html",
+          "text": "Buscamos constantemente a **liderança global**\n quando se trata de **soluções para comércio digital.**",
+          "textColor": "black",
+          "font": "t-heading-5",
+          "blockClass": "presentation1"
       }
-    },
-
-
-    // Cases
-
-    "rich-text#case1":{
+  },
+  "rich-text#home2": {
       "props": {
-        "text": "**Carrefour**\n\n O grupo Carrefour é um dos maiores conglomerados de alimentos e varejo do mundo. O Grupo opera atualmente em 33 países com mais de 10.800 lojas",
-        "textPosition": "CENTER",
-        "textAlignment": "CENTER",
-        "blockClass": "rtCases"
+          "textAlignment": "CENTER",
+          "textPosition": "CENTER",
+          "textMode": "html",
+          "text": "Quando o assunto é e-commerce, somos líderes! Desenvolvemos soluções para empresas que buscam crescimento. Seja a criação de um aplicativo móvel, um site totalmente novo ou aumentar o desempenho e a inteligência da sua organização, nós oferecemos o suporte necessário às empresas na era digital.",
+          "blockClass": "presentation2"
       }
-    },
-    "rich-text#case2":{
-      "props": {
-        "text": "**Empório da Cerveja**\n\n Como parte da ZX Ventures, o braço de inovação global do maior grupo cervejeiro do mundo, a AB InBev.",
-        "textPosition": "CENTER",
-        "textAlignment": "CENTER",
-        "blockClass": "rtCases"
-      }
-    },
-    "rich-text#case3":{
-      "props": {
-        "text": "**Forma Turismo**\n\n A Forma Turismo é uma agência especializada em viagens estudantis. Rapidamente se tornou um importante player no setor de turismo no Brasil.",
-        "textPosition": "CENTER",
-        "textAlignment": "CENTER",
-        "blockClass": "rtCases"
-      }
-    },
-
-  /*
-    Título dos depoimentos.
-  */
-
-
-  "text-blink#testimonialsTitle": {
+  },
+  "text-blink#home3": {
     "props": {
       "text":
-      "Depoimentos",
+      "Trusted by",
       "textAlign":
       "center"  
     }
   },
 
-  /*
-    Textos referentes aos depoimentos dos clientes e parceiros.
-  */
+  /* Cases */
+
+  "rich-text#case1":{
+    "props": {
+      "text": "**Carrefour**\n\n O grupo Carrefour é um dos maiores conglomerados de alimentos e varejo do mundo. O Grupo opera atualmente em 33 países com mais de 10.800 lojas",
+      "textPosition": "CENTER",
+      "textAlignment": "CENTER",
+      "blockClass": "rtCases"
+    }
+  },
+  "rich-text#case2":{
+    "props": {
+      "text": "**Empório da Cerveja**\n\n Como parte da ZX Ventures, o braço de inovação global do maior grupo cervejeiro do mundo, a AB InBev.",
+      "textPosition": "CENTER",
+      "textAlignment": "CENTER",
+      "blockClass": "rtCases"
+    }
+  },
+  "rich-text#case3":{
+    "props": {
+      "text": "**Forma Turismo**\n\n A Forma Turismo é uma agência especializada em viagens estudantis. Rapidamente se tornou um importante player no setor de turismo no Brasil.",
+      "textPosition": "CENTER",
+      "textAlignment": "CENTER",
+      "blockClass": "rtCases"
+    }
+  },
 
   "rich-text#testimonial1": {
     "props": {
@@ -100,9 +82,16 @@
     }
   },
 
-  /*
-    Textos referentes aos nomes e trabalhos dos clientes e parceiros.
-  */
+  /* Testimonials */
+  
+  "text-blink#testimonialsTitle": {
+    "props": {
+      "text":
+      "Depoimentos",
+      "textAlign":
+      "center"  
+    }
+  },
 
   "rich-text#name1": {
     "props": {
