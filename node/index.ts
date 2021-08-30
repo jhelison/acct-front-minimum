@@ -5,9 +5,12 @@ import { method, Service } from '@vtex/api'
 import { Clients } from './clients'
 import { status } from './middlewares/status'
 import { validate } from './middlewares/validate'
-import { leads } from './middlewares/leads'
+
+// import { leads } from './middlewares/leads'
+// import { leadByEmail } from './middlewares/leadByEmail'
+import { leadProxy } from './middlewares/leadProxy'
+
 import { orderCreated } from './middlewares/orderCreated'
-import { leadByEmail } from './middlewares/leadByEmail'
 import { categories } from './middlewares/categories'
 import { products } from './middlewares/products'
 import { specificationsByProductId } from './middlewares/specificationsByProductsId'
@@ -66,13 +69,17 @@ export default new Service({
     status: method({
       GET: [validate, status],
     }),
-    // `status` is the route ID from service.json. It maps to an array of middlewares (or a single handler).
+    //Call Middlewares
     leads: method({
-      GET: [leads],
+      GET: [leadProxy],
+      PUT: [leadProxy],
     }),
+    // by :email
     lead: method({
-      GET: [leadByEmail],
-    }),
+      GET: [leadProxy],
+      PATCH: [leadProxy],
+      DELETE: [leadProxy]
+    }),    
     categories: method({
       GET: [categories],
     }),    

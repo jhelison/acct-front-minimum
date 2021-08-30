@@ -5,6 +5,7 @@ import { OMS, Catalog } from '@vtex/clients'
 import Status from './status'
 import Leads from './leads'
 import LeadByEmail from './leadByEmail'
+import leadCLI from './leadCLI'
 import SkuByProductId from './skuByProductId'
 import ProductById from './productById'
 import SpecificationsByProductId from './specificationsByProductId'
@@ -22,6 +23,10 @@ export class Clients extends IOClients {
 
   public get leadByEmail() {
     return this.getOrSet('lead', LeadByEmail)
+  }
+
+  public get leadCLI() {
+    return this.getOrSet('leadCLI', leadCLI)
   }
 
   public get OMS() {
