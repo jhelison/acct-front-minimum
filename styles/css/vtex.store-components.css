@@ -124,25 +124,6 @@
 
 /* ----------------- contacts page -----------------*/
 
-.imageElement--imageQuote {
-    color: #ccc;
-    text-align: center;
-    align-items: center;
-    display: block;
-    margin: auto;
-    margin-bottom: 1rem;
-    background: none;
-    width: auto;
-    height: auto;
-}
-
-.imageElement--imageWriter {
-    border-radius: 50%;
-    max-width: 64px;
-    margin: 1rem 1rem 5rem auto;
-}
-/* ----------------- contacts page -----------------*/
-
 /* Customização do info card da home page. */
 
 .infoCardContainer--info-card1-home {
