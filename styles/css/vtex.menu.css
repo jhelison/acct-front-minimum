@@ -1,0 +1,15 @@
+.menuItem {
+  cursor: pointer;
+}
+
+.styledLinkContent {
+  font-family: 'Open Sans';
+  font-weight: 500;
+  font-size: 15px;
+  font-style: bold;
+  text-transform: uppercase;
+}
+
+.menuItem:hover .styledLinkContent {
+  color: #fcc200;
+}
