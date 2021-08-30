@@ -78,3 +78,39 @@
   width: auto !important;
 }
 /* -------------------- Formulário --------------------*/
+
+/* -------------------- Button --------------------*/
+.containerBasicButton{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@media(max-width: 800px) {
+  .containerBasicButton{
+    justify-content: center;
+  }
+}
+
+.basicButton {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 120%;
+  font-weight: bold;
+
+  padding: 10px 20px;
+  border: 2px solid #5974c7;
+  border-radius: 5px;
+  margin: 10px 0;
+  background: #fff ;
+  color: #5974c7 ;
+  width: auto !important;
+  cursor: pointer !important;
+  transition:all 0.3s;
+}
+
+.basicButton:hover {
+  color: #fff !important;
+  background: #5974c7 !important;
+}
+/* -------------------- Button --------------------*/

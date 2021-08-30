@@ -225,7 +225,7 @@
     width: 100%;
 }
 
-.strong--about-container1-title, .strong--about-container1-title2 {
+.strong--about-container1-title, .strong--about-container1-title2, .strong--products--consultor-title{
     color: #fcc200;
 }
 
@@ -254,3 +254,21 @@
 .paragraph--tab-subtitle {
     margin-top: 30px;
 }
+
+.container--products-subtitle{
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 28px;
+    margin: 50px 0;
+}
+
+.container--products--consultor-title{
+    font-family: "Open Sans Condensed", sans-serif;
+}
+
+.container--products--consultor-sub{
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    max-width: 400px;
+}
+/* ----------------- products page -----------------*/
+

@@ -1,0 +1,40 @@
+{
+  "memory": 256,
+  "ttl": 10,
+  "timeout": 10,
+  "minReplicas": 2,
+  "maxReplicas": 4,
+  "workers": 1,
+  "routes": {
+    "status": {
+      "path": "/_v/status/:code",
+      "public": true
+    },
+    "leads": {
+      "path": "/_v/leads",
+      "public": true
+    },
+    "lead": {
+      "path": "/_v/lead/:email",
+      "public": true
+    },
+    "categories": {
+      "path": "/_v/categories/",
+      "public": true
+    },
+    "products": {
+      "path": "/_v/products/:categoryid",
+      "public": true
+    },
+    "specifications": {
+      "path": "/_v/specifications/:productid",
+      "public": true
+    }                   
+  },
+  "events": {
+    "orderCreated": {
+      "sender": "vtex.orders-broadcast",
+      "topics": ["order-created"]
+    }
+  }
+}

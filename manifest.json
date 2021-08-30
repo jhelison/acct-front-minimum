@@ -1,6 +1,6 @@
 {
-  "name": "admin-example",
-  "vendor": "vtex",
+  "name": "app-acct-group19",
+  "vendor": "hiringcoders202119",
   "version": "0.0.1",
   "builders": {
     "styles": "2.x",
@@ -9,10 +9,12 @@
     "react": "3.x",
     "assets": "0.x",
     "messages": "1.x",
-    "admin": "0.x"
+    "admin": "0.x",
+    "node": "6.x"
   },
   "scripts": {
-    "postreleasy": "vtex publish --verbose"
+    "postreleasy": "vtex publish --verbose",
+    "prereleasy": "bash lint.sh"
   },
   "dependencies": {
     "vtex.store": "2.x",
@@ -51,5 +53,52 @@
     "vtex.add-to-cart-button": "0.x",
     "vtex.product-price": "1.x"
   },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "httpstat.us",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "g0deojz10k.execute-api.us-east-2.amazonaws.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "OMSViewer"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "/api/oms/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "hiringcoders202119.myvtex.com",
+        "path": "/api/catalog/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "hiringcoders202119.myvtex.com",
+        "path": "/api/catalog_system/*"
+      }
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    }
+  ],
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

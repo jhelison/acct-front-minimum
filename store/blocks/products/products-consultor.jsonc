@@ -1,25 +1,48 @@
 {
     "flex-layout.row#consultor": {
-        "children": [
-            "flex-layout.col#consultor"
-        ]
+        "children": ["flex-layout.row#consultor-content"],
+        "props":{
+            "blockClass": "products-consultor-container"
+        }
     },
-
+    "flex-layout.row#consultor-content": {
+        "children": [
+            "flex-layout.col#consultor",
+            "flex-layout.col#consultor-button"
+        ],
+        "props":{
+            "blockClass": "products-consultor-content"
+        }
+    },
+    "basic-button#products-consultor":{
+        "props": {
+            "title": "Fale com um Consultor"
+        }
+    },
     "flex-layout.col#consultor": {
         "children": [
             "rich-text#consultor-title",
             "rich-text#consultor-sub"
         ]
     },
-
     "rich-text#consultor-title": {
         "props": {
-            "text": "## Precisa de ajuda?"
+            "text": "## Precisa de ajuda **?**",
+            "blockClass": "products--consultor-title"
         }
     },
     "rich-text#consultor-sub": {
         "props": {
-            "text": "Fale com a gente e descubra qual é o melhor plano para a sua necessidade"
+            "text": "Fale com a gente e descubra qual é o melhor plano para a sua necessidade",
+            "blockClass": "products--consultor-sub"
+        }
+    },
+    "flex-layout.col#consultor-button": {
+        "children": [
+            "basic-button#products-consultor"
+        ],
+        "props":{
+            "blockClass": "products-consultor-col-button"
         }
     }
 }
