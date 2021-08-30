@@ -10,7 +10,7 @@
   // Banner 
   "banner#about":{
     "props":{
-      "title": "Sobre nós",
+      "title": "SOBRE NÓS",
       "urlImage": "https://acct.global/wp-content/uploads/2020/10/cover-about-us.jpg"      
     }
   },
