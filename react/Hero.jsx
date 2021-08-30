@@ -1,8 +1,14 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import styles from "./Hero.css"
 import "./TweenLite.min.js"
 
 const Hero = (props) => {
+    const heroWords = ['Tecnologia_', 'Engenharia de E-commerce_', 'Desenvolvimento de Produto_'];
+    const [index, setIndex] = useState(0);
+    const [subIndex, setSubIndex] = useState(0);
+    const [blink, setBlink] = useState(true); 
+    const [reverse, setReverse] = useState(false);
+
     function animateWithRandomNumber(myClass, from, to) {
         TweenLite.fromTo(
             myClass,
@@ -43,11 +49,53 @@ const Hero = (props) => {
 
     useEffect(() => {
         animateHero()
-    })
+    }, [])
+
+    useEffect(() => {
+        if (index === heroWords.length) return;
+    
+        if ( subIndex === heroWords[index].length + 1 && 
+            index !== heroWords.length - 1 && !reverse ) {
+          setReverse(true);
+          return;
+        }
+    
+        if (subIndex === 0 && reverse) {
+          setReverse(false);
+          setIndex((prev) => prev + 1);
+          return;
+        }
+    
+        const timeout = setTimeout(() => {
+          setSubIndex((prev) => prev + (reverse ? -1 : 1));
+        }, Math.max(reverse ? 75 : subIndex === heroWords[index].length ? 1000 :
+                    150, parseInt(Math.random() * 150)));
+    
+        return () => clearTimeout(timeout);
+    }, [subIndex, index, reverse]);
+
+    // blinker
+    useEffect(() => {
+        const timeout2 = setTimeout(() => {
+        setBlink((prev) => !prev);
+        }, 200);
+        return () => clearTimeout(timeout2);
+    }, [blink]);
 
     return (
         <div className={styles.heroHome}>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+            <div className={styles.heroContent}>
+                <p className={styles.heroTitle}>{`${heroWords[index].substring(0, subIndex)}${blink ? "|" : ""}`}</p>
+                <div className={styles.heroWrapper}>
+                    <p className={styles.heroSubTitle}>Preencha o formulário abaixo para entrar em contato conosco!</p>
+                    <form className={styles.heroForm}>
+                        <input className={styles.nameInput} type="text" placeholder="Nome*"/>
+                        <input className={styles.emailInput} type="text" placeholder="E-mail*"/>
+                        <input type="submit" value="Enviar" className={styles.submitInput}/>
+                    </form>
+                </div>
+            </div>
             <svg
                 className={styles.heroSvg}
                 id="lines"

@@ -65,7 +65,7 @@
 
 @media(min-width: 1440px) {
   .contactsContentBanner{
-    padding-left: calc((100% - 850px)/2);;
+    padding-left: calc((100% - 850px)/2);
   }
 }
 

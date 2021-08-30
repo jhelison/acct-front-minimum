@@ -2,11 +2,9 @@
   "store.home": { 
     "blocks": [
       "hero",
-      "stack-layout#home-infocards",
       "rich-text#home1",
       "rich-text#home2",
       "services",
-      // "link#1",
       "flex-layout.row#cases",
       "rich-text#home3",
       "slider-layout-group#trustedBy",
