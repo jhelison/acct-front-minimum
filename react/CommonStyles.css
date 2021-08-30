@@ -75,6 +75,9 @@
 .height60 {
     height: 60px;
 }
+.height100 {
+    height: 100px;
+}
 
 .smallText {
     font-size: .7rem;
