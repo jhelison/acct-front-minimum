@@ -114,9 +114,13 @@ export async function products(
     }
 
     if( Object.keys( jsonGenerated ).length === 0 ) {
-      ctx.status = 404
+        ctx.body = {
+          warning: 'Products not exists to this category id'
+        }
+        ctx.status = 404
+    } else { 
+      ctx.body = jsonGenerated
     }
-    ctx.body = jsonGenerated
     ctx.set('Cache-Control', 'no-cache no-store')
 
   }

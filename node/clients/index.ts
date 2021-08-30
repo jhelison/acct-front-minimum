@@ -7,6 +7,7 @@ import Leads from './leads'
 import LeadByEmail from './leadByEmail'
 import SkuByProductId from './skuByProductId'
 import ProductById from './productById'
+import SpecificationsByProductId from './specificationsByProductId'
 
 // Extend the default IOClients implementation with our own custom clients.
 export class Clients extends IOClients {
@@ -37,6 +38,10 @@ export class Clients extends IOClients {
 
   public get productById() {
     return this.getOrSet('productById', ProductById)
+  } 
+
+  public get specificationsByProductId() {
+    return this.getOrSet('specificationsByProductId', SpecificationsByProductId)
   } 
 
 }

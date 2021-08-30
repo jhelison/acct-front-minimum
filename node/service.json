@@ -25,7 +25,11 @@
     "products": {
       "path": "/_v/products/:categoryid",
       "public": true
-    }             
+    },
+    "specifications": {
+      "path": "/_v/specifications/:productid",
+      "public": true
+    }                   
   },
   "events": {
     "orderCreated": {

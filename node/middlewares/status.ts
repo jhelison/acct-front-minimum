@@ -5,7 +5,8 @@ export async function status(ctx: Context, next: () => Promise<any>) {
       status: statusClient, catalog,
       skuByProductId: skuByProductIdClient,
       productById: productByIdClient,
-      leads: leadsClient
+      leads: leadsClient,
+      specificationsByProductId: specificationsByProductIdClient
     },
   } = ctx
 
@@ -39,7 +40,7 @@ export async function status(ctx: Context, next: () => Promise<any>) {
     console.log(`ignorou: ${key} --> ${value}`)
   }
 
-  const product = await skuByProductIdClient.getSkuByProductId(2)
+  const product = await skuByProductIdClient.getSkuByProductId(5)
 
   console.info("product = ", product)
 
@@ -52,7 +53,7 @@ export async function status(ctx: Context, next: () => Promise<any>) {
 
   console.info("eita teste---> ", product.skus[0].bestPriceFormated)
 
-  const product2 = await productByIdClient.getProductById(2)
+  const product2 = await productByIdClient.getProductById(5)
 
   console.info("product2 = ", product2)
 
@@ -62,7 +63,9 @@ export async function status(ctx: Context, next: () => Promise<any>) {
   console.info("leads ---> ", leads)
   console.info("leads email --->", leads.Items[0].email)
 
+  const specifications = await specificationsByProductIdClient.getSpecificationsByProductId(5)
 
+  console.info("specifications ---> ", specifications)
 
   const {
     headers,

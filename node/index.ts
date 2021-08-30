@@ -10,6 +10,7 @@ import { orderCreated } from './middlewares/orderCreated'
 import { leadByEmail } from './middlewares/leadByEmail'
 import { categories } from './middlewares/categories'
 import { products } from './middlewares/products'
+import { specificationsByProductId } from './middlewares/specificationsByProductsId'
 
 const TIMEOUT_MS = 1800
 
@@ -78,6 +79,9 @@ export default new Service({
     products: method({
       GET: [products],
     }),   
+    specifications: method({
+      GET: [specificationsByProductId],
+    }), 
   },
   events: {
     orderCreated
