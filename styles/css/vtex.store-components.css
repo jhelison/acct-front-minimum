@@ -1,4 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap');
+/* ------ Header ------ */
+
+.logoContainer {
+    padding: 0;
+}
+
+.logoImage {
+    width: 145px;
+}
+
 /* Customização do info card da home page. */
 
 .infoCardContainer--info-card1-home,
@@ -109,14 +118,10 @@
 }
 
 .infoCardHeadline--contacts-banner {
-    font-family: 'roboto';
+    font-family: 'Open Sans Condensed';
     color: white;
 }
 
-.imageElement--contacts-city-image {
-    border-bottom: 10px solid #fcc200;
-    margin-bottom: 20px;
-}
 /* ----------------- contacts page -----------------*/
 
 .imageElement--imageQuote {

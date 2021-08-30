@@ -249,3 +249,8 @@
     font-weight: 700;
 }
 /* ----------------- about page -----------------*/
+
+/* ------ products page ------ */
+.paragraph--tab-subtitle {
+    margin-top: 30px;
+}

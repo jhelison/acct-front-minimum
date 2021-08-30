@@ -64,7 +64,8 @@
         "props": {
             "text": "Planos com descontos de até 20% na assinatura anual",
             "textPosition": "CENTER",
-            "textAlignment": "CENTER"
+            "textAlignment": "CENTER",
+            "blockClass": "tab-subtitle"
         }
     },
 
