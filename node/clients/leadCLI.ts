@@ -1,4 +1,4 @@
-import { InstanceOptions, IOContext, IOResponse } from '@vtex/api'
+import { InstanceOptions, IOContext } from '@vtex/api'
 import { ExternalClient } from '@vtex/api'
 
 export default class leadCLI extends ExternalClient {
@@ -8,7 +8,7 @@ export default class leadCLI extends ExternalClient {
     super(url, context, options)
   }
 
-  public async handler(ctx: Context, body: Object, email?: string|undefined): Promise<IOResponse<string>> {
+  public async handler(ctx: Context, body: Object, email?: string|undefined): Promise<any> {
     let url = email ? `/lead/${email}` : `/leads`
     let method=ctx.method
 
@@ -17,10 +17,13 @@ export default class leadCLI extends ExternalClient {
         return this.http.putRaw(url, body, {
           metric: `lead-${method.toLowerCase}`,
         })
+      //Não retorna no padrão de IOResponse
       case 'PATCH':
-        return this.http.patch(url, body, {
-          metric: `lead-${method.toLowerCase}`,
-        })
+        return {
+          data: (await this.http.patch(url, body, {
+            metric: `lead-${method.toLowerCase}`,
+          }))
+        }
       case 'DELETE':
         return this.http.delete(url, {
           metric: `lead-${method.toLowerCase}`,
