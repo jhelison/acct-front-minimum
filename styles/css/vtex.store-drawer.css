@@ -1,0 +1,7 @@
+.drawer {
+  min-width: 150px !important;
+}
+
+.childrenContainer {
+  justify-content: center;
+}

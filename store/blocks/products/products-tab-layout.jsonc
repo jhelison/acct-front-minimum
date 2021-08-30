@@ -10,8 +10,7 @@
         "children": [
             "tab-list.item#data-growth",
             "tab-list.item#quality-assurance",
-            "tab-list.item#experience-design",
-            "tab-list.item#tecnologia"
+            "tab-list.item#experience-design"
         ]
     },
 
@@ -34,19 +33,12 @@
             "label": "Experience & Design"
         }
     },
-    "tab-list.item#tecnologia": {
-        "props": {
-            "tabId": "tecnologia",
-            "label": "Tecnologia"
-        }
-    },
 
     "tab-content#products": {
         "children": [
             "tab-content.item#data-growth",
             "tab-content.item#quality-assurance",
-            "tab-content.item#experience-design",
-            "tab-content.item#tecnologia"
+            "tab-content.item#experience-design"
         ]
     },
     "tab-content.item#data-growth": {
@@ -62,15 +54,9 @@
         }
     },
     "tab-content.item#experience-design": {
-        "children": [],
+        "children": ["rich-text#tab-content-title", "flex-layout.row#tab-content-items-experience-design"],
         "props": {
             "tabId": "experience-design"
-        }
-    },
-    "tab-content.item#tecnologia": {
-        "children": [],
-        "props": {
-            "tabId": "tecnologia"
         }
     },
 
@@ -102,6 +88,16 @@
         "props":{
             "categoryId": 4
         }
-    }
+    },
 
+    "flex-layout.row#tab-content-items-experience-design": {
+        "children": [
+            "product-cards#experience-design"
+        ]
+    },
+    "product-cards#experience-design": {
+        "props":{
+            "categoryId": 5
+        }
+    }
 }

@@ -6,11 +6,11 @@
     },
     "flex-layout.col#products-title-layout": {
         "children": [
-          "text-blink",
+          "text-blink#producs-title",
           "rich-text#products-subtitle"
         ]
       },
-     "text-blink": {
+     "text-blink#producs-title": {
         "props": {
           "text":
           "Planos e preços",
