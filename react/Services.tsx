@@ -32,15 +32,6 @@ const Services = () => {
             <a>Saiba mais</a>
           </div>
         </div>
-        <div className={styleModule.serviceItem}>
-          <img src="https://acct.global/wp-content/uploads/2020/11/flip-tecnology.jpg"></img>
-          <h2 className={styleModule.serviceTitle}>Tecnologia</h2>
-          <div className={styleModule.serviceContent}>
-            <h2>Tecnologia</h2>
-            <p>Uma empresa com as melhores práticas de desenvolvimento, soluções digitais e implementações de plataformas, com especialização em e-commerce.</p>
-            <a>Saiba mais</a>
-          </div>
-        </div>
       </div>
     </a>
   )

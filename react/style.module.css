@@ -367,7 +367,7 @@
   opacity: 1;
   max-width: 350px;
   margin: 0 auto;
-  transition: opacity 100ms ease;
+  transition: all 100ms ease;
 }
 
 .servicesContainer .serviceItem:hover .serviceContent {
@@ -377,16 +377,16 @@
 @media(min-width: 600px) {
   .servicesContainer {
     display: flex;
-    flex-wrap: wrap;
   }
   .servicesContainer .serviceItem {
     height: 280px;
-    width: 50%;
-    min-width: 50%;
+    width: 33.333%;
+    min-width: 33.333%;
     transition: all linear 150ms 50ms;
   }
   .servicesContainer .serviceItem .serviceTitle {
     display: initial;
+    width: min-content;
   }
   .servicesContainer .serviceItem:hover .serviceTitle {
     display: none;
@@ -414,18 +414,18 @@
   }
 
   .servicesContainer .serviceItem {
-    min-width: 25%;
-    width: 25%;
+    min-width: 33.333%;
+    width: 33.333%;
   }
 
   .servicesContainer:hover .serviceItem {
-    width: 23%;;
-    min-width: 23%;
+    width: 30%;;
+    min-width: 30%;
   }
   
   .servicesContainer .serviceItem:hover {
-    width: 31%;
-    min-width: 31%;
+    width: 40%;
+    min-width: 40%;
   }
 
 }
