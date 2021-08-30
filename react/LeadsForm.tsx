@@ -10,13 +10,11 @@ const LeadsForm = () => {
           </div>
 
           <div className={styleModule.leadsRow}>
-            <div className={styleModule.leadsHalf}>
-              <input className={styleModule.leadsFormInput} type="text" placeholder="nome"/>
-            </div>
+              <input className={styleModule.leadsFormInput} type="text" placeholder="Nome*"/>
+          </div>
 
-            <div className={styleModule.leadsHalf}>
-              <input className={styleModule.leadsFormInput} type="e-mail" placeholder="e-mail"/>
-            </div>
+          <div className={styleModule.leadsRow}>
+              <input className={styleModule.leadsFormInput} type="e-mail" placeholder="E-mail*"/>
           </div>
 
           <div className={styleModule.leadsRow}>

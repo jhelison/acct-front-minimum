@@ -174,7 +174,7 @@ const ProductCard = ({
             >
                 A partir de
             </span>
-            <label className={join([cStyles.colorYellow, cStyles.textCenter])}>
+            <label className={join([cStyles.colorYellow, cStyles.textCenter, cStyles.openSansCondensed])}>
                 R$ <b className={cStyles.bigText}>{price.toFixed(2)}</b>
             </label>
             <span
@@ -194,6 +194,7 @@ const ProductCard = ({
                     cStyles.mb40,
                     cStyles.dFlex,
                     cStyles.flexCenter,
+                    cStyles.openSansCondensed
                 ])}
                 href={toCartLink}
             >
@@ -204,6 +205,8 @@ const ProductCard = ({
                     cStyles.selfFlexStart,
                     cStyles.colorDarkGray,
                     cStyles.mb10,
+                    cStyles.openSansCondensed,
+                    cStyles.textUpper
                 ])}
             >
                 <b>Principais recursos</b>
