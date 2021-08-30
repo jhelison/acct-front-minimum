@@ -13,3 +13,7 @@
 .menuItem:hover .styledLinkContent {
   color: #fcc200;
 }
+
+.menuItem--menuMobile {
+  margin: 5px auto;
+}

@@ -1,3 +1,7 @@
 .headerRowContainer--flex-header {
   height: 90px;
 }
+
+.headerRowContainer--main-header-mobile {
+  height: 70px;
+}
