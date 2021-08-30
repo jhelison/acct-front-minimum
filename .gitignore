@@ -27,6 +27,7 @@ $RECYCLE.BIN/
 
 # App specific
 node_modules/
+node/node_modules/
 docs/_book/
 .tmp
 .idea
@@ -36,3 +37,4 @@ lib
 .eslintrc
 *.orig
 react/yarn.lock
+node/yarn.lock
