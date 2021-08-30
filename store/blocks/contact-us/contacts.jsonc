@@ -1,5 +1,5 @@
 {
-  // Eu dividi o layout em 3 partes: o banner e + 2 containers
+
   "store.custom#contacts":{
     "blocks": [
       "banner",
@@ -14,7 +14,7 @@
       "urlImage": "https://dev-acct.pantheonsite.io/wp-content/uploads/2020/10/cover-contact.jpg"
     }
   },
-  // Banner - Info Card
+
   "info-card#banner": {
     "props": {
       "isFullModeStyle": true,
@@ -26,7 +26,7 @@
       "blockClass": "contacts-banner"
     }
   },
-  // Container 1
+
   "flex-layout.row#containerCities":{
     "children": [
       "flex-layout.col#container1-linha1-col2-saopaulo", 
@@ -122,7 +122,7 @@
       "blockClass": "contacts-city-description"
     }
   },
-  // Container 2
+
   "flex-layout.row#container2":{
     "children": [
       "flex-layout.col#container2-col"
@@ -175,7 +175,7 @@
       "width": "20%"
     }
   },
-  "rich-text#bloco3-lista1":{ // Deveria ser uma lista <ul><li>Brasil</ul></li>
+  "rich-text#bloco3-lista1":{
     "props":{
       "text": "\n - Argentina \n - Brasil \n - Chile \n - Colômbia \n - EUA\n - France\n - Alemanha\n - Índia\n - Itália",
       "blockClass": "contacts-country-list"

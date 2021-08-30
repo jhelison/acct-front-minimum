@@ -47,7 +47,7 @@
         brightness(105%) contrast(104%);
 }
 
-/* ----------------------Loading Animation---------------------- */
+/* ------ Loading Animation ------ */
 .ldsDourglass {
     display: inline-block;
     position: relative;
@@ -79,5 +79,3 @@
         transform: rotate(1800deg);
     }
 }
-
-/* ----------------------Loading Animation---------------------- */

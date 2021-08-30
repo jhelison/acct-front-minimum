@@ -11,12 +11,5 @@
       "flex-layout.row#testimonials",
       "leadsForm"
     ]
-  },
-  "stack-layout#home-infocards":{
-    "children":[ 
-      "slider-layout#home-infocards",
-      "image#infocard-curve"
-
-    ]
   }
 }

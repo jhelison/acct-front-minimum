@@ -7,14 +7,14 @@
       "flex-layout.row#about-container3"
     ]
   },
-  // Banner 
+
   "banner#about":{
     "props":{
       "title": "SOBRE NÓS",
       "urlImage": "https://acct.global/wp-content/uploads/2020/10/cover-about-us.jpg"      
     }
   },
-  // Container 1 - Projetando o futuro do comercio digital
+  
   "flex-layout.row#about-container1":{
     "children": ["flex-layout.col#about-container1-col"]
   },
@@ -88,7 +88,7 @@
       "src": "https://acct.global/wp-content/uploads/2020/10/img-about-us.jpg"
     }
   },
-  // Container 2 - Por que a ACCT?
+
   "flex-layout.row#about-container2":{
     "children": ["flex-layout.col#about-container2-col"]
   },
@@ -224,7 +224,7 @@
       "blockClass": "about-container2-row-col-text"
     }
   },
-  // Container 3 - Trusted by_
+
   "flex-layout.row#about-container3":{
     "children": ["flex-layout.col#about-container3-col"]
   },
@@ -309,29 +309,5 @@
     "props":{
       "src": "https://acct.global/wp-content/uploads/2020/09/clients_cea.svg"
     }
-  },
-  // Container 4 - Time_
-  "flex-layout.row#about-container4":{
-    "children": ["flex-layout.col#about-container4-col"]
-  },
-  "flex-layout.col#about-container4-col":{
-    "children": [
-      "rich-text#about-container4-title",
-      "rich-text#about-container4-description",
-      "flex-layout.row#about-container4-row"
-    ]
-  },
-  "rich-text#about-container4-title":{
-    "props":{
-      "text": "Time**_**"
-    }
-  },
-  "rich-text#about-container4-description":{
-    "props":{
-      "text": "**A ACCT tem uma equipe interna de alto desempenho** com recursos de 360 graus para fornecer soluções de tecnologia de alta complexidade."
-    }
-  },
-  "flex-layout.row#about-container4-row":{
-    "children": []
   }
 }
