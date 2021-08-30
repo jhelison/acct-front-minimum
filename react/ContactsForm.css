@@ -3,20 +3,21 @@
   display: flex;
   width: 100%;
   justify-content: center;
-  /* background-image: url("https://dev-acct.pantheonsite.io/wp-content/uploads/2020/10/cover-contact.jpg"); */
+  align-items: center;
   background-position: center center;
   background-size: cover;
-  padding: 6rem 0rem 6rem 0rem;
+  height: 250px;
 }
 
 .contactsContentBanner{
-  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   max-width: 1300px;
 }
 
 .contactsBannerTitle{
-  /* width: 100%; */
-  width: 1300px;
+  width: 100%;
   font-size: 36px;
   text-align: left;
   text-transform: uppercase;
@@ -123,3 +124,39 @@
   width: auto !important;
 }
 /* -------------------- Formulário --------------------*/
+
+/* -------------------- Button --------------------*/
+.containerBasicButton{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@media(max-width: 800px) {
+  .containerBasicButton{
+    justify-content: center;
+  }
+}
+
+.basicButton {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 120%;
+  font-weight: bold;
+
+  padding: 10px 20px;
+  border: 2px solid #5974c7;
+  border-radius: 5px;
+  margin: 10px 0;
+  background: #fff ;
+  color: #5974c7 ;
+  width: auto !important;
+  cursor: pointer !important;
+  transition:all 0.3s;
+}
+
+.basicButton:hover {
+  color: #fff !important;
+  background: #5974c7 !important;
+}
+/* -------------------- Button --------------------*/

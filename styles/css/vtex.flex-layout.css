@@ -211,3 +211,28 @@
         margin-left: 40px;
     }
 }
+
+/* ------ products page ------ */
+
+.flexRow--products-consultor-container{
+    margin-top: 50px;
+}
+
+.flexRow--products-consultor-content{
+    width: 100%;
+    max-width: 1300px;
+}
+
+.flexCol--products-consultor-col-button{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.flexColChild--products-consultor-col-button{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+/* ------ products page ------ */

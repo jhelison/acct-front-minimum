@@ -6,24 +6,16 @@
     },
     "flex-layout.col#products-title-layout": {
         "children": [
-          "text-blink",
           "rich-text#products-subtitle"
         ]
-      },
-     "text-blink": {
-        "props": {
-          "text":
-          "Planos e preços",
-          "textAlign":
-          "center"
-        }
       },
       "rich-text#products-subtitle": {
         "props": {
           "text":
           " Com 7 dias grátis para experimentar, sem taxas de implantação e sem surpresas!",
           "textPosition": "CENTER",
-          "textAlignment": "CENTER"
+          "textAlignment": "CENTER",
+          "blockClass": "products-subtitle"
         }
       }
 }

@@ -9,7 +9,7 @@
     max-width: 22%;
     padding: 10px;
     margin: 10px;
-=======
+}
 .sliderLayoutContainer--sliderTestimonials {
     max-width: 750px;
     overflow: hidden;
@@ -26,6 +26,10 @@
 
 .paginationDotsContainer--trustedBy {
     bottom: -30px;
+}
+
+.sliderLayoutContainer--about-trusted-by{
+    margin-bottom: 100px;
 }
 
 @media(min-width: 800px){    

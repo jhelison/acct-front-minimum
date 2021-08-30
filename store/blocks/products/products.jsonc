@@ -1,9 +1,17 @@
 {
-    "store.custom#products": {
-      "blocks": [
-        "flex-layout.row#products-title-layout",
-        "tab-layout#products",
-        "flex-layout.row#consultor"
-      ]
+  "store.custom#products": {
+    "blocks": [
+      "banner#products",
+      "flex-layout.row#products-title-layout",
+      "tab-layout#products",
+      "flex-layout.row#consultor",
+      "flex-layout.row#testimonials"
+    ]
+  },
+  "banner#products":{
+    "props":{
+      "title": "PLANOS E PREÇOS",
+      "urlImage": "https://acct.global/wp-content/uploads/2020/11/cover-case-dito.png"
     }
-   }
+  }
+}

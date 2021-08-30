@@ -1,4 +1,7 @@
 {
+  "basic-button": {
+    "component": "Button"
+  },
   "contactsform": {
     "component": "ContactsForm"
   },

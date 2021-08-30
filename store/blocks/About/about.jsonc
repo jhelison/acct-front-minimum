@@ -229,10 +229,13 @@
   "flex-layout.col#about-container3-col":{
     "children": [
       "rich-text#about-container3-title",
-      "flex-layout.row#home1"
-
-      // "flex-layout.row#about-container3-row"
+      "slider-layout-group#trustedBy"
     ]
+  },
+  "slider-layout-group#trustedBy":{
+    "props":{
+      "blockClass": "about-trusted-by"
+    }
   },
   "rich-text#about-container3-title":{
     "props":{
