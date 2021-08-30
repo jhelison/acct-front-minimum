@@ -152,17 +152,15 @@
       "children":[
         "flex-layout.col#case1",
         "flex-layout.col#case2",
-        "flex-layout.col#case3",
-        "flex-layout.col#case4"
-      ],
+        "flex-layout.col#case3"      ],
       "props":{
         "itemsPerPage": {
           "desktop": 4,
           "tablet": 3,
           "phone": 1
           },
-          "showNavigationArrows": "always",
-          "showPaginationDots": "mobileOnly",
+          "showNavigationArrows": "never",
+          "showPaginationDots": "always",
           "blockClass": "rowCases"
   
       }

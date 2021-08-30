@@ -10,8 +10,11 @@
     padding: 24px;
     flex-direction: column;
     box-shadow: rgb(66 66 66 / 15%) 0px 8px 16px;
-
     border-bottom: 4px solid #fcc200;
+}
+
+.productCard h2 {
+    font-family: "Open Sans Condensed", sans-serif;
 }
 
 .productCardBuyButton {

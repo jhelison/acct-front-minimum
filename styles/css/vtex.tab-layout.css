@@ -1,4 +1,7 @@
 /* ---------------------- Products page ---------------------- */
+.container--products {
+    margin-top: 50px;
+}
 .listItem {
     background-color: white;
     border: 1px solid #f1f1f1;
@@ -6,6 +9,7 @@
 .listItem :global(.vtex-button) {
     border-width: 0;
     color: #737373;
+    font-family: "Open Sans Condensed", sans-serif;
 }
 .listItem :global(.vtex-button):hover {
     background-color: white !important;

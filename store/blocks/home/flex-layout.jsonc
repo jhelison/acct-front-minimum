@@ -16,7 +16,7 @@
     "props":{
       "horizontalAlign":"center",
       "colGap":"3",
-      "blockClass":"rowTestimonials"
+      "blockClass":"rowCases"
     }
   },
 
@@ -64,17 +64,6 @@
       "blockClass":"colCases"
     }
   },
-  "flex-layout.col#case4":{
-    "children":[
-      "image#case4",
-      "rich-text#case4"
-    ],
-    "props":{
-      "horizontalAlign":"center",
-      "width":"22%",
-      "blockClass":"colCases"
-    }
-  },
   
   "image#case1":{
     "props":{
@@ -94,14 +83,6 @@
       "blockClass":"imgCases"
     }
   },
-  "image#case4":{
-    "props":{
-      "src": "assets/client-stories-tokstok.jpg",
-      "blockClass":"imgCases"
-    }
-  },
-
-
 
     /* Flex layout na home page com imagens de logos de marcas importantes. */
     "flex-layout.row#home1": {

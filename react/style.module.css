@@ -314,7 +314,7 @@
   opacity: 1;
   max-width: 350px;
   margin: 0 auto;
-  transition: all 100ms ease;
+  transition: opacity 100ms ease;
 }
 
 .servicesContainer .serviceItem:hover .serviceContent {
@@ -349,6 +349,9 @@
   }
   .servicesContainer .serviceItem:hover img {
     filter: brightness(0.4);
+  }
+  .servicesContainer .serviceItem:hover .serviceContent {
+    transition-delay: 260ms;
   }
 }
 
