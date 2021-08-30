@@ -23,7 +23,7 @@ const AdminLeads = () => {
     const getProspects = async () => {
         try {
             const res = await fetch(
-                "https://jhelison--hiringcoders202119.myvtex.com/_v/leads"
+                "https://mariavitoria--hiringcoders202119.myvtex.com/_v/leads"
             )
             const resJson = await res.json()
             if (resJson) {
@@ -69,19 +69,21 @@ const AdminLeads = () => {
 
     const renderProspectsTable = () => {
         return (
-            <table className={join([cStyles.width100, cStyles.mt20, styles.CustomTable])}>
-                <tbody>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Telefone</th>
-                        <th>Status</th>
-                        <th>Cadastrado em</th>
-                        <th>Cliente em</th>
-                        <th>Ações</th>
-                    </tr>
-                    {renderProspectsItems()}
-                </tbody>
-            </table>
+            <div className={styles.tableWrapper}>
+                <table className={join([cStyles.width100, cStyles.mt20, styles.CustomTable])}>
+                    <tbody>
+                        <tr  className={cStyles.mb10}>
+                            <th className={join([cStyles.textLeft, cStyles.openSansCondensed, cStyles.mediumText])} >Nome</th>
+                            <th className={join([cStyles.textLeft, cStyles.openSansCondensed, cStyles.mediumText])}>Telefone</th>
+                            <th className={join([cStyles.textLeft, cStyles.openSansCondensed, cStyles.mediumText])}>Status</th>
+                            <th className={join([cStyles.textLeft, cStyles.openSansCondensed, cStyles.mediumText])}>Cadastrado em</th>
+                            <th className={join([cStyles.textLeft, cStyles.openSansCondensed, cStyles.mediumText])}>Cliente em</th>
+                            <th className={join([cStyles.textLeft, cStyles.openSansCondensed, cStyles.mediumText])}>Ações</th>
+                        </tr>
+                        {renderProspectsItems()}
+                    </tbody>
+                </table>
+            </div>
         )
     }
 
@@ -93,16 +95,16 @@ const AdminLeads = () => {
         return prospects.map((item) => {
             return (
                 <tr key={item.id}>
-                    <td>
+                    <td className={join([cStyles.pr15, cStyles.pb5])}>
                         <div className={join([cStyles.dFlex, cStyles.justifyStart, cStyles.flexColumn])}>
-                            <p className={cStyles.m0}><b>{item.name}</b></p>
+                            <p className={join([cStyles.m0, cStyles.openSansCondensed])}><b>{item.name}</b></p>
                             <a className={join([cStyles.colorGray])} href ={"mailto: " + item.email}>{item.email}</a>
                         </div>
                     </td>
-                    <td>{item.fone}</td>
-                    <td>{item.status}</td>
-                    <td>{item.createdAt}</td>
-                    <td>{item.customerAt}</td>
+                    <td className={join([cStyles.pr15, cStyles.pb5])}>{item.fone}</td>
+                    <td className={join([cStyles.pr15, cStyles.pb5])}>{item.status}</td>
+                    <td className={join([cStyles.pr15, cStyles.pb5])}>{item.createdAt}</td>
+                    <td className={join([cStyles.pr15, cStyles.pb5])}>{item.customerAt}</td>
                     <td className={join([cStyles.dFlex, cStyles.flexCenter])}
                     >
                         <button
@@ -113,7 +115,7 @@ const AdminLeads = () => {
                             }}
                             onClick={() => deleteProspect(item.id)}
                         >
-                            <FiTrash2 color="red" size={20}/>
+                            <FiTrash2 color="#de5d5d" size={20}/>
                         </button>
                     </td>
                 </tr>
@@ -144,6 +146,7 @@ const AdminLeads = () => {
                             <h4
                                 className={join([
                                     cStyles.colorGray,
+                                    cStyles.openSansCondensed,
                                     styles.textMargin,
                                 ])}
                             >
@@ -151,7 +154,8 @@ const AdminLeads = () => {
                             </h4>
                             <h2
                                 className={join([
-                                    cStyles.colorGreen,
+                                    cStyles.colorYellow,
+                                    cStyles.openSansCondensed,
                                     styles.textMargin,
                                 ])}
                             >
@@ -181,6 +185,7 @@ const AdminLeads = () => {
                             <h4
                                 className={join([
                                     cStyles.colorGray,
+                                    cStyles.openSansCondensed,
                                     styles.textMargin,
                                 ])}
                             >
@@ -188,7 +193,8 @@ const AdminLeads = () => {
                             </h4>
                             <h2
                                 className={join([
-                                    cStyles.colorGreen,
+                                    cStyles.colorYellow,
+                                    cStyles.openSansCondensed,
                                     styles.textMargin,
                                 ])}
                             >
@@ -205,7 +211,7 @@ const AdminLeads = () => {
                         >
                             <FiCheckCircle
                                 size={30}
-                                className={cStyles.colorGreen}
+                                className={cStyles.colorPastelGreen}
                             />
                         </div>
                         <div
@@ -218,6 +224,7 @@ const AdminLeads = () => {
                             <h4
                                 className={join([
                                     cStyles.colorGray,
+                                    cStyles.openSansCondensed,
                                     styles.textMargin,
                                 ])}
                             >
@@ -225,7 +232,8 @@ const AdminLeads = () => {
                             </h4>
                             <h2
                                 className={join([
-                                    cStyles.colorGreen,
+                                    cStyles.colorYellow,
+                                    cStyles.openSansCondensed,
                                     styles.textMargin,
                                 ])}
                             >
@@ -273,7 +281,7 @@ const AdminLeads = () => {
                             styles.exportButton,
                         ])}
                     >
-                        <FiDownload size={25} className={cStyles.mr10} />
+                        <FiDownload size={25} className={join([cStyles.colorPastelGreen, cStyles.mr10])} />
                         <label>Exportar dados em csv</label>
                     </div>
                 </div>

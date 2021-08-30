@@ -45,6 +45,10 @@
     color: green;
 }
 
+.colorPastelGreen {
+    color: #8bc34a;
+}
+
 .colorYellow {
     color: #fcc200;
 }
@@ -76,6 +80,14 @@
     margin-right: 10px;
 }
 
+.pr15 {
+    padding-right: 15px;
+}
+
+.pb5 {
+    padding-bottom: 15px;
+}
+
 .gap20 {
     gap: 20px;
 }
@@ -86,6 +98,10 @@
 
 .bgWhite {
     background-color: white;
+}
+
+.textLeft {
+    text-align: left;
 }
 
 .textCenter {
@@ -99,8 +115,13 @@
     height: 100px;
 }
 
+
 .smallText {
     font-size: 0.7rem;
+}
+
+.mediumText {
+    font-size: 1.1rem;
 }
 
 .bigText {
@@ -111,6 +132,7 @@
     text-transform: uppercase;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap');
 .openSansCondensed {
     font-family: "Open Sans Condensed", sans-serif;
 }
