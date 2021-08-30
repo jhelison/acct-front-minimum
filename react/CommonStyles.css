@@ -9,6 +9,10 @@
     align-items: center;
 }
 
+.flexColumn {
+    flex-direction: column;
+}
+
 .justifyCenter {
     justify-content: center;
 }
@@ -93,4 +97,8 @@
 
 .openSansCondensed {
   font-family: "Open Sans Condensed", sans-serif;
+}
+
+.m0 {
+    margin: 0;
 }

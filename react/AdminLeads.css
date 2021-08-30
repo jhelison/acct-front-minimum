@@ -1,0 +1,19 @@
+.headerContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    border: 1px solid lightgray;
+}
+
+.headerCardContainer {
+    padding: 5px;
+    border: 1px solid lightgray;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.textMargin {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
