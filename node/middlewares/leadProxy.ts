@@ -64,8 +64,10 @@ export async function leadProxy(ctx: Context, next: () => Promise<any>) {
       // resp: ctx.res,
     }    
   }
-    
-  console.warn(r, status, headers, data)
+   
+  r
+  
+  // console.warn(r, status, headers, data)
 
   // Prepare: Response
   if(!isNaN(status)){
