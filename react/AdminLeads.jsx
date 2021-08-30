@@ -9,6 +9,9 @@ import { join } from "./util"
 import { FiUsers } from "react-icons/fi"
 import { FiUserPlus } from "react-icons/fi"
 import { FiCheckCircle } from "react-icons/fi"
+import { FiSearch } from "react-icons/fi"
+import { FiDownload } from "react-icons/fi"
+import { FiTrash2 } from "react-icons/fi"
 
 const AdminLeads = () => {
     const [prospects, setProspects] = useState(null)
@@ -20,7 +23,7 @@ const AdminLeads = () => {
     const getProspects = async () => {
         try {
             const res = await fetch(
-                "https://g0deojz10k.execute-api.us-east-2.amazonaws.com/items"
+                "https://jhelison--hiringcoders202119.myvtex.com/_v/leads"
             )
             const resJson = await res.json()
             if (resJson) {
@@ -66,12 +69,14 @@ const AdminLeads = () => {
 
     const renderProspectsTable = () => {
         return (
-            <table style={{ width: "100%" }}>
+            <table className={join([cStyles.width100, cStyles.mt20, styles.CustomTable])}>
                 <tbody>
                     <tr>
                         <th>Nome</th>
-                        <th>Email</th>
                         <th>Telefone</th>
+                        <th>Status</th>
+                        <th>Cadastrado em</th>
+                        <th>Cliente em</th>
                         <th>Ações</th>
                     </tr>
                     {renderProspectsItems()}
@@ -81,17 +86,24 @@ const AdminLeads = () => {
     }
 
     const renderProspectsItems = () => {
+        const getStatus = () => {
+
+        }
+
         return prospects.map((item) => {
             return (
                 <tr key={item.id}>
-                    <td>{item.name}</td>
-                    <td>{item.email}</td>
+                    <td>
+                        <div className={join([cStyles.dFlex, cStyles.justifyStart, cStyles.flexColumn])}>
+                            <p className={cStyles.m0}><b>{item.name}</b></p>
+                            <a className={join([cStyles.colorGray])} href ={"mailto: " + item.email}>{item.email}</a>
+                        </div>
+                    </td>
                     <td>{item.fone}</td>
-                    <td
-                        style={{
-                            display: "flex",
-                            justifyContent: "center",
-                        }}
+                    <td>{item.status}</td>
+                    <td>{item.createdAt}</td>
+                    <td>{item.customerAt}</td>
+                    <td className={join([cStyles.dFlex, cStyles.flexCenter])}
                     >
                         <button
                             style={{
@@ -101,15 +113,7 @@ const AdminLeads = () => {
                             }}
                             onClick={() => deleteProspect(item.id)}
                         >
-                            <svg
-                                fill="red"
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                            >
-                                <path d="M3 6v18h18v-18h-18zm5 14c0 .552-.448 1-1 1s-1-.448-1-1v-10c0-.552.448-1 1-1s1 .448 1 1v10zm5 0c0 .552-.448 1-1 1s-1-.448-1-1v-10c0-.552.448-1 1-1s1 .448 1 1v10zm5 0c0 .552-.448 1-1 1s-1-.448-1-1v-10c0-.552.448-1 1-1s1 .448 1 1v10zm4-18v2h-20v-2h5.711c.9 0 1.631-1.099 1.631-2h5.315c0 .901.73 2 1.631 2h5.712z" />
-                            </svg>
+                            <FiTrash2 color="red" size={20}/>
                         </button>
                     </td>
                 </tr>
@@ -119,92 +123,158 @@ const AdminLeads = () => {
 
     const renderHeader = () => {
         return (
-            <div className={styles.headerContainer}>
-                <div className={styles.headerCardContainer}>
-                    <div className={join([cStyles.dFlex, cStyles.flexCenter])}>
-                        <FiUsers size={30} className={cStyles.colorGray} />
+            <div>
+                <div className={styles.headerContainer}>
+                    <div className={styles.headerCardContainer}>
+                        <div
+                            className={join([
+                                cStyles.dFlex,
+                                cStyles.flexCenter,
+                            ])}
+                        >
+                            <FiUsers size={30} className={cStyles.colorGray} />
+                        </div>
+                        <div
+                            className={join([
+                                cStyles.dFlex,
+                                cStyles.justifyCenter,
+                                cStyles.flexColumn,
+                            ])}
+                        >
+                            <h4
+                                className={join([
+                                    cStyles.colorGray,
+                                    styles.textMargin,
+                                ])}
+                            >
+                                Total de prospectos
+                            </h4>
+                            <h2
+                                className={join([
+                                    cStyles.colorGreen,
+                                    styles.textMargin,
+                                ])}
+                            >
+                                1231233
+                            </h2>
+                        </div>
                     </div>
-                    <div
-                        className={join([
-                            cStyles.dFlex,
-                            cStyles.justifyCenter,
-                            cStyles.flexColumn,
-                        ])}
-                    >
-                        <h4
+                    <div className={styles.headerCardContainer}>
+                        <div
                             className={join([
-                                cStyles.colorGray,
-                                styles.textMargin,
+                                cStyles.dFlex,
+                                cStyles.flexCenter,
                             ])}
                         >
-                            Total de prospectos
-                        </h4>
-                        <h2
+                            <FiUserPlus
+                                size={30}
+                                className={cStyles.colorGray}
+                            />
+                        </div>
+                        <div
                             className={join([
-                                cStyles.colorGreen,
-                                styles.textMargin,
+                                cStyles.dFlex,
+                                cStyles.justifyCenter,
+                                cStyles.flexColumn,
                             ])}
                         >
-                            1231233
-                        </h2>
+                            <h4
+                                className={join([
+                                    cStyles.colorGray,
+                                    styles.textMargin,
+                                ])}
+                            >
+                                Prospectos na semana
+                            </h4>
+                            <h2
+                                className={join([
+                                    cStyles.colorGreen,
+                                    styles.textMargin,
+                                ])}
+                            >
+                                1231233
+                            </h2>
+                        </div>
+                    </div>
+                    <div className={styles.headerCardContainer}>
+                        <div
+                            className={join([
+                                cStyles.dFlex,
+                                cStyles.flexCenter,
+                            ])}
+                        >
+                            <FiCheckCircle
+                                size={30}
+                                className={cStyles.colorGreen}
+                            />
+                        </div>
+                        <div
+                            className={join([
+                                cStyles.dFlex,
+                                cStyles.justifyCenter,
+                                cStyles.flexColumn,
+                            ])}
+                        >
+                            <h4
+                                className={join([
+                                    cStyles.colorGray,
+                                    styles.textMargin,
+                                ])}
+                            >
+                                Novos clientes na semana
+                            </h4>
+                            <h2
+                                className={join([
+                                    cStyles.colorGreen,
+                                    styles.textMargin,
+                                ])}
+                            >
+                                1231233
+                            </h2>
+                        </div>
                     </div>
                 </div>
-                <div className={styles.headerCardContainer}>
-                    <div className={join([cStyles.dFlex, cStyles.flexCenter])}>
-                        <FiUserPlus size={30} className={cStyles.colorGray} />
-                    </div>
+
+                <div className={join([cStyles.dFlex, cStyles.flexRow])}>
+                    <form
+                        className={join([
+                            cStyles.dFlex,
+                            cStyles.flexColumn,
+                            cStyles.mt20,
+                            cStyles.mr10,
+                            styles.searchForm,
+                        ])}
+                    >
+                        <label htmlFor="emailId">Email para pesquisa</label>
+                        <div
+                            className={join([
+                                styles.customInput,
+                                cStyles.dFlex,
+                                cStyles.flexCenter,
+                                cStyles.mt10,
+                            ])}
+                        >
+                            <input id={"emailId"} placeholder="Email"></input>
+                            <div
+                                className={join([
+                                    cStyles.dFlex,
+                                    cStyles.flexCenter,
+                                    cStyles.mr10,
+                                ])}
+                            >
+                                <FiSearch className={cStyles.colorGray} />
+                            </div>
+                        </div>
+                    </form>
                     <div
                         className={join([
                             cStyles.dFlex,
-                            cStyles.justifyCenter,
-                            cStyles.flexColumn,
+                            cStyles.flexCenter,
+                            styles.exportButton,
                         ])}
                     >
-                        <h4
-                            className={join([
-                                cStyles.colorGray,
-                                styles.textMargin,
-                            ])}
-                        >
-                            Prospectos na semana
-                        </h4>
-                        <h2
-                            className={join([
-                                cStyles.colorGreen,
-                                styles.textMargin,
-                            ])}
-                        >
-                            1231233
-                        </h2>
-                    </div>
-                </div>
-                <div className={styles.headerCardContainer}>
-                    <div className={join([cStyles.dFlex, cStyles.flexCenter])}>
-                        <FiCheckCircle size={30} className={cStyles.colorGreen} />
-                    </div>
-                    <div
-                        className={join([
-                            cStyles.dFlex,
-                            cStyles.justifyCenter,
-                            cStyles.flexColumn,
-                        ])}
-                    >
-                        <h4
-                            className={join([
-                                cStyles.colorGray,
-                                styles.textMargin,
-                            ])}
-                        >
-                            Novos cliente semana
-                        </h4>
-                        <h2
-                            className={join([
-                                cStyles.colorGreen,
-                                styles.textMargin,
-                            ])}
-                        >
-                            1231233
-                        </h2>
+                        <FiDownload size={25} className={cStyles.mr10} />
+                        <label>Exportar dados em csv</label>
                     </div>
                 </div>
             </div>
@@ -219,7 +289,7 @@ const AdminLeads = () => {
                 variation="full"
             >
                 {renderHeader()}
-                {/* {prospects !== null ? renderProspectsTable() : renderNotFound()} */}
+                {prospects !== null ? renderProspectsTable() : renderNotFound()}
             </PageBlock>
         </Layout>
     )

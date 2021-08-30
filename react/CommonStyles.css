@@ -1,5 +1,3 @@
-
-
 .dFlex {
     display: flex;
 }
@@ -13,8 +11,16 @@
     flex-direction: column;
 }
 
+.flexRow {
+    flex-direction: Row;
+}
+
 .justifyCenter {
     justify-content: center;
+}
+
+.justifyStart {
+    justify-content: flex-start;
 }
 
 .alignCenter {
@@ -56,8 +62,18 @@
     margin-bottom: 60px;
 }
 
+.mt10 {
+    margin-top: 10px;
+}
 .mt20 {
     margin-top: 20px;
+}
+.mt40 {
+    margin-top: 40px;
+}
+
+.mr10 {
+    margin-right: 10px;
 }
 
 .gap20 {
@@ -84,7 +100,7 @@
 }
 
 .smallText {
-    font-size: .7rem;
+    font-size: 0.7rem;
 }
 
 .bigText {
@@ -96,9 +112,13 @@
 }
 
 .openSansCondensed {
-  font-family: "Open Sans Condensed", sans-serif;
+    font-family: "Open Sans Condensed", sans-serif;
 }
 
 .m0 {
     margin: 0;
+}
+
+.width100 {
+    width: 100%;
 }
