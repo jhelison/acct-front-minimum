@@ -2,6 +2,10 @@
     display: flex;
 }
 
+.flexComumn {
+    flex-direction: column;
+}
+
 .flexCenter {
     justify-content: center;
     align-items: center;
@@ -134,7 +138,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap');
 .openSansCondensed {
-    font-family: "Open Sans Condensed", sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
 }
 
 .m0 {
