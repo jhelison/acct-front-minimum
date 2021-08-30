@@ -11,5 +11,5 @@ export async function categories(ctx: Context, next: () => Promise<any>) {
   ctx.set('Cache-Control', 'no-cache no-store')
 
   await next()
-  
+
 }

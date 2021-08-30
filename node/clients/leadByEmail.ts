@@ -1,14 +1,18 @@
-import type { InstanceOptions, IOContext } from '@vtex/api'
+import type { InstanceOptions, IOContext, IOResponse } from '@vtex/api'
 import { ExternalClient } from '@vtex/api'
 
 interface Lead {
-  customerAt: any
-  status: 'prospect' | 'client'
+  customerAt: number
+  status: string
   createdAt: number
   lastUpdatedAt: number
   email: string
   name: string
   fone: string
+}
+
+interface Item { 
+  Item: Lead
 }
 
 export default class LeadByEmail extends ExternalClient {
@@ -22,13 +26,21 @@ export default class LeadByEmail extends ExternalClient {
     })
   }
 
-  public async getLead(email: string): Promise<Lead> {
+  public async getLead(email: string): Promise<Item> {
     return this.http.get(`/lead/${email}`, {
-      metric: 'leads-get',
+      metric: 'lead-get',
     })
   }
 
-  public async patchLead(email: string): Promise<Lead> {
+  public async getLeadWithHeaders(
+    email: string
+  ): Promise<IOResponse<Item>> {
+    return this.http.getRaw(`/lead/${email}`, {
+      metric: 'lead-get-raw',
+    })
+  }
+
+  public async patchLead(email: string): Promise<Item> {
     return this.http.patch(`/lead/${email}`, {
       "status": "customer"
     })
