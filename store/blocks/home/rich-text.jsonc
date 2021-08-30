@@ -20,26 +20,13 @@
             "blockClass": "presentation2"
         }
     },
-    // "link#1": {
-    //     "props": {
-    //         "href": "",
-    //         "label": "Saiba mais sobre nós",
-    //         "displayMode": "button",
-    //         "buttonProps": {
-    //             "variant": "primary",
-    //             "size": "regular"
-    //         },
-    //         "blockClass": "presentation-button"
-    //     }
-    // },
-    /* Texto para a abertura para o flex layout com imagens de marcas importantes para a empresa . */
-    "rich-text#home3": {
-        "props": {
-            "text": "Trusted by**_**",
-            "textAlignment": "CENTER",
-            "textPosition": "CENTER",
-            "blockClass": "title"
-          }
+    "text-blink#home3": {
+      "props": {
+        "text":
+        "Trusted by",
+        "textAlign":
+        "center"  
+      }
     },
 
 
@@ -74,13 +61,13 @@
     Título dos depoimentos.
   */
 
-  "rich-text#testimonialsTitle": {
+
+  "text-blink#testimonialsTitle": {
     "props": {
-      "text": "Depoimentos**_**",
-      "textAlignment": "CENTER",
-      "textPosition": "CENTER",
-      "font": "t-heading-3",
-      "blockClass": "title"
+      "text":
+      "Depoimentos",
+      "textAlign":
+      "center"  
     }
   },
 

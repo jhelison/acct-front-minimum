@@ -10,7 +10,7 @@
   // Banner 
   "banner#about":{
     "props":{
-      "title": "Sobre nós",
+      "title": "SOBRE NÓS",
       "urlImage": "https://acct.global/wp-content/uploads/2020/10/cover-about-us.jpg"      
     }
   },
@@ -94,15 +94,17 @@
   },
   "flex-layout.col#about-container2-col":{
     "children": [
-      "rich-text#about-container2-title",
+      "text-blink#about-container2-title",
       "flex-layout.row#about-container2-row"
     ],
     "props":{"blockClass": "about-container1-col"}
   },
-  "rich-text#about-container2-title":{
-    "props":{
-      "text": "Por que a ACCT?**_**",
-      "blockClass": "about-container1-title2"
+  "text-blink#about-container2-title": {
+    "props": {
+      "text":
+      "Por que a ACCT?",
+      "textAlign":
+      "center"  
     }
   },
   "flex-layout.row#about-container2-row":{
