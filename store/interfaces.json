@@ -16,5 +16,8 @@
   },
     "leadsForm": {
     "component": "LeadsForm"
+  },
+    "hero": {
+    "component": "Hero"
   }
 }

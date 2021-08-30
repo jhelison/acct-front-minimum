@@ -423,3 +423,35 @@
   }
 
 }
+
+/* Hero Home */
+
+.heroHome {
+  position: relative;
+  height: 600px;
+}
+
+.heroSvg {
+  position: absolute;
+  height: 100%;;
+}
+
+.lines {
+  opacity: 0.05; 
+}  
+
+.line {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #fcc200; 
+}
+
+.lights {
+  opacity: 0.9;
+}
+
+.light {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #fcc200; 
+}

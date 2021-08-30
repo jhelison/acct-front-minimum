@@ -1,6 +1,7 @@
 {
   "store.home": { 
     "blocks": [
+      "hero",
       "stack-layout#home-infocards",
       "rich-text#home1",
       "rich-text#home2",
