@@ -2,6 +2,7 @@ import type { InstanceOptions, IOContext } from '@vtex/api'
 import { ExternalClient } from '@vtex/api'
 
 interface Lead {
+  customerAt: any
   status: 'prospect' | 'client'
   createdAt: number
   lastUpdatedAt: number
@@ -26,5 +27,14 @@ export default class LeadByEmail extends ExternalClient {
       metric: 'leads-get',
     })
   }
+
+  public async patchLead(email: string): Promise<Lead> {
+    return this.http.patch(`/lead/${email}`, {
+      "status": "customer"
+    })
+  }
+
+
+
 
 }
