@@ -8,17 +8,6 @@ import { FiAlertCircle } from "react-icons/fi"
 import { FiCheck } from "react-icons/fi"
 import { FiX } from "react-icons/fi"
 
-import { FiActivity } from "react-icons/fi"
-import { FiCloudDrizzle } from "react-icons/fi"
-import { FiCommand } from "react-icons/fi"
-
-// const testData = [
-//     {
-//         id: "1",
-//         title: "CRO",
-//         description: "Data Analytics com foco em CRO",
-//         price: "349.99",
-//         Icon: FiActivity,
 const caracteristics = [
     { label: "Estudo de Conversão", status: true },
     { label: "Elaboração de Dashboard", status: false },
@@ -28,44 +17,9 @@ const caracteristics = [
     },
     { label: "Configuração do Analytics", status: false },
 ]
-//     {
-//         id: "2",
-//         title: "GOLIVE",
-//         description:
-//             "Acompanhar os principais ofensores e oportunidades do Funil",
-//         price: "549.99",
-//         Icon: FiCloudDrizzle,
-//         caracteristics: [
-//             { label: "Estudo de Conversão", status: true },
-//             { label: "Elaboração de Dashboard", status: true },
-//             {
-//                 label: "Participações em discussões de estratégia",
-//                 status: false,
-//             },
-//             { label: "Configuração do Analytics", status: true },
-//         ],
-//     },
-//     {
-//         id: "3",
-//         title: "TESTE AB",
-//         description:
-//             "Realizar Testes entre Layouts, Versões de Site, Landing Pages",
-//         price: "1099.99",
-//         Icon: FiCommand,
-//         caracteristics: [
-//             { label: "Estudo de Conversão", status: true },
-//             { label: "Elaboração de Dashboard", status: true },
-//             {
-//                 label: "Participações em discussões de estratégia",
-//                 status: true,
-//             },
-//             { label: "Configuração do Analytics", status: true },
-//         ],
-//     },
-// ]
 
 const ProductCards = ({ categoryId }) => {
-    const [products, setProducts] = useState([])
+    const [products, setProducts] = useState(null)
 
     useEffect(() => {
         getItems()
@@ -96,27 +50,39 @@ const ProductCards = ({ categoryId }) => {
         })
     }
 
+    
     const renderProducts = () => {
         if (products) {
             return products.map((product) => {
                 return (
                     <ProductCard
-                        key={product.productId}
-                        title={product.productName}
-                        description={product.description}
-                        price={
-                            product.items[0].sellers[0].commertialOffer.Price
-                        }
-                        caracteristics={caracteristics}
-                        img={product.items[0].images[0]}
-                        toCartLink={product.items[0].sellers[0].addToCartLink}
+                    key={product.productId}
+                    title={product.productName}
+                    description={product.description}
+                    price={
+                        product.items[0].sellers[0].commertialOffer.Price
+                    }
+                    caracteristics={caracteristics}
+                    img={product.items[0].images[0]}
+                    toCartLink={product.items[0].sellers[0].addToCartLink}
                     />
-                )
-            })
+                    )
+                })
+            }
         }
-    }
 
-    return (
+        const productsOrLoader = () => {
+            if(products === null) {
+                return (
+                    <CustomLoader/>
+                )
+            }
+            return (
+                renderProducts()
+            )
+        }
+        
+        return (
         <div
             className={join([
                 styles.productCardsContainer,
@@ -124,7 +90,7 @@ const ProductCards = ({ categoryId }) => {
                 cStyles.flexCenter,
             ])}
         >
-            {renderProducts()}
+            {productsOrLoader()}
         </div>
     )
 }
@@ -153,10 +119,12 @@ const ProductCard = ({
                 alt={img.imageLabel}
                 className={styles.imgIcon}
             />
-            <h2>{title}</h2>
+            <div className={join([cStyles.dFlex, cStyles.flexCenter, cStyles.height60])}>
+                <h2 className={join([cStyles.textCenter])}>{title}</h2>
+            </div>
             <div
                 className={join([
-                    cStyles.height60,
+                    cStyles.height100,
                     cStyles.dFlex,
                     cStyles.flexCenter,
                 ])}
@@ -174,7 +142,7 @@ const ProductCard = ({
             >
                 A partir de
             </span>
-            <label className={join([cStyles.colorYellow, cStyles.textCenter])}>
+            <label className={join([cStyles.colorYellow, cStyles.textCenter, cStyles.openSansCondensed])}>
                 R$ <b className={cStyles.bigText}>{price.toFixed(2)}</b>
             </label>
             <span
@@ -194,6 +162,7 @@ const ProductCard = ({
                     cStyles.mb40,
                     cStyles.dFlex,
                     cStyles.flexCenter,
+                    cStyles.openSansCondensed
                 ])}
                 href={toCartLink}
             >
@@ -204,6 +173,8 @@ const ProductCard = ({
                     cStyles.selfFlexStart,
                     cStyles.colorDarkGray,
                     cStyles.mb10,
+                    cStyles.openSansCondensed,
+                    cStyles.textUpper
                 ])}
             >
                 <b>Principais recursos</b>
@@ -243,6 +214,12 @@ const ProductCaracteristic = ({ label, status, key }) => {
                 {getIcon()}
             </div>
         </div>
+    )
+}
+
+const CustomLoader = (props) => {
+    return (
+        <div className={styles.ldsDourglass}></div>
     )
 }
 

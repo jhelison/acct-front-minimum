@@ -55,8 +55,6 @@
     object-fit: contain;
 }
 
-
-
 @media(min-width: 800px) {
     .flexRowContent--contacts-list-city-cards, .flexRow--contacts-container2 {
       padding: 0 48px;
@@ -66,23 +64,63 @@
 /* ----------------- cases -----------------*/
 
 .flexRow--rowCases {
-    background-color: #f1f1f1;
+
 }
 
 .flexCol--colCases {
-    background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
-    max-width: 22%;
-    padding: 5%;
+    text-align: center;
+    padding: 0 0 40px;
 }
 
-.flexColChild--colCases {
-    background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
-    max-width: 22%;
-    padding: 5%;
+.flexRowContent--rowCases .flexColChild {
+    width: 100%;
+}
+
+.flexColChild--colCases:last-child {
+    text-align: left;
+    max-width: 280px;
+}
+
+.flexCol--colCases :global(.vtex-store-components-3-x-imageElement) {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 100px;
+}
+
+.flexCol--colCases :global(.vtex-rich-text-0-x-paragraph--rtCases) {
+    color: #1d1d1d;
+    font-size: 16px;
+    text-align: left;
+}
+
+.flexCol--colCases :global(.vtex-rich-text-0-x-strong) {
+    font-family: "Open Sans Condensed", sans-serif;
+    color: #040404;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+}
+
+@media(min-width: 600px) {
+    .flexCol--colCases :global(.vtex-store-components-3-x-imageElement) {
+        width: 150px;
+        height: 150px;
+    }
+    .flexColChild--colCases:last-child {
+        padding: 0 24px;
+    }
+}
+
+@media(min-width: 1024px) {
+    .flexCol--colCases :global(.vtex-store-components-3-x-imageElement) {
+        width: 250px;
+        height: 250px;
+    }
+    .flexColChild--colCases:last-child {
+        padding: 0 24px;
+        max-width: initial
+    }
 }
 
 
