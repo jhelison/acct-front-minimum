@@ -3,5 +3,17 @@
 }
 
 .childrenContainer {
-  justify-content: center;
+  padding-left: 24px;
+  justify-content: left;
+}
+
+.openIconContainer {
+  padding: 0;
+  color: #fcc200;
+}
+
+@media(min-width: 1024px) {
+  .childrenContainer {
+    justify-content: space-between;
+  }
 }

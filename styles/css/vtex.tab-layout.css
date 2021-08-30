@@ -8,6 +8,7 @@
 }
 .listItem :global(.vtex-button) {
     border-width: 0;
+    font-size: 18px;
     color: #737373;
     font-family: "Open Sans Condensed", sans-serif;
 }

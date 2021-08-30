@@ -2,12 +2,15 @@
   cursor: pointer;
 }
 
+.styledLinkContainer {
+  margin: 0;
+}
+
 .styledLinkContent {
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
   font-weight: 500;
-  font-size: 15px;
-  font-style: bold;
-  text-transform: uppercase;
+  font-size: 20px;
+  color: #707070;
 }
 
 .menuItem:hover .styledLinkContent {
@@ -15,5 +18,13 @@
 }
 
 .menuItem--menuMobile {
-  margin: 5px auto;
+  margin: 5px 0 ;
+}
+
+@media(min-width: 1024px) {
+  .styledLinkContent {
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-right: 35px;
+  }
 }

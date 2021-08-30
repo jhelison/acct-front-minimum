@@ -2,12 +2,24 @@
     "flex-layout.row#products-title-layout":{
         "children": [
             "flex-layout.col#products-title-layout"
-        ]
+        ],
+        "props":{
+          "blockClass":
+          "products-title"
+        }
     },
     "flex-layout.col#products-title-layout": {
         "children": [
           "rich-text#products-subtitle"
         ]
+      },
+     "text-blink#producs-title": {
+        "props": {
+          "text":
+          "Planos e preços",
+          "textAlign":
+          "center"  
+        }
       },
       "rich-text#products-subtitle": {
         "props": {

@@ -249,7 +249,11 @@
     font-weight: 700;
 }
 /* ----------------- about page -----------------*/
-/* ----------------- products page -----------------*/
+
+/* ------ products page ------ */
+.paragraph--tab-subtitle {
+    margin-top: 30px;
+}
 
 .container--products-subtitle{
     font-family: "Open Sans Condensed", sans-serif;
@@ -267,3 +271,4 @@
     max-width: 400px;
 }
 /* ----------------- products page -----------------*/
+

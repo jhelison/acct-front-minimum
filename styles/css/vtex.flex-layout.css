@@ -1,3 +1,7 @@
+.flexRowContent--products-title {
+    margin-top: 60px;
+}
+
 /* ------ Contacts Page ------ */
 
 .flexRowContent--contacts-list-city-cards {
@@ -157,6 +161,7 @@
 
 .flexColChild--about-container1-col{
     width: 100%;
+    padding: 0 24px;
 }
 
 .flexCol--about-container3-col{
@@ -189,6 +194,32 @@
     align-items: center;
     justify-content: center;
 }
+
+@media(min-width: 800px) {
+    .flexColChild--about-container1-col{
+        padding: 0 48px;
+    }
+}
+
+@media(min-width: 1024px) {
+    .flexColChild--about-container1-col{
+        padding: 0 96px;
+    }
+}
+  
+  
+@media(min-width: 1250px) {
+    .flexColChild--about-container1-col{
+        padding: 0 120px;
+    } 
+}
+  
+@media(min-width: 1440px) {
+    .flexColChild--about-container1-col{
+        padding: 0 calc((100% - 1020px)/2);
+    }
+}
+  
 /* ----------------- about page -----------------*/
 
 .flexColChild .container {
