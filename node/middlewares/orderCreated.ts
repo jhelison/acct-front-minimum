@@ -4,7 +4,7 @@ export async function orderCreated(
   ) {
     const orderId = ctx.body.orderId
     const OrderClient = ctx.clients.OMS
-    const LeadsClient = ctx.clients.leads
+    // const LeadsClient = ctx.clients.leads
 
     const order = await OrderClient.order(orderId, 'AUTH_TOKEN')
 
@@ -17,27 +17,27 @@ export async function orderCreated(
 
     const email = array.slice(0, indexOfDash).join('')
 
-    // Seria bom ter uma rota para pegar o lead pelo email
-    const leads = await LeadsClient.getLeads()
+    // // Seria bom ter uma rota para pegar o lead pelo email
+    // const leads = await LeadsClient.getLeads()
 
-    // Pega todos os Leads e acha quem tem email igual ao recebido pelo Feed
-    const lead = leads.Items.find(lead => lead.email === email)
+    // // Pega todos os Leads e acha quem tem email igual ao recebido pelo Feed
+    // const lead = leads.Items.find(lead => lead.email === email)
 
-    if (!lead) {
-        console.log(`Email ${email} não é lead!!`)
+    // if (!lead) {
+    //     console.log(`Email ${email} não é lead!!`)
 
-        return
-    }
+    //     return
+    // }
 
-    const isProspect = lead.status === 'prospect'
+    // const isProspect = lead.status === 'prospect'
 
-    if (isProspect) {
-        // Implementar chamada para atualizar de prospect para client na aws
-    }
+    // if (isProspect) {
+    //     // Implementar chamada para atualizar de prospect para client na aws
+    // }
 
     console.log(`Email recebido: ${email}`)
-    console.log(`Lead é: ${JSON.stringify(lead)}`)
-    console.log(`É prospect: ${isProspect}`)
+    // console.log(`Lead é: ${JSON.stringify(lead)}`)
+    // console.log(`É prospect: ${isProspect}`)
 
     await next()
   }

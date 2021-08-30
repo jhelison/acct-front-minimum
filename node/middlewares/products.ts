@@ -32,23 +32,22 @@ export async function products(
 ) {
 
   const {
-    clients: { 
-      skuByProductId: skuByProductIdClient,
-       catalog,
-       productById: productByIdClient,
-       },
+    clients: {
+      catalog,
+      vtexApi: vtexApiClient
+    },
     vtex: {
-      route: { params }, 
+      route: { params },
     },
   } = ctx
 
   const { categoryid } = params
 
-  if (! categoryid) {
+  if (!categoryid) {
     throw new UserInputError('Category Id is required') // Wrapper for a Bad Request (400) HTTP Error. Check others in https://github.com/vtex/node-vtex-api/blob/fd6139349de4e68825b1074f1959dd8d0c8f4d5b/src/errors/index.ts
   }
 
-  const CatId : number = parseInt( categoryid as string, 10)
+  const CatId: number = parseInt(categoryid as string, 10)
 
   const { data } = await catalog.getProductsAndSkus(1)
 
@@ -56,10 +55,10 @@ export async function products(
 
   let prodId: number
   for (let [key] of Object.entries(data)) {
-    prodId = parseInt( key as string, 10)
+    prodId = parseInt(key as string, 10)
 
-    const { 
-      Id, 
+    const {
+      Id,
       Name,
       CategoryId,
       IsVisible,
@@ -67,16 +66,60 @@ export async function products(
       Title,
       IsActive,
       MetaTagDescription
-    } = await productByIdClient.getProductById( prodId )
+    } = await vtexApiClient.getProductById(prodId)
 
-    if( IsActive && IsVisible && CategoryId === CatId) {
+    if (IsActive && IsVisible && CategoryId === CatId) {
 
-      const { 
+      const spec = await vtexApiClient.getSpecificationsByProductId(prodId)
+
+      let jsonSpec: any = []
+
+      for (let [ ,value] of Object.entries(spec)) {
+        const eachRow = value
+        let result = []
+
+        for (let i in eachRow)
+          result.push([i, eachRow[i]]);
+
+        const specValue = result[0][1]
+        const id = result[1][1]
+        const name = result[2][1]
+
+        const idDetail: number = parseInt(id as string, 10)
+        const {
+          Description,
+          Position,
+          FieldGroupId,
+          FieldGroupName,
+          IsActive
+        } = await vtexApiClient.getSpecificationsDetails(idDetail)
+
+        if(IsActive) {
+
+          const objSpec = {
+            fieldGroupId: FieldGroupId,
+            fieldGroupName: FieldGroupName,
+            description: Description,
+            specId: id,
+            specName: name,
+            specValue: specValue,
+            position: Position
+          }
+
+          jsonSpec.push(objSpec)
+
+        }
+
+      }
+
+      
+
+      const {
         available,
         skus
-      } = await skuByProductIdClient.getSkuByProductId( prodId )
+      } = await vtexApiClient.getSkuByProductId(prodId)
 
-      const newSkus = skus.map( (item: Sku) => {
+      const newSkus = skus.map((item: Sku) => {
         return {
           skuId: item.sku,
           skuName: item.skuname,
@@ -93,11 +136,11 @@ export async function products(
           skuInstallmentsInsterestRate: item.installmentsInsterestRate,
           skuImage: item.image
         }
-        
-      } )
+
+      })
 
       const newProd = {
-        Id, 
+        Id,
         Name,
         CategoryId,
         IsVisible,
@@ -106,21 +149,24 @@ export async function products(
         IsActive,
         MetaTagDescription,
         available,
-        skus: newSkus
+        skus: newSkus,
+        specifications: jsonSpec
       }
 
       jsonGenerated.push(newProd)
 
     }
 
-    if( Object.keys( jsonGenerated ).length === 0 ) {
-        ctx.body = {
-          warning: 'Products not exists to this category id'
-        }
-        ctx.status = 404
-    } else { 
-      ctx.body = jsonGenerated
-    }
+    // if (Object.keys(jsonGenerated).length === 0) {
+    //   ctx.body = {
+    //     warning: 'Products not exists to this category id'
+    //   }
+    //   ctx.status = 404
+    // } else {
+    //   ctx.body = jsonGenerated
+    //   ctx.status = 200
+    // }
+    ctx.body = jsonGenerated
     ctx.set('Cache-Control', 'no-cache no-store')
 
   }

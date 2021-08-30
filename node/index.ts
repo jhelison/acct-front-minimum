@@ -3,11 +3,7 @@ import type { ClientsConfig, ServiceContext, RecorderState, EventContext } from 
 import { method, Service } from '@vtex/api'
 
 import { Clients } from './clients'
-import { status } from './middlewares/status'
-import { validate } from './middlewares/validate'
-import { leads } from './middlewares/leads'
 import { orderCreated } from './middlewares/orderCreated'
-import { leadByEmail } from './middlewares/leadByEmail'
 import { categories } from './middlewares/categories'
 import { products } from './middlewares/products'
 import { specificationsByProductId } from './middlewares/specificationsByProductsId'
@@ -63,16 +59,6 @@ export default new Service({
   clients,
   routes: {
     // `status` is the route ID from service.json. It maps to an array of middlewares (or a single handler).
-    status: method({
-      GET: [validate, status],
-    }),
-    // `status` is the route ID from service.json. It maps to an array of middlewares (or a single handler).
-    leads: method({
-      GET: [leads],
-    }),
-    lead: method({
-      GET: [leadByEmail],
-    }),
     categories: method({
       GET: [categories],
     }),    

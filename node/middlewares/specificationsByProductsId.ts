@@ -7,7 +7,7 @@ export async function specificationsByProductId(
 
   const {
     clients: {
-      specificationsByProductId: specificationsByProductIdClient,
+      vtexApi: vtexApiClient,
     },
     vtex: {
       route: { params },
@@ -22,16 +22,18 @@ export async function specificationsByProductId(
 
   const prodId: number = parseInt(productid as string, 10)
 
-  const specifications = await specificationsByProductIdClient.getSpecificationsByProductId(prodId)
+  const specifications = await vtexApiClient.getSpecificationsByProductId(prodId)
 
-  if (Object.keys(specifications).length === 0) {
-    ctx.body = {
-      warning: 'Specifications not exists to this product id'
-    }
-    ctx.status = 404
-  } else {
-    ctx.body = specifications
-  }
+  // if (Object.keys(specifications).length === 0) {
+  //   ctx.body = {
+  //     warning: 'Specifications not exists to this product id'
+  //   }
+  //   ctx.status = 404
+  // } else {
+  //   ctx.body = specifications
+  // }
+  
+  ctx.body = specifications
   ctx.set('Cache-Control', 'no-cache no-store')
 
 
