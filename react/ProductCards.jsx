@@ -8,16 +8,6 @@ import { FiAlertCircle } from "react-icons/fi"
 import { FiCheck } from "react-icons/fi"
 import { FiX } from "react-icons/fi"
 
-const caracteristics = [
-    { label: "Estudo de Conversão", status: true },
-    { label: "Elaboração de Dashboard", status: false },
-    {
-        label: "Participações em discussões de estratégia",
-        status: false,
-    },
-    { label: "Configuração do Analytics", status: false },
-]
-
 const ProductCards = ({ categoryId }) => {
     const [products, setProducts] = useState(null)
 
@@ -25,64 +15,77 @@ const ProductCards = ({ categoryId }) => {
         getItems()
     }, [])
 
+    const formatSpecifications = (specifications) => {
+        let groups = {}
+
+        const parseSpecValue = (specValue) => {
+            if (specValue === "false") {
+                return false
+            } else if (specValue === "true") {
+                return true
+            }
+            return specValue
+        }
+
+        specifications.forEach((item) => {
+            if (!Object.keys(groups).includes(item.fieldGroupName)) {
+                groups[item.fieldGroupName] = []
+            }
+
+            groups[item.fieldGroupName].push({
+                fieldGroupName: item.fieldGroupName,
+                description: item.description,
+                specName: item.specName,
+                specValue: parseSpecValue(item.specValue[0]),
+            })
+        })
+
+        return groups
+    }
+
     const getItems = async () => {
-        const res = await fetch("/api/catalog_system/pub/products/search/")
+        const res = await fetch(`/_v/products/${categoryId}`)
         const resJson = await res.json()
 
         if (resJson) {
-            const productsOnSection = filterItemsByCategory(resJson)
-            setProducts(sortItemsByPrice(productsOnSection))
+            const productsSorted = sortItemsByPrice(resJson)
+            setProducts(productsSorted)
         }
-    }
-
-    const filterItemsByCategory = (items) => {
-        return items.filter((value) => {
-            return value.categoryId === String(categoryId)
-        })
     }
 
     const sortItemsByPrice = (items) => {
         return items.sort((a, b) => {
-            return (
-                a.items[0].sellers[0].commertialOffer.Price -
-                b.items[0].sellers[0].commertialOffer.Price
-            )
+            return a.skus[0].skuBestPrice - b.skus[0].skuBestPrice
         })
     }
 
-    
     const renderProducts = () => {
         if (products) {
             return products.map((product) => {
                 return (
                     <ProductCard
-                    key={product.productId}
-                    title={product.productName}
-                    description={product.description}
-                    price={
-                        product.items[0].sellers[0].commertialOffer.Price
-                    }
-                    caracteristics={caracteristics}
-                    img={product.items[0].images[0]}
-                    toCartLink={product.items[0].sellers[0].addToCartLink}
+                        key={product.Id}
+                        title={product.Name}
+                        description={product.Description}
+                        price={product.skus[0].skuBestPriceFormated}
+                        specifications={formatSpecifications(
+                            product.specifications
+                        )}
+                        skuImage={product.skus[0].skuImage}
                     />
-                    )
-                })
-            }
-        }
-
-        const productsOrLoader = () => {
-            if(products === null) {
-                return (
-                    <CustomLoader/>
                 )
-            }
-            return (
-                renderProducts()
-            )
+            })
         }
-        
-        return (
+    }
+
+    const productsOrLoader = () => {
+        if (products === null) {
+            return <CustomLoader />
+        }
+        return renderProducts()
+    }
+
+    return (
         <div
             className={join([
                 styles.productCardsContainer,
@@ -99,11 +102,19 @@ const ProductCard = ({
     title,
     description,
     price,
-    caracteristics,
-    img,
+    specifications,
+    skuImage,
     key,
-    toCartLink,
 }) => {
+    const goToAddToCartLink = async (productName) => {
+        const res = await fetch(`/api/catalog_system/pub/products/search/${productName}`)
+        const resJson = await res.json()
+
+        if(resJson.length){
+            window.location.href = resJson[0].items[0].sellers[0].addToCartLink
+        }
+    }
+    
     return (
         <div
             key={key}
@@ -114,12 +125,14 @@ const ProductCard = ({
                 cStyles.bgWhite,
             ])}
         >
-            <img
-                src={img.imageUrl}
-                alt={img.imageLabel}
-                className={styles.imgIcon}
-            />
-            <div className={join([cStyles.dFlex, cStyles.flexCenter, cStyles.height60])}>
+            <img src={skuImage} alt={title} className={styles.imgIcon} />
+            <div
+                className={join([
+                    cStyles.dFlex,
+                    cStyles.flexCenter,
+                    cStyles.height60,
+                ])}
+            >
                 <h2 className={join([cStyles.textCenter])}>{title}</h2>
             </div>
             <div
@@ -142,8 +155,14 @@ const ProductCard = ({
             >
                 A partir de
             </span>
-            <label className={join([cStyles.colorYellow, cStyles.textCenter, cStyles.openSansCondensed])}>
-                R$ <b className={cStyles.bigText}>{price.toFixed(2)}</b>
+            <label
+                className={join([
+                    cStyles.colorYellow,
+                    cStyles.textCenter,
+                    cStyles.openSansCondensed,
+                ])}
+            >
+                R$ <b className={cStyles.bigText}>{price}</b>
             </label>
             <span
                 className={join([
@@ -162,29 +181,18 @@ const ProductCard = ({
                     cStyles.mb40,
                     cStyles.dFlex,
                     cStyles.flexCenter,
-                    cStyles.openSansCondensed
+                    cStyles.openSansCondensed,
                 ])}
-                href={toCartLink}
+                onClick={() => goToAddToCartLink(title)}
             >
                 Assinar
             </a>
-            <span
-                className={join([
-                    cStyles.selfFlexStart,
-                    cStyles.colorDarkGray,
-                    cStyles.mb10,
-                    cStyles.openSansCondensed,
-                    cStyles.textUpper
-                ])}
-            >
-                <b>Principais recursos</b>
-            </span>
-            {caracteristics.map((item) => {
+
+            {Object.keys(specifications).map((sectionName) => {
                 return (
-                    <ProductCaracteristic
-                        key={item.label}
-                        label={item.label}
-                        status={item.status}
+                    <ProductCatacteristicSection
+                        key={sectionName}
+                        specifications={specifications[sectionName]}
                     />
                 )
             })}
@@ -192,7 +200,43 @@ const ProductCard = ({
     )
 }
 
-const ProductCaracteristic = ({ label, status, key }) => {
+const ProductCatacteristicSection = ({ specifications, key }) => {
+    return (
+        <div
+            key={key}
+            className={join([
+                cStyles.dFlex,
+                cStyles.mt20,
+                cStyles.flexComumn,
+                cStyles.width100,
+            ])}
+        >
+            <span
+                className={join([
+                    cStyles.selfFlexStart,
+                    cStyles.colorDarkGray,
+                    cStyles.mb10,
+                    cStyles.openSansCondensed,
+                    cStyles.textUpper,
+                ])}
+            >
+                <b>{specifications[0].fieldGroupName}</b>
+            </span>
+            {specifications.map((specs) => {
+                return (
+                    <ProductCaracteristic
+                        key={specs.specName}
+                        label={specs.specName}
+                        status={specs.specValue}
+                        toolTip={specs.description}
+                    />
+                )
+            })}
+        </div>
+    )
+}
+
+const ProductCaracteristic = ({ label, status, toolTip, key }) => {
     const getIcon = () => {
         const baseSize = 20
         return status ? (
@@ -205,7 +249,7 @@ const ProductCaracteristic = ({ label, status, key }) => {
     return (
         <div className={styles.caracContainer} key={key}>
             <div className={join([cStyles.dFlex, cStyles.alignCenter])}>
-                <FiAlertCircle className={cStyles.colorDarkGray} />
+                <IconWithToolTip toolTip={toolTip}/>
             </div>
             <div className={join([cStyles.dFlex, cStyles.alignCenter])}>
                 <span className={cStyles.colorDarkGray}>{label}</span>
@@ -218,8 +262,15 @@ const ProductCaracteristic = ({ label, status, key }) => {
 }
 
 const CustomLoader = (props) => {
+    return <div className={styles.ldsDourglass}></div>
+}
+
+const IconWithToolTip = ({ toolTip }) => {
     return (
-        <div className={styles.ldsDourglass}></div>
+        <div className={styles.tooltip}>
+            <FiAlertCircle className={cStyles.colorDarkGray}/>
+            <span className={styles.tooltiptext}>{toolTip}</span>
+        </div>
     )
 }
 
