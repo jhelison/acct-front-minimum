@@ -153,10 +153,12 @@ const ProductCard = ({
                 alt={img.imageLabel}
                 className={styles.imgIcon}
             />
-            <h2>{title}</h2>
+            <div className={join([cStyles.dFlex, cStyles.flexCenter, cStyles.height60])}>
+                <h2 className={join([cStyles.textCenter])}>{title}</h2>
+            </div>
             <div
                 className={join([
-                    cStyles.height60,
+                    cStyles.height80,
                     cStyles.dFlex,
                     cStyles.flexCenter,
                 ])}
