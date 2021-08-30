@@ -18,11 +18,11 @@
       "fullWidth": true
     },
     "children": [
-      "logo",
+      "logo#header",
       "header-force-center#menu"
     ]
   },
-  "logo": {
+  "logo#header": {
     "props": {
       "title": "Logo",
       "href": "/",
@@ -94,12 +94,12 @@
     }
   },
   "header-layout.mobile": {
-    "children": ["flex-layout.row#mobile"]
+    "children": ["header-row#mobile"]
   },
-  "flex-layout.row#mobile": {
+  "header-row#mobile": {
     "children": [
-      "drawer",
-      "logo"
+      "drawer#mobile",
+      "logo#mobile"
     ],
     "props": {
       "blockClass": "main-header-mobile",
@@ -108,7 +108,78 @@
       "fullWidth": true
     }
   },
-  "drawer": {
-    "children": []
+  "drawer#mobile": {
+    "children": ["vtex.menu@2.x:menu#menuMobile"],
+    "props": {
+      "maxWidth": 200
+    }
+  },
+  "vtex.menu@2.x:menu#menuMobile": {
+    "props": {
+      "orientation": "vertical",
+      "blockClass": "menuMobile",
+      "items": [
+        {
+          "id": "menu-item-inicio",
+          "type": "custom",
+          "iconId": null,
+          "highlight": true,
+          "itemProps": {
+            "type": "internal",
+            "href": "/",
+            "noFollow": false,
+            "tagTitle": "Início",
+            "text": "Início"
+          }
+        },
+        {
+          "id": "menu-item-acct",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/about-us",
+            "noFollow": false,
+            "tagTitle": "ACCT",
+            "text": "ACCT"
+          }
+        },
+        {
+          "id": "menu-item-produtos",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/product",
+            "noFollow": false,
+            "tagTitle": "Produtos",
+            "text": "Produtos"
+          }
+        },
+        {
+          "id": "menu-item-contato",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "contact-us",
+            "noFollow": false,
+            "tagTitle": "Contato",
+            "text": "Contato"
+          }
+        }
+      ]
+    }
+  },
+  "logo#mobile": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "https://acct.global/wp-content/uploads/2021/06/logo-acct-black.svg",
+      "width": "80"
+    }
   }
 }
