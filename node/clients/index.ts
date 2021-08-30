@@ -10,6 +10,8 @@ import SkuByProductId from './skuByProductId'
 import ProductById from './productById'
 import SpecificationsByProductId from './specificationsByProductId'
 
+import VtexApi from './vtexapi'
+
 // Extend the default IOClients implementation with our own custom clients.
 export class Clients extends IOClients {
 
@@ -17,13 +19,8 @@ export class Clients extends IOClients {
     return this.getOrSet('status', Status)
   }
 
-  public get leads() {
-    return this.getOrSet('leads', Leads)
-  }
+export class Clients extends IOClients {
 
-  public get leadByEmail() {
-    return this.getOrSet('lead', LeadByEmail)
-  }
 
   public get leadCLI() {
     return this.getOrSet('leadCLI', leadCLI)
@@ -37,16 +34,8 @@ export class Clients extends IOClients {
     return this.getOrSet('catalog', Catalog)
   } 
 
-  public get skuByProductId() {
-    return this.getOrSet('skuByProductId', SkuByProductId)
-  } 
-
-  public get productById() {
-    return this.getOrSet('productById', ProductById)
-  } 
-
-  public get specificationsByProductId() {
-    return this.getOrSet('specificationsByProductId', SpecificationsByProductId)
+  public get vtexApi() {
+    return this.getOrSet('vtexApi', VtexApi)
   } 
 
 }
