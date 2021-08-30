@@ -1,12 +1,9 @@
-.menuItem {
-  cursor: pointer;
-}
-
 .styledLinkContainer {
   margin: 0;
 }
 
 .styledLinkContent {
+  cursor: pointer;
   font-family: 'Open Sans', sans-serif;
   font-weight: 500;
   font-size: 20px;

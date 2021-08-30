@@ -22,7 +22,7 @@
 
   "flex-layout.col#cases":{
     "children":[
-      "rich-text#casesTitle",
+      "text-blink#casesTitle",
       "slider-layout#cases"],
 
     "props":{
@@ -30,7 +30,14 @@
       "colGap":"3"
     }
   },
-
+  "text-blink#casesTitle": {
+    "props": {
+      "text":
+      "Histórias e Clientes",
+      "textAlign":
+      "center"  
+    }
+  },
   "flex-layout.col#case1":{
     "children":[
       "image#case1",
