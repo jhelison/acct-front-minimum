@@ -17,7 +17,15 @@
     "lead": {
       "path": "/_v/lead/:email",
       "public": true
-    }     
+    },
+    "categories": {
+      "path": "/_v/categories/",
+      "public": true
+    },
+    "products": {
+      "path": "/_v/products/:categoryid",
+      "public": true
+    }             
   },
   "events": {
     "orderCreated": {

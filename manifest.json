@@ -74,8 +74,22 @@
     {
       "name": "outbound-access",
       "attrs": {
-        "host": "portal.vtexcommercestable.com.br",
+        "host": "hiringcoders202119.myvtex.com",
         "path": "/api/oms/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "hiringcoders202119.myvtex.com",
+        "path": "/api/catalog/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "hiringcoders202119.myvtex.com",
+        "path": "/api/catalog_system/*"
       }
     },
     {

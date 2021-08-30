@@ -1,4 +1,4 @@
-import type { InstanceOptions, IOContext, IOResponse } from '@vtex/api'
+import type { InstanceOptions, IOContext } from '@vtex/api'
 import { ExternalClient } from '@vtex/api'
 
 interface Lead {
@@ -22,20 +22,20 @@ export default class LeadByEmail extends ExternalClient {
     })
   }
 
-  public async getLead(email: string): Promise<{ Items: Lead}> {
+  public async getLead(email: string): Promise<Lead> {
     return this.http.get(`/lead/${email}`, {
       metric: 'leads-get',
     })
   }
 
-  public async getLeadWithHeaders(ctx: Context, email: string): Promise<IOResponse<string>> {
-    console.log("authToken:", ctx.vtex.authToken)
-    return this.http.getRaw(`/lead/${email}`, {
-      metric: 'leads-get-raw',
-      headers: {
-        "X-VTEX-Use-Https": true,
-        "Proxy-Authorization": ctx.vtex.authToken,
-      }
-    })
-  }
+  // public async getLeadWithHeaders(ctx: Context, email: string): Promise<IOResponse<string>> {
+  //   console.log("authToken:", ctx.vtex.authToken)
+  //   return this.http.getRaw(`/lead/${email}`, {
+  //     metric: 'leads-get-raw',
+  //     headers: {
+  //       "X-VTEX-Use-Https": true,
+  //       "Proxy-Authorization": ctx.vtex.authToken,
+  //     }
+  //   })
+  // }
 }

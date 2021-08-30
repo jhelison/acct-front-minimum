@@ -8,6 +8,8 @@ import { validate } from './middlewares/validate'
 import { leads } from './middlewares/leads'
 import { orderCreated } from './middlewares/orderCreated'
 import { leadByEmail } from './middlewares/leadByEmail'
+import { categories } from './middlewares/categories'
+import { products } from './middlewares/products'
 
 const TIMEOUT_MS = 1800
 
@@ -70,6 +72,12 @@ export default new Service({
     lead: method({
       GET: [leadByEmail],
     }),
+    categories: method({
+      GET: [categories],
+    }),    
+    products: method({
+      GET: [products],
+    }),   
   },
   events: {
     orderCreated
