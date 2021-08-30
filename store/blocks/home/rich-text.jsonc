@@ -45,16 +45,6 @@
 
     // Cases
 
-    "rich-text#casesTitle": {
-      "props": {
-        "text": "Histórias e Clientes**_**",
-        "textAlignment": "CENTER",
-        "textPosition": "CENTER",
-        "font": "t-heading-3",
-        "blockClass": "title"
-      }
-    },
-
     "rich-text#case1":{
       "props": {
         "text": "**Carrefour**\n\n O grupo Carrefour é um dos maiores conglomerados de alimentos e varejo do mundo. O Grupo opera atualmente em 33 países com mais de 10.800 lojas",

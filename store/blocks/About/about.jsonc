@@ -228,7 +228,7 @@
   },
   "flex-layout.col#about-container3-col":{
     "children": [
-      "rich-text#about-container3-title",
+      "text-blink#about-container3-title",
       "slider-layout-group#trustedBy"
     ]
   },
@@ -237,10 +237,11 @@
       "blockClass": "about-trusted-by"
     }
   },
-  "rich-text#about-container3-title":{
+
+  "text-blink#about-container3-title":{
     "props":{
-      "text": "Trusted by**_**",
-      "blockClass": "about-container1-title2"
+      "text": "Trusted by",
+      "textAlign": "center"
     }
   },
   "flex-layout.row#about-container3-row":{
