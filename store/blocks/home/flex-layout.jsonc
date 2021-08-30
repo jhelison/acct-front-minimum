@@ -238,7 +238,7 @@
   },
   "flex-layout.col#testimonials": {
     "children": [
-      "rich-text#testimonialsTitle",
+      "text-blink#testimonialsTitle",
       "slider-layout#testimonials"
     ]
   },
