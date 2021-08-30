@@ -6,18 +6,6 @@
   "maxReplicas": 4,
   "workers": 1,
   "routes": {
-    "status": {
-      "path": "/_v/status/:code",
-      "public": true
-    },
-    "leads": {
-      "path": "/_v/leads",
-      "public": true
-    },
-    "lead": {
-      "path": "/_v/lead/:email",
-      "public": true
-    },
     "categories": {
       "path": "/_v/categories/",
       "public": true
