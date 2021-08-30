@@ -7,7 +7,7 @@ import { join } from "./util"
 const TextBlink = ({ text, textAlign }) => {
     return (
         <h1
-            className={join([cStyles.bigText, cStyles.textUpper, cStyles.openSansCondensed])}
+            className={join([cStyles.bigText, cStyles.openSansCondensed])}
             style={{ textAlign: textAlign }}
         >
             {text + " "}
