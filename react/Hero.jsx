@@ -74,7 +74,6 @@ const Hero = (props) => {
         return () => clearTimeout(timeout);
     }, [subIndex, index, reverse]);
 
-    // blinker
     useEffect(() => {
         const timeout2 = setTimeout(() => {
         setBlink((prev) => !prev);

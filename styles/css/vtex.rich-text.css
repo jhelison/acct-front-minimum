@@ -206,7 +206,8 @@
     
 }
 
-/* ----------------- about page -----------------*/
+/* ------ About Page ------ */
+
 .container--about-container1-title, .container--about-container1-title2 {
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 48px;
@@ -248,9 +249,9 @@
     text-align: center;
     font-weight: 700;
 }
-/* ----------------- about page -----------------*/
 
-/* ------ products page ------ */
+/* ------ Products Page ------ */
+
 .paragraph--tab-subtitle {
     margin-top: 30px;
 }
@@ -269,5 +270,4 @@
     font-size: 18px;
     max-width: 400px;
 }
-/* ----------------- products page -----------------*/
 

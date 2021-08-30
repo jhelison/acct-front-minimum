@@ -1,92 +1,118 @@
 {
-    "footer": {
-      "blocks": ["footer-layout.desktop", "footer-layout.mobile"]
+  "footer": {
+    "blocks": ["footer-layout.desktop", "footer-layout.mobile"]
+  },
+  "footer-layout.desktop": { 
+    "children": [
+      "flex-layout.row#footer"
+      ]
+  },
+  "footer-layout.mobile": { 
+    "children": [
+      "flex-layout.row#footer"
+    ]
+  },
+  "flex-layout.row#footer": {
+    "props":{
+      "preventVerticalStretch": true,
+      "blockClass": "footer-row"
     },
-    "footer-layout.desktop": { 
+    "children": [
+      "flex-layout.col#logo",
+      "flex-layout.col#brazil",
+      "flex-layout.col#spain",
+      "flex-layout.col#eua"
+    ]
+  },
+    "flex-layout.col#logo": {
+      "props": {
+        "blockClass": "col-logo",
+        "preventVerticalStretch": true
+      },
       "children": [
-        "flex-layout.row#footer"
-       ]
-    },
-    "footer-layout.mobile": { 
-      "children": [
-        "flex-layout.row#footer"
+        "image#logo-footer",
+        "social-networks",
+        "rich-text#footer-email"
       ]
     },
-    "flex-layout.row#footer": {
-      "props":{
-        "preventVerticalStretch": true,
-        "blockClass": "footer-row"
+      "social-networks": {
+        "props": {
+          "socialNetworks": [
+            { "url": "https://facebook.com/foo", "name": "Instagram" },
+            { "url": "https://twitter.com/foo", "name": "Youtube" },
+            { "url": "https://twitter.com/foo", "name": "Linkedin" }
+          ]
+        }
+      },
+      "image#logo-footer": {
+        "props": {
+          "src": "https://acct.global/wp-content/uploads/2021/06/logo-acct-black.svg",
+          "maxHeight": 40
+        }
+      },
+      "rich-text#footer-email": {
+        "props": {
+          "blockClass": "footer-link",
+          "textAlignment": "CENTER",
+          "textPosition": "CENTER",
+          "text": "[contato@acct.global](mailto:contato@acct.global)"
+        }
+      },
+    "flex-layout.col#brazil": {
+      "props": {
+        "blockClass": "col-brazil",
+        "preventVerticalStretch": true 
       },
       "children": [
-        "flex-layout.col#logo",
-        "flex-layout.col#brazil",
-        "flex-layout.col#spain",
-        "flex-layout.col#eua"
+        "rich-text#brasil-title",
+        "rich-text#brasil-address-1",
+        "rich-text#brasil-address-2"
       ]
     },
-      "flex-layout.col#logo": {
+      "rich-text#brasil-title": {
         "props": {
-          "blockClass": "col-logo",
-          "preventVerticalStretch": true
-        },
-        "children": [
-          "image#logo-footer",
-          "social-networks",
-          "rich-text#footer-email"
-        ]
+          "blockClass": "col-title",
+          "textAlignment": "CENTER",
+          "textPosition": "CENTER",
+          "text": "Brasil",
+          "font": "open-sans-condensed"
+        }
       },
-        "social-networks": {
-          "props": {
-            "socialNetworks": [
-              { "url": "https://facebook.com/foo", "name": "Instagram" },
-              { "url": "https://twitter.com/foo", "name": "Youtube" },
-              { "url": "https://twitter.com/foo", "name": "Linkedin" }
-            ]
-          }
-        },
-        "image#logo-footer": {
-          "props": {
-            "src": "https://acct.global/wp-content/uploads/2021/06/logo-acct-black.svg",
-            "maxHeight": 40
-          }
-        },
-        "rich-text#footer-email": {
-          "props": {
-            "blockClass": "footer-link",
-            "textAlignment": "CENTER",
-            "textPosition": "CENTER",
-            "text": "[contato@acct.global](mailto:contato@acct.global)"
-          }
-        },
-      "flex-layout.col#brazil": {
+      "rich-text#brasil-address-1": {
         "props": {
-         "blockClass": "col-brazil",
-         "preventVerticalStretch": true 
-        },
-        "children": [
-          "rich-text#brasil-title",
-          "rich-text#brasil-address-1",
-          "rich-text#brasil-address-2"
-        ]
+          "blockClass": "col-address",
+          "textAlignment": "CENTER",
+          "textPosition": "CENTER",
+          "text": "Al. Prof. Lucas Nogueira Garcez, 1395 - Atibaia - SP"
+        }
       },
-        "rich-text#brasil-title": {
-          "props": {
-            "blockClass": "col-title",
-            "textAlignment": "CENTER",
-            "textPosition": "CENTER",
-            "text": "Brasil",
-            "font": "open-sans-condensed"
-          }
-        },
-        "rich-text#brasil-address-1": {
-          "props": {
-            "blockClass": "col-address",
-            "textAlignment": "CENTER",
-            "textPosition": "CENTER",
-            "text": "Al. Prof. Lucas Nogueira Garcez, 1395 - Atibaia - SP"
-          }
-        },
-        "rich-text#brasil-address-2": {
+      "rich-text#brasil-address-2": {
+        "props": {
+          "blockClass": "col-address",
+          "textAlignment": "CENTER",
+          "textPosition": "CENTER",
+          "text": "Av. das Nações Unidas, 11.857 8º Andar - Brooklin – São Paulo - SP"
+        }
+      },
+    "flex-layout.col#spain": {
+      "props": {
+        "blockClass": "col-spain",
+        "preventVerticalStretch": true 
+      },
+      "children": [
+        "rich-text#spain-title",
+        "rich-text#spain-address"
+      ]
+    },
+      "rich-text#spain-title": {
+        "props": {
+          "blockClass": "col-title",
+          "textAlignment": "CENTER",
+          "textPosition": "CENTER",
+          "text": "Espanha"
+        }
+      },
+        "rich-text#spain-address": {
           "props": {
             "blockClass": "col-address",
             "textAlignment": "CENTER",
@@ -94,56 +120,30 @@
             "text": "Av. das Nações Unidas, 11.857 8º Andar - Brooklin – São Paulo - SP"
           }
         },
-      "flex-layout.col#spain": {
-        "props": {
-          "blockClass": "col-spain",
-          "preventVerticalStretch": true 
+    "flex-layout.col#eua": {
+      "props": {
+        "blockClass": "col-eua",
+        "preventVerticalStretch": true
         },
         "children": [
-          "rich-text#spain-title",
-          "rich-text#spain-address"
+          "rich-text#eua-title",
+          "rich-text#eua-address"
         ]
-      },
-        "rich-text#spain-title": {
-          "props": {
-            "blockClass": "col-title",
-            "textAlignment": "CENTER",
-            "textPosition": "CENTER",
-            "text": "Espanha"
-          }
-        },
-          "rich-text#spain-address": {
-            "props": {
-              "blockClass": "col-address",
-              "textAlignment": "CENTER",
-              "textPosition": "CENTER",
-              "text": "Av. das Nações Unidas, 11.857 8º Andar - Brooklin – São Paulo - SP"
-            }
-          },
-      "flex-layout.col#eua": {
+    },
+      "rich-text#eua-title": {
         "props": {
-          "blockClass": "col-eua",
-          "preventVerticalStretch": true
-          },
-          "children": [
-            "rich-text#eua-title",
-            "rich-text#eua-address"
-          ]
+          "blockClass": "col-title",
+          "textAlignment": "CENTER",
+          "textPosition": "CENTER",
+          "text": "Estados Unidos"
+        }
       },
-        "rich-text#eua-title": {
+        "rich-text#eua-address": {
           "props": {
-            "blockClass": "col-title",
+            "blockClass": "col-address",
             "textAlignment": "CENTER",
             "textPosition": "CENTER",
-            "text": "Estados Unidos"
+            "text": "Av. das Nações Unidas, 11.857 8º Andar - Brooklin – São Paulo - SP"
           }
-        },
-          "rich-text#eua-address": {
-            "props": {
-              "blockClass": "col-address",
-              "textAlignment": "CENTER",
-              "textPosition": "CENTER",
-              "text": "Av. das Nações Unidas, 11.857 8º Andar - Brooklin – São Paulo - SP"
-            }
-          }
+        }
   }

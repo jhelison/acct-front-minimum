@@ -1,4 +1,5 @@
-/* ---------------------- Products page ---------------------- */
+/* ------ Products page ------ */
+
 .container--products {
     margin-top: 50px;
 }
@@ -38,4 +39,3 @@
 :global(.vtex-tab-layout-0-x-contentContainer) {
     background-color: #f1f1f1;
 }
-/* ---------------------- Products page end ---------------------- */

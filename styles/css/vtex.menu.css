@@ -1,3 +1,5 @@
+/* Header */
+
 .styledLinkContainer {
   margin: 0;
 }
@@ -7,7 +9,6 @@
   font-family: 'Open Sans', sans-serif;
   font-weight: 500;
   font-size: 20px;
-  color: #707070;
 }
 
 .menuItem:hover .styledLinkContent {

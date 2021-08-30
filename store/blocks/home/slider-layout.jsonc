@@ -1,101 +1,4 @@
 {
-    /* Slider layout da home page com info cards. */
-    "slider-layout#home-infocards": {
-        "children": [
-            "info-card#1",
-            "info-card#2",
-            "info-card#3",
-            "info-card#4",
-            "info-card#5"
-        ],
-        "props": {
-            "showPaginationDots": "never",
-            "itemsPerPage": {
-                "desktop": 1,
-                "tablet": 1,
-                "phone": 1
-            },
-            "autoplay": {
-                "timeout": 6500,
-                "stopOnHover": true
-            },
-            "infinite": "true"
-        }
-    },
-    /* Info cards presentes no Slider layout da home page. */
-    "info-card#1": {
-        "props": {
-            "id": "info-card1",
-            "isFullModeStyle": false,
-            "textPosition": "left",
-            "imageUrl": "assets/quadrante_vtex_2021.webp",
-            "textMode": "rich-text",
-            "headline": "**Somos líderes no Quadrante VTEX**",
-            "subhead": "- Mais de 100 colaboradores certificados.\n- Temos os clientes mais relevantes da VTEX.\n- Conteúdo técnico criado em parceria com a VTEX.",
-            "callToActionText": "Saiba mais",
-            "callToActionUrl": "/sale/d",
-            "blockClass": "info-card1-home",
-            "textAlignment": "center"
-        }
-    },
-    "info-card#2": {
-        "props": {
-            "id": "info-card2",
-            "isFullModeStyle": false,
-            "textPosition": "left",
-            "imageUrl": "https://i.ibb.co/fq5drXV/download-1.png",
-            "textMode": "rich-text",
-            "headline": "**O maior desafio universitário do mundo!**",
-            "subhead": "Participe de uma experiência transformadora e insira-se no mercado digital.",
-            "callToActionText": "Saiba mais",
-            "callToActionUrl": "/sale/d",
-            "blockClass": "info-card2-home",
-            "textAlignment": "left"
-        }
-    },
-    "info-card#3": {
-        "props": {
-            "id": "info-card3",
-            "isFullModeStyle": true,
-            "textPosition": "left",
-            "imageUrl": "assets/slider-home-technology.jpg",
-            "textMode": "rich-text",
-            "headline": "**Tecnologia_**",
-            "subhead": "Somos uma empresa de arquitetura e engenharia de\n software focada na solução de problemas de negócios\n altamente complexos.",
-            "blockClass": "info-card3-home",
-            "callToActionMode": "none",
-            "textAlignment": "center"
-        }
-    },
-    "info-card#4": {
-        "props": {
-            "id": "info-card4",
-            "isFullModeStyle": true,
-            "textPosition": "left",
-            "imageUrl": "assets/slider-home-engineering.jpg",
-            "textMode": "rich-text",
-            "headline": "**Engenharia de E-commerce_**",
-            "subhead": "Equipes de alto desempenho entregando algumas das\n soluções de e-commerce mais complexas do mundo.",
-            "callToActionMode": "none",
-            "blockClass": "info-card4-home",
-            "textAlignment": "center"
-        }
-    },
-    "info-card#5": {
-        "props": {
-            "id": "info-card5",
-            "isFullModeStyle": true,
-            "textPosition": "left",
-            "imageUrl": "assets/slider-home-product.jpg",
-            "textMode": "rich-text",
-            "headline": "**Desenvolvimento de Produto_**",
-            "subhead": "Somos especialistas em projetar e desenvolver produtos\n digitais de alto desempenho.",
-            "callToActionMode": "none",
-            "blockClass": "info-card5-home",
-            "textAlignment": "center"
-        }
-    },
-    /* Final dos Info cards presentes no Slider layout da home page. */
     /* Slider Layout Trusted by */
 
     "slider-layout-group#trustedBy": {
@@ -147,6 +50,7 @@
         }
     },
 
+    /* Slider Layout Cases */
 
     "slider-layout#cases":{
       "children":[
@@ -165,11 +69,9 @@
   
       }
     },
-  /*
-    Criação de um slider-layout para exibição de vários depoimentos na
-    mesma página.
-  */
 
+  /* Slider Layout Testimonials */
+  
   "slider-layout#testimonials": {
     "props": {
       "itemsPerPage": {

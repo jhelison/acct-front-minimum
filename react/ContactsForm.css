@@ -1,4 +1,4 @@
-/* -------------------- Formulário --------------------*/
+/* ------ Form ------ */
 .contacts-container{
   display: flex;
   flex-direction: column;
@@ -77,9 +77,9 @@
   text-transform: uppercase !important;
   width: auto !important;
 }
-/* -------------------- Formulário --------------------*/
 
-/* -------------------- Button --------------------*/
+/* ------ Button ------ */
+
 .containerBasicButton{
   display: flex;
   width: 100%;
@@ -113,4 +113,3 @@
   color: #fff !important;
   background: #5974c7 !important;
 }
-/* -------------------- Button --------------------*/

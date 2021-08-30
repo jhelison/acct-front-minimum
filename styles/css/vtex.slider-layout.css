@@ -1,6 +1,4 @@
-.sliderArrows--trustedBy {
-    top: 0;
-}
+/* ------ Cases ------ */
 
 .slide--rowCases {
     background-color: #fff;
@@ -10,7 +8,6 @@
     padding: 10px;
     margin: 20px 30px 10px;
 }
-/* ------ Cases ------ */
 
 .sliderLayoutContainer--rowCases {
     margin-bottom: 60px;
@@ -39,6 +36,7 @@
       padding: 0 calc((100% - 1000px)/2);
     }
 }
+
 /* ------ Testimonials ------ */
 
 .sliderLayoutContainer--sliderTestimonials {
