@@ -1,0 +1,50 @@
+{
+    "store.custom#custom-shelf":{
+        "blocks":[
+            "product-summary.shelf#oneClick"
+        ]
+    },
+    "product-summary.shelf#oneClick": {
+        "children": [
+          "stack-layout#oneClick",
+          "add-to-cart-button#oneClick"
+        ],
+        "props":{
+            "blockClass": "oneClick"
+        }
+      },
+      "stack-layout#oneClick":{
+        "children":[
+           "product-summary-image",
+            "flex-layout.row#text"
+        ],
+        "props":{
+            "blockClass":"oneClick"
+        }
+      },
+      "flex-layout.row#text":{
+          "children":[
+              "flex-layout.col#text"
+          ]
+
+      },
+      "flex-layout.col#text":{
+            "children":[
+                "product-summary-name",
+                "product-selling-price"
+            ]
+      },
+
+      "add-to-cart-button#oneClick": {
+        "props":{
+          "text":"Assinar",
+          "isOneClickBuy":true,
+          "blockClass":"oneClick"
+        }
+      },
+      "product-selling-price": {
+        "props": {
+          "alwaysShow": true
+        }
+      }
+}

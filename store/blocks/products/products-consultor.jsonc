@@ -1,0 +1,25 @@
+{
+    "flex-layout.row#consultor": {
+        "children": [
+            "flex-layout.col#consultor"
+        ]
+    },
+
+    "flex-layout.col#consultor": {
+        "children": [
+            "rich-text#consultor-title",
+            "rich-text#consultor-sub"
+        ]
+    },
+
+    "rich-text#consultor-title": {
+        "props": {
+            "text": "## Precisa de ajuda?"
+        }
+    },
+    "rich-text#consultor-sub": {
+        "props": {
+            "text": "Fale com a gente e descubra qual é o melhor plano para a sua necessidade"
+        }
+    }
+}

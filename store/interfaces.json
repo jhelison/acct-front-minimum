@@ -4,5 +4,17 @@
   },
   "banner": {
     "component": "Banner"
+  },
+  "product-cards": {
+    "component": "ProductCards"
+  },
+  "text-blink": {
+    "component": "TextBlink"
+  },
+  "services": {
+    "component": "Services"
+  },
+    "leadsForm": {
+    "component": "LeadsForm"
   }
 }

@@ -2,7 +2,10 @@
     "store.custom#about-us": {
         "path": "/about-us"
     },
-    "store.custom#contact-us": {
+    "store.custom#contacts": {
         "path": "/contact-us"
+    },
+    "store.custom#products": {
+        "path": "/products"
     }
 }

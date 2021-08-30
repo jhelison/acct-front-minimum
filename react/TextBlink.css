@@ -1,0 +1,15 @@
+.blink {
+    margin: 0 0 0 -5px;
+    animation: blink-animation 1.5s steps(3, start) infinite;
+    -webkit-animation: blink-animation 1.5s steps(3, start) infinite;
+}
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}

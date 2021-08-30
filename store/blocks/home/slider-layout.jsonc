@@ -15,6 +15,10 @@
                 "tablet": 1,
                 "phone": 1
             },
+            "autoplay": {
+                "timeout": 6500,
+                "stopOnHover": true
+            },
             "infinite": "true"
         }
     },
@@ -24,9 +28,9 @@
             "id": "info-card1",
             "isFullModeStyle": false,
             "textPosition": "left",
-            "imageUrl": "https://acct.global/wp-content/uploads/slider/cache/b3d783e1026a452a17b0d42642af3418/quadrante_vtex_2021.webp",
+            "imageUrl": "assets/quadrante_vtex_2021.webp",
             "textMode": "rich-text",
-            "headline": "**Somos líder no\n Quadrante VTEX**",
+            "headline": "**Somos líderes no Quadrante VTEX**",
             "subhead": "- Mais de 100 colaboradores certificados.\n- Temos os clientes mais relevantes da VTEX.\n- Conteúdo técnico criado em parceria com a VTEX.",
             "callToActionText": "Saiba mais",
             "callToActionUrl": "/sale/d",
@@ -41,8 +45,8 @@
             "textPosition": "left",
             "imageUrl": "https://i.ibb.co/fq5drXV/download-1.png",
             "textMode": "rich-text",
-            "headline": "**TETRIX\n O maior desafio universitário do mundo!**",
-            "subhead": "Participe de uma experiência transformadora\n e insira-se no mercado digital.",
+            "headline": "**O maior desafio universitário do mundo!**",
+            "subhead": "Participe de uma experiência transformadora e insira-se no mercado digital.",
             "callToActionText": "Saiba mais",
             "callToActionUrl": "/sale/d",
             "blockClass": "info-card2-home",
@@ -54,7 +58,7 @@
             "id": "info-card3",
             "isFullModeStyle": true,
             "textPosition": "left",
-            "imageUrl": "https://miro.medium.com/max/1200/0*q072x43FX1tSLaXb",
+            "imageUrl": "assets/slider-home-technology.jpg",
             "textMode": "rich-text",
             "headline": "**Tecnologia_**",
             "subhead": "Somos uma empresa de arquitetura e engenharia de\n software focada na solução de problemas de negócios\n altamente complexos.",
@@ -68,9 +72,9 @@
             "id": "info-card4",
             "isFullModeStyle": true,
             "textPosition": "left",
-            "imageUrl": "https://coding.degree/wp-content/uploads/2020/09/shutterstock_661113826-scaled.jpg",
+            "imageUrl": "assets/slider-home-engineering.jpg",
             "textMode": "rich-text",
-            "headline": "**Engenharia de\n E-commerce_**",
+            "headline": "**Engenharia de E-commerce_**",
             "subhead": "Equipes de alto desempenho entregando algumas das\n soluções de e-commerce mais complexas do mundo.",
             "callToActionMode": "none",
             "blockClass": "info-card4-home",
@@ -82,9 +86,9 @@
             "id": "info-card5",
             "isFullModeStyle": true,
             "textPosition": "left",
-            "imageUrl": "https://www.univates.br/media/noticias_responsivo/27285//1581429928.5376.jpg?1581429928703",
+            "imageUrl": "assets/slider-home-product.jpg",
             "textMode": "rich-text",
-            "headline": "**Desenvolvimento\n de Produto_**",
+            "headline": "**Desenvolvimento de Produto_**",
             "subhead": "Somos especialistas em projetar e desenvolver produtos\n digitais de alto desempenho.",
             "callToActionMode": "none",
             "blockClass": "info-card5-home",
@@ -92,7 +96,77 @@
         }
     },
     /* Final dos Info cards presentes no Slider layout da home page. */
+    /* Slider Layout Trusted by */
 
+    "slider-layout-group#trustedBy": {
+        "children": [
+        "slider-layout#trusted1",
+        "slider-layout#trusted2"
+        ],
+        "props":{
+          "blockClass":"trusted-by-container"
+        }
+    },
+
+    "slider-layout#trusted1":{
+      "children":[
+        "image#logo1",
+        "image#logo3",
+        "image#logo5",
+        "image#logo7",
+        "image#logo9"
+      ],
+      "props": {
+        "itemsPerPage": {
+          "desktop": 5,
+          "tablet": 3,
+          "phone": 1
+        },
+        "showNavigationArrows": "never",
+        "showPaginationDots": "never",
+        "blockClass": "trustedBy"
+      }
+    },
+    "slider-layout#trusted2":{
+        "children":[
+        "image#logo2",
+        "image#logo4",
+        "image#logo6",
+        "image#logo8",
+        "image#logo10"
+        ],
+        "props": {
+            "itemsPerPage": {
+            "desktop": 5,
+            "tablet": 3,
+            "phone": 1
+            },
+            "showNavigationArrows": "never",
+            "showPaginationDots": "mobileOnly",
+            "blockClass": "trustedBy"
+        }
+    },
+
+
+    "slider-layout#cases":{
+      "children":[
+        "flex-layout.col#case1",
+        "flex-layout.col#case2",
+        "flex-layout.col#case3",
+        "flex-layout.col#case4"
+      ],
+      "props":{
+        "itemsPerPage": {
+          "desktop": 4,
+          "tablet": 3,
+          "phone": 1
+          },
+          "showNavigationArrows": "always",
+          "showPaginationDots": "mobileOnly",
+          "blockClass": "rowCases"
+  
+      }
+    },
   /*
     Criação de um slider-layout para exibição de vários depoimentos na
     mesma página.
@@ -105,8 +179,12 @@
         "tablet": 1,
         "phone": 1
       },
-      "showNavigationArrows": "desktopOnly",
-      "showPaginationDots": "mobileOnly",
+      "autoplay": {
+        "timeout": 7000,
+        "stopOnHover": true
+      },
+      "showNavigationArrows": "never",
+      "showPaginationDots": "always",
       "blockClass": "sliderTestimonials"
     },
     "children": [

@@ -1,22 +1,19 @@
-/* -------------------- Banner --------------------*/
+/* ------ Banner ------ */
+
 .contactsContainerBanner{
   display: flex;
   width: 100%;
   justify-content: center;
-  /* background-image: url("https://dev-acct.pantheonsite.io/wp-content/uploads/2020/10/cover-contact.jpg"); */
   background-position: center center;
   background-size: cover;
   padding: 6rem 0rem 6rem 0rem;
 }
 
 .contactsContentBanner{
-  display: flex;
-  max-width: 1300px;
+  padding: 0 24px;
 }
 
 .contactsBannerTitle{
-  /* width: 100%; */
-  width: 1300px;
   font-size: 36px;
   text-align: left;
   text-transform: uppercase;
@@ -42,9 +39,47 @@
     visibility: hidden;
   }
 }
-/* -------------------- Banner --------------------*/
-/* -------------------- Formulário --------------------*/
-.contacts-container{
+
+@media(min-width: 800px) {
+  .contactsContentBanner{
+    padding-left: 48px;
+  }
+  .contactsContainerBanner{
+    justify-content: initial;
+  }
+}
+
+
+@media(min-width: 1024px) {
+  .contactsContentBanner{
+    padding-left: 150px;
+  }
+}
+
+
+@media(min-width: 1250px) {
+  .contactsContentBanner{
+    padding-left: 240px;
+  }
+}
+
+@media(min-width: 1440px) {
+  .contactsContentBanner{
+    padding-left: calc((100% - 850px)/2);;
+  }
+}
+
+/* ------ Formulário ------ */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 40px 0 80px;
+  padding: 0 24px;
+}
+
+.form .contacts-container{
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -53,20 +88,15 @@
   font-weight: 400;
 }
 
-.contacts-content{
+.form .contacts-content{
   padding: 6rem 0;
   display: flex;
   width: 1140px;
   justify-content: space-between;
 }
 
-.form{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
 
-.contactsFormTitle{
+.form .contactsFormTitle{
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 24px;
   font-weight: bold;
@@ -74,23 +104,21 @@
   margin: 12px 0 24px;
 }
 
-.row{
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-between;
-}
-
-.half{
+.form .half{
   display: flex;
   flex-direction: column;
-  width: 48.93617%;
+  margin-bottom: 10px;
 }
 
 .contactsLabel{
   color: #292929;
   margin-bottom: 5px;
   line-height: 1.2;
+  display: inline-block;
+}
+
+.contactsLabel span {
+  color: #5974c7;
 }
 
 .contactsFormInput, .contactsFormTextarea{
@@ -103,6 +131,7 @@
   font: inherit;
   box-sizing: inherit;
 }
+
 .contactsFormTextarea{
   padding: 0.375rem 0.375rem;
   min-height: 5rem;
@@ -112,14 +141,235 @@
 
 .contactsFormSubmit{
   font-size: 110%;
+  font-weight: 500;
+  font-family: "Open Sans Condensed", sans-serif;
+
+  padding: 5px 19px;
+  background: transparent;
+  border: 2px solid #5974c7;
+  margin-top: 10px;
+  color: #5974c7;
+  text-transform: uppercase;
+  width: auto;
+  transition: all ease 200ms;
+  cursor: pointer;
+}
+
+.contactsFormSubmit:hover{
+  background-color: #5974c7;
+  color: #fff;
+}
+
+@media(min-width: 600px) {
+  .form .row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .form .half{
+    display: flex;
+    flex-direction: column;
+    width: 48.93617%;
+  }
+  .form .rowFull {
+    width: 100%;
+  }
+}
+
+
+@media(min-width: 800px) {
+  .form {
+    padding: 0 48px;
+  }
+}
+
+
+@media(min-width: 1024px) {
+  .form {
+    padding: 0 150px;
+  }
+}
+
+
+@media(min-width: 1250px) {
+  .form {
+    padding: 0 240px;
+  }
+}
+
+@media(min-width: 1440px) {
+  .form {
+    padding: 0 calc((100% - 850px)/2);;
+  }
+}
+
+/* --------------------Formulário de Leads --------------------*/
+.leadsForm {
+  font-family: 'Open Sans Condensed', sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  align-items: center;
+}
+
+.leadsFormTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #040404;
+  margin: 12px 0 24px;
+}
+
+.leadsHalf {
+  margin-bottom: 1rem;
+}
+
+.leadsFormInput {
+  text-align: center;
+  width: 25rem;
+  background: #fff;
+  border: none;
+  border-bottom: 1px solid #040404;
+}
+
+.leadsFormInput:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+.leadsFormSubmit {
+  font: inherit;
+  font-size: 110%;
   font-weight: bold;
 
   padding: 5px 19px !important;
-  background: transparent !important;
   border: 2px solid #5974c7 !important;
   margin-top: 10px !important;
+  margin-bottom: 10px;
+  background: #fff !important;
   color: #5974c7 !important;
-  text-transform: uppercase !important;
+  text-transform: capitalize !important;
   width: auto !important;
+  cursor: pointer !important;
 }
-/* -------------------- Formulário --------------------*/
+
+.leadsFormSubmit:hover {
+  color: #fff !important;
+  background: #5974c7 !important;
+}
+
+/* ------ Services ------*/
+
+.services {
+  display: block;
+  text-decoration: none;
+}
+
+.servicesContainer {
+  margin: 30px auto 80px;
+}
+
+.servicesContainer .serviceItem {
+  position: relative;
+  height: 250px;
+}
+
+.servicesContainer .serviceItem img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+
+.servicesContainer .serviceContent {
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  padding: 20px 50px 30px;
+}
+
+.servicesContainer .serviceItem .serviceTitle {
+  z-index: 1;
+  top: 40%;
+  left: 50%;
+  display: none;
+  position: absolute;
+  color: #fff;
+  text-align: center;
+  transition: all 200ms ease;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%);
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+.servicesContainer .serviceItem .serviceContent h2 {
+  font-family: "Open Sans Condensed", sans-serif;
+  text-transform: uppercase;
+  color: #fcc200;
+}
+
+.servicesContainer .serviceItem .serviceContent {
+  opacity: 1;
+  max-width: 350px;
+  margin: 0 auto;
+  transition: all 100ms ease;
+}
+
+.servicesContainer .serviceItem:hover .serviceContent {
+  opacity: 1;
+}
+
+@media(min-width: 600px) {
+  .servicesContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .servicesContainer .serviceItem {
+    height: 280px;
+    width: 50%;
+    min-width: 50%;
+    transition: all linear 150ms 50ms;
+  }
+  .servicesContainer .serviceItem .serviceTitle {
+    display: initial;
+  }
+  .servicesContainer .serviceItem:hover .serviceTitle {
+    display: none;
+  }
+  .servicesContainer .serviceItem .serviceContent {
+    opacity: 0;
+  }
+  .servicesContainer .serviceItem:hover .serviceContent {
+    opacity: 1;
+  }
+  .servicesContainer .serviceItem img {
+    filter: initial;
+  }
+  .servicesContainer .serviceItem:hover img {
+    filter: brightness(0.4);
+  }
+}
+
+@media(min-width: 1024px) {
+  .servicesContainer {
+    max-width: 1000px;
+  }
+
+  .servicesContainer .serviceItem {
+    min-width: 25%;
+    width: 25%;
+  }
+
+  .servicesContainer:hover .serviceItem {
+    width: 23%;;
+    min-width: 23%;
+  }
+  
+  .servicesContainer .serviceItem:hover {
+    width: 31%;
+    min-width: 31%;
+  }
+
+}

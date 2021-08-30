@@ -1,0 +1,33 @@
+{
+    "flex-layout.row#oneClick":{
+        "children":["list-context.product-list#home"],
+        "props":{
+            "horizontalAlign":"center"
+        }
+    },
+    
+    "list-context.product-list#home": {
+        "blocks": ["product-summary.shelf#oneClick"],
+        "children":["slider-layout#summary"],
+        "props":{
+          "hideUnavailableItems":false,
+          "maxItems":4,
+          "category":"1"
+        }
+      },
+      "slider-layout#summary":{
+        "props":{
+          "itemsPerPage": {
+            "desktop": 4,
+            "tablet": 2,
+            "phone": 1
+          },
+        "blockClass":"oneClick",
+        "infinite":true,
+        "fullWidth": false,
+        "showNavigationArrows": "always",
+        "showPaginationDots": "never"
+        }
+      }
+
+}

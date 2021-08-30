@@ -1,46 +1,213 @@
-/* ----------------- contacts page -----------------*/
-.flexRow--contacts-container{
-  width: 100%;
-  align-items: center;
+/* ------ Contacts Page ------ */
+
+.flexRowContent--contacts-list-city-cards {
+    justify-content: space-between;
+    padding: 0 24px;
 }
 
-.flexRow--contacts-content{
-  max-width: 1300px;
-  align-items: center;
+.flexCol--contacts-city-card {
+    align-items: left;
+    height: min-content;
+    margin-bottom: 30px;
+    overflow: hidden;
 }
 
-.flexRowContent--contacts-content{
-  align-items: center;
-  padding: 50px 0;
+.flexColChild--contacts-city-card:first-child {
+    border-bottom: 10px solid #fcc200;
+    margin-bottom: 20px;
+    overflow: hidden;
 }
 
-.flexRow--contacts-list-city-cards{
-  margin-left: 50px;
+.flexCol--contacts-city-card :global(.vtex-store-components-3-x-imageElement) {
+    height: 300px;
+    width: 100%;
+    transition: all ease 200ms;
+    object-fit: cover;
 }
 
-.flexRowContent--contacts-list-city-cards{
-  justify-content: space-between;
+.flexCol--contacts-city-card:hover :global(.vtex-store-components-3-x-imageElement) {
+    transform: scale(1.2);
 }
 
-.flexCol--contacts-city-card{
-  align-items: left;
-  height: min-content;
+.flexCol--contacts-city-card :global(.vtex-rich-text-0-x-paragraph--contacts-city-title) {
+    margin: 0;
 }
 
-.flexRow--contacts-container2{
-  background-color: #f1f1f1;
+.flexRow--contacts-container2 {
+    background-color: #f1f1f1;
 }
 
-.flexRow--contacts-container2{
-  padding: 150px 0;
+.flexRow--contacts-container2 {
+    padding: 0 24px;
 }
 
-.flexCol--contacts-container2-col{
-  align-items: center;
-  width: 1300px;
+.flexCol--contacts-container2-col {
+    align-items: center;
+    width: 1300px;
+    padding: 70px 0;
 }
 
-.flexRowContent--contacts-container2-row{
-  align-items: center;
+.flexRowContent--contacts-container2-row {
+    align-items: center;
 }
-/* ----------------- contacts page -----------------*/
+
+.flexCol--contacts-container2-col :global(.vtex-store-components-3-x-imageElement) {
+    object-fit: contain;
+}
+
+
+
+@media(min-width: 800px) {
+    .flexRowContent--contacts-list-city-cards, .flexRow--contacts-container2 {
+      padding: 0 48px;
+    }
+}
+
+/* ----------------- cases -----------------*/
+
+.flexRow--rowCases {
+    background-color: #f1f1f1;
+}
+
+.flexCol--colCases {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+    max-width: 22%;
+    padding: 5%;
+}
+
+.flexColChild--colCases {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+    max-width: 22%;
+    padding: 5%;
+}
+
+
+/* ----------------- cases -----------------*/
+
+
+/* ----------------- testmonials -----------------*/
+@media(min-width: 1024px) {
+    .flexRowContent--contacts-list-city-cards, .flexRow--contacts-container2 {
+    padding: 0 150px;
+    }
+}
+
+@media(min-width: 1250px) {
+    .flexRowContent--contacts-list-city-cards, .flexRow--contacts-container2 {
+    padding: 0 240px;
+    }
+}
+
+@media(min-width: 1440px) {
+    .flexRowContent--contacts-list-city-cards, .flexRow--contacts-container2 {
+    padding: 0 calc((100% - 850px)/2);;
+    }
+}
+
+/* ----------------- testmonials -----------------*/
+
+/* ----------------- about page -----------------*/
+.flexCol--about-container1-col{
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+}
+
+.flexColChild--about-container1-col{
+    width: 100%;
+}
+
+.flexCol--about-container3-col{
+    align-items: center;
+    justify-content: center;
+}
+
+.flexRow--about-container1-row{
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.flexRowContent--about-container1-row{
+    justify-content: space-between;
+}
+
+.flexCol--about-container2-row-col{
+    float: left;
+    margin: 20px 0 0 20px;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.flexCol--about-container2-row-col:hover{
+    -webkit-transform: scale(0.9, 0.9);
+    transform: scale(0.9, 0.9);
+}
+
+.flexColChild--about-container2-row-col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ----------------- about page -----------------*/
+
+.flexColChild .container {
+    vertical-align: middle;
+}
+
+.flexColChild--nameAndJob {
+    height: auto !important;
+}
+
+.flexColChild--nameAndJob .stretchChildrenWidth {
+    padding-right: 0;
+    margin-right: 0;
+    margin-right: 25px;
+}
+
+.flexRow--rowTestimonials {
+    margin-top: 50px;
+    padding: 60px 24px;
+    background-color: #f1f1f1;
+}
+
+.flexRowContent--writer {
+    margin-bottom: 40px;
+    justify-content: center;
+    display: flex !important;
+}
+
+.flexRow--writer {
+    margin: auto;
+}
+
+/* ------ Footer ------ */
+
+.flexCol--col-logo, .flexCol--col-brazil, .flexCol--col-spain, .flexCol--col-eua {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.flexCol--col-logo :global(.vtex-store-components-3-x-imageElement) {
+    margin-bottom: 20px;
+}
+
+.flewRowContent--footer-row, .container {
+    display: block !important;
+    align-items: flex-start;
+    -webkit-box-align: flex-start;
+}
+
+@media(min-width: 600px) {
+    .flexCol--col-brazil, .flexCol--col-spain, .flexCol--col-eua {
+        margin-left: 20px;
+    }
+}
+
+@media(min-width: 1024px) {
+    .flexCol--col-brazil, .flexCol--col-spain, .flexCol--col-eua {
+        margin-left: 40px;
+    }
+}

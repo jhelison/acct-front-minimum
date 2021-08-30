@@ -1,0 +1,114 @@
+{
+  "header": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  "header.full": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  "header-layout.desktop": {
+    "children": [
+      "header-row#desktop"
+    ]
+  },
+  "header-row#desktop": {
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "blockClass": "flex-header",
+      "fullWidth": true
+    },
+    "children": [
+      "logo",
+      "header-force-center#menu"
+    ]
+  },
+  "logo": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "https://acct.global/wp-content/uploads/2021/06/logo-acct-black.svg",
+      "width": "150"
+    }
+  },
+  "header-force-center#menu": {
+    "children": [
+      "vtex.menu@2.x:menu#menuHeader"
+    ]
+  },
+  "vtex.menu@2.x:menu#menuHeader": {
+    "props": {
+      "items": [
+        {
+          "id": "menu-item-inicio",
+          "type": "custom",
+          "iconId": null,
+          "highlight": true,
+          "itemProps": {
+            "type": "internal",
+            "href": "/",
+            "noFollow": false,
+            "tagTitle": "Início",
+            "text": "Início"
+          }
+        },
+        {
+          "id": "menu-item-acct",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/about-us",
+            "noFollow": false,
+            "tagTitle": "ACCT",
+            "text": "ACCT"
+          }
+        },
+        {
+          "id": "menu-item-produtos",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/product",
+            "noFollow": false,
+            "tagTitle": "Produtos",
+            "text": "Produtos"
+          }
+        },
+        {
+          "id": "menu-item-contato",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "contact-us",
+            "noFollow": false,
+            "tagTitle": "Contato",
+            "text": "Contato"
+          }
+        }
+      ]
+    }
+  },
+  "header-layout.mobile": {
+    "children": ["flex-layout.row#mobile"]
+  },
+  "flex-layout.row#mobile": {
+    "children": [
+      "drawer",
+      "logo"
+    ],
+    "props": {
+      "blockClass": "main-header-mobile",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "drawer": {
+    "children": []
+  }
+}
