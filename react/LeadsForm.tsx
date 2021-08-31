@@ -1,10 +1,27 @@
-import React from 'react'
+import React, {useState , FormData} from 'react'
 import styleModule from './style.module.css'
 
 const LeadsForm = () => {
 
+  var form = new FormData(document.getElementById('lead-form'));
+  const insertProspect = async (e) => {
+      e.preventDefault();
+      console.log("/_v/lead/")
+      try {
+          const res = await fetch(
+              "/_v/lead/" ,
+              {
+                  method: "put",
+                  body: form
+              }
+          )
+      } catch (error) {
+          console.log(error)
+      }
+  }
+
   return (
-        <form className={styleModule.leadsForm} method="post">
+        <form id="lead-form" className={styleModule.leadsForm} method="post" onSubmit={insertProspect(e)}>
           <div className={styleModule.leadsRow}>
             <h3 className={styleModule.leadsFormTitle}>Fale com a gente!</h3>
           </div>
