@@ -1,5 +1,5 @@
 <h1 align="center">
-<img src="https://hiringcoders-app.gama.academy/images/logo-sm.png" title="Hiring Coders" />
+<img src="https://acct.global/wp-content/uploads/2021/06/logo-acct-black.svg" title="Hiring Coders" />
 </h1>
 
 <h3 align="center">
