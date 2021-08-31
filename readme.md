@@ -15,9 +15,10 @@
 
 ## 👨🏻‍💻 Sobre o projeto
 
-- Desafio final do Hiring Coders 2021  ()
-
-Para ver o **Front-end**, clique aqui: [front-end](https://github.com/jhsmiranda/desafio-afya-front-end)</br>
+- Desafio final do Hiring Coders 2021
+- Documentação 
+	- [**Front-end**](https://github.com/jhelison/acct-front-minimum)
+	- [**AWS Lambda**](https://github.com/jhelison/http-crud-leads-function)
 
 ### 💻 Desenvolvedores
 - [Alessandro Amelio](https://github.com/alessandro-amelio)
@@ -37,27 +38,31 @@ Para ver o **Front-end**, clique aqui: [front-end](https://github.com/jhsmiranda
 
 Tecnologias que utilizamos para desenvolver esta API Rest:
 
+- [VTEX IO](https://vtex.io/)
 - [Node.js](https://nodejs.org/en/)
 - [React](https://nodejs.org/en/)
-- [VTEX IO](https://vtex.io/)
+
 
 ## 💻 Iniciando
 
-- As instruções a seguir irão te guiar para execução do projeto no workspace do VTEX IO
+- As instruções irão te guiar para execução do projeto no workspace do VTEX IO
 
 ### Pré-requisitos
 
-- Conta no VTEX IO
+- Uma conta no ambiente do [VTEX IO](https://vtex.io/)
+- [Toolbelt CLI](https://github.com/vtex/toolbelt) 
 
 **Clone o projeto e acesse a pasta**
 
 ```bash
 $ git clone https://github.com/jhelison/acct-front-minimum
-&&
-cd desafio-afya-api
+$ cd acct-front-minimum
 ```
 
 ```bash
+# Realizar login na sua conta
+$ vtex login {nome_conta}
+
 # Crie um workspace de sua preferencia
 $ vtex create workspace {nome_workspace}
 
@@ -68,18 +73,17 @@ $ vtex use {nome_wokspace}
 $ vtex link
 ```
 
-Tudo pronto! O VTEX Toolbelt irá disponibilizar e abrir automaticamente no browser.
-
-Documentação dos endpoints disponível na rota:
-...
-
-Para acessar a API diretamente no seu browser, a versão de [deploy final](https://github.com/viniciusvds1)
+Pronto! <br>
+O toolbet irá abrir automaticamente no browser seu workspace!
 
 ## ⚙️ Funcionalidades
 Funcionalidades que o sistema oferece:
-- Formulario de interesse (Lead)
+- Formulario de interesse (Leads)
 - Contratação de Serviços (Carrinho)
-- Enpointpoint's disponiveis
+- Indentificação quando Lead se torna Cliente
+- Serviços
+	- Enpoint's disponível (API VTEX)
+	- Proxy API externa (AWS)
 - Documentação dos endpoints
 
 ## 📄 Licença
