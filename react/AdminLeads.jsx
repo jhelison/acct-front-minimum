@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { Layout, PageBlock } from "vtex.styleguide"
+import moment from "moment"
+moment.locale('pt-br')
 
 import styles from "./AdminLeads.css"
 import cStyles from "./CommonStyles.css"
@@ -15,15 +17,63 @@ import { FiTrash2 } from "react-icons/fi"
 
 const AdminLeads = () => {
     const [prospects, setProspects] = useState(null)
+    const [propectsCount, setProspectsCount] = useState(0)
+    const [prospectsDay, setProspectsDay] = useState(0)
+    const [propectsNew, setProspectsNew] = useState(0)
 
     useEffect(() => {
         getProspects()
     }, [])
 
+    useEffect(() => {
+        if(prospects){
+            setProspectsCount(prospects.length)
+            countToday()
+            countNewToday()
+        }
+    }, [prospects])
+
+
+    const countToday = () => {
+        const today = prospects.filter(item => {
+            return isToday(item.createdAt)
+        })
+
+        setProspectsDay(today.length)
+    }
+    const countNewToday = () => {
+        const today = prospects.filter(item => {
+            return isToday(item.customerAt)
+        })
+
+        setProspectsNew(today.length)
+    }
+
+    const epochToDate = (epoch) => {
+        let d = new Date(0)
+        d.setMilliseconds(epoch)
+
+        return moment(d).fromNow()
+    }
+
+    const isToday = (epoch) => {
+        if(epoch){
+            let d = new Date(0)
+            d.setMilliseconds(epoch)
+            return moment(d).format('MMMM Do YYYY') === moment().format('MMMM Do YYYY')
+        }
+        return false
+    }
+
+    const buildJSON = () => {
+        const jsonString = JSON.stringify(prospects)
+        navigator.clipboard.writeText(jsonString)
+    }
+
     const getProspects = async () => {
         try {
             const res = await fetch(
-                "https://mariavitoria--hiringcoders202119.myvtex.com/_v/leads"
+                "/_v/leads"
             )
             const resJson = await res.json()
             if (resJson) {
@@ -39,9 +89,10 @@ const AdminLeads = () => {
     }
 
     const deleteProspect = async (id) => {
+        console.log("/_v/leads/" + id)
         try {
             const res = await fetch(
-                "https://g0deojz10k.execute-api.us-east-2.amazonaws.com/items/" +
+                "/_v/lead/" +
                     id,
                 {
                     method: "delete",
@@ -95,16 +146,16 @@ const AdminLeads = () => {
         return prospects.map((item) => {
             return (
                 <tr key={item.id}>
-                    <td className={join([cStyles.pr15, cStyles.pb5])}>
+                    <td className={join([])}>
                         <div className={join([cStyles.dFlex, cStyles.justifyStart, cStyles.flexColumn])}>
                             <p className={join([cStyles.m0, cStyles.openSansCondensed])}><b>{item.name}</b></p>
                             <a className={join([cStyles.colorGray])} href ={"mailto: " + item.email}>{item.email}</a>
                         </div>
                     </td>
-                    <td className={join([cStyles.pr15, cStyles.pb5])}>{item.fone}</td>
-                    <td className={join([cStyles.pr15, cStyles.pb5])}>{item.status}</td>
-                    <td className={join([cStyles.pr15, cStyles.pb5])}>{item.createdAt}</td>
-                    <td className={join([cStyles.pr15, cStyles.pb5])}>{item.customerAt}</td>
+                    <td className={join([])}>{item.fone}</td>
+                    <td className={join([])}>{item.status}</td>
+                    <td className={join([])}>{epochToDate(item.createdAt)}</td>
+                    <td className={join([])}>{item.customerAt ? epochToDate(item.customerAt) : ""}</td>
                     <td className={join([cStyles.dFlex, cStyles.flexCenter])}
                     >
                         <button
@@ -113,7 +164,7 @@ const AdminLeads = () => {
                                 backgroundColor: "rgba(0,0,0,0)",
                                 cursor: "pointer",
                             }}
-                            onClick={() => deleteProspect(item.id)}
+                            onClick={() => deleteProspect(item.email)}
                         >
                             <FiTrash2 color="#de5d5d" size={20}/>
                         </button>
@@ -159,7 +210,7 @@ const AdminLeads = () => {
                                     styles.textMargin,
                                 ])}
                             >
-                                1231233
+                                {propectsCount}
                             </h2>
                         </div>
                     </div>
@@ -189,7 +240,7 @@ const AdminLeads = () => {
                                     styles.textMargin,
                                 ])}
                             >
-                                Prospectos na semana
+                                Prospectos hoje
                             </h4>
                             <h2
                                 className={join([
@@ -198,7 +249,7 @@ const AdminLeads = () => {
                                     styles.textMargin,
                                 ])}
                             >
-                                1231233
+                                {prospectsDay}
                             </h2>
                         </div>
                     </div>
@@ -228,7 +279,7 @@ const AdminLeads = () => {
                                     styles.textMargin,
                                 ])}
                             >
-                                Novos clientes na semana
+                                Novos clientes hoje
                             </h4>
                             <h2
                                 className={join([
@@ -237,7 +288,7 @@ const AdminLeads = () => {
                                     styles.textMargin,
                                 ])}
                             >
-                                1231233
+                                {propectsNew}
                             </h2>
                         </div>
                     </div>
@@ -280,9 +331,10 @@ const AdminLeads = () => {
                             cStyles.flexCenter,
                             styles.exportButton,
                         ])}
+                        onClick={buildJSON}
                     >
                         <FiDownload size={25} className={join([cStyles.colorPastelGreen, cStyles.mr10])} />
-                        <label>Exportar dados em csv</label>
+                        <label>Copiar em json</label>
                     </div>
                 </div>
             </div>
