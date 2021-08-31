@@ -37,26 +37,18 @@ The builder used is **"node": "6.x"**.
 This API perfom calls to **AWS** gateway API and VTEX IO API to the routes bellow:
 
 - **AWS Gateway** (to do: authetication)<br>
-https://g0deojz10k.execute-api.us-east-2.amazonaws.com//lead/leads
+https://g0deojz10k.execute-api.us-east-2.amazonaws.com//lead/leads<br>
+https://g0deojz10k.execute-api.us-east-2.amazonaws.com//lead/{email}<br>
 
-https://g0deojz10k.execute-api.us-east-2.amazonaws.com//lead/{email}
 
-
-- **VTEX IO API** (this endpoints need VTEX authentications)
-https://some-vtex-account.myvtex.com/api/catalog_system/pub/products/variations/{productId}
-
-https://some-vtex-account.myvtex.com/api/catalog/pvt/product/{productId}
-
-https://some-vtex-account.myvtex.com/api/catalog_system/pvt/products/{productId}/specification
-
-https://some-vtex-account.myvtex.com/api/catalog_system/pub/specification/fieldGet/{fieldId}
-
-https://some-vtex-account.myvtex.com/api/catalog/pvt/category/{categoryId}
-
-https://some-vtex-account.myvtex.com/api/catalog_system/pvt/products/GetProductAndSkuIds?_from={from}_to={to}
-
-https://some-vtex-account.myvtex.com/api/api/catalog/pvt/category/{categoryId}
-
+- **VTEX IO API** (this endpoints need VTEX authentications)<br>
+https://some-vtex-account.myvtex.com/api/catalog_system/pub/products/variations/{productId}<br>
+https://some-vtex-account.myvtex.com/api/catalog/pvt/product/{productId}<br>
+https://some-vtex-account.myvtex.com/api/catalog_system/pvt/products/{productId}/specification<br>
+https://some-vtex-account.myvtex.com/api/catalog_system/pub/specification/fieldGet/{fieldId}<br>
+https://some-vtex-account.myvtex.com/api/catalog/pvt/category/{categoryId}<br>
+https://some-vtex-account.myvtex.com/api/catalog_system/pvt/products/GetProductAndSkuIds?_from={from}_to={to}<br>
+https://some-vtex-account.myvtex.com/api/api/catalog/pvt/category/{categoryId}<br>
 
  
 ## Acess to the server
