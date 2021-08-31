@@ -36,7 +36,7 @@ The builder used is **"node": "6.x"**.
 
 This API perfom calls to **AWS** gateway API and VTEX IO API to the routes bellow:
 
-- **AWS Gateway** (to do: authetication)
+- **AWS Gateway** (to do: authetication)<br>
 https://g0deojz10k.execute-api.us-east-2.amazonaws.com//lead/leads
 
 https://g0deojz10k.execute-api.us-east-2.amazonaws.com//lead/{email}
