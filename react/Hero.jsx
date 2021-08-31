@@ -1,13 +1,60 @@
 import React, { useEffect, useState } from "react"
 import styles from "./Hero.css"
+import style from "./style.module.css"
 import "./TweenLite.min.js"
 
+import { join } from "./util.js"
+
 const Hero = (props) => {
-    const heroWords = ['Tecnologia_', 'Engenharia de E-commerce_', 'Desenvolvimento de Produto_'];
-    const [index, setIndex] = useState(0);
-    const [subIndex, setSubIndex] = useState(0);
-    const [blink, setBlink] = useState(true); 
-    const [reverse, setReverse] = useState(false);
+    const heroWords = [
+        "Tecnologia_",
+        "Engenharia de E-commerce_",
+        "Desenvolvimento de Produto_",
+    ]
+    const [index, setIndex] = useState(0)
+    const [subIndex, setSubIndex] = useState(0)
+    const [blink, setBlink] = useState(true)
+    const [reverse, setReverse] = useState(false)
+
+    const [buttonLabel, setButtonLabel] = useState("Enviar")
+
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+
+    const sendForm = async () => {
+        await fetch("/_v/leads/", {
+            method: "put",
+            headers: {
+                "Access-Control-Allow-Headers": "Content-Type",
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "OPTIONS,PUT,GET",
+            },
+            body: JSON.stringify({
+                name,
+                email,
+            }),
+        })
+            .then(() => {
+                setName("")
+                setEmail("")
+                setButtonLabel("Sucesso!")
+            })
+            .catch(() => {
+                setName("")
+                setEmail("")
+                setButtonLabel("Erro!")
+            })
+    }
+
+    const getButtonStyle = () => {
+        if (buttonLabel === "Enviar") {
+            return style.leadsFormSubmit
+        } else if (buttonLabel === "Sucesso!") {
+            return join([style.leadsFormSubmitSucess])
+        } else if (buttonLabel === "Erro!") {
+            return join([style.leadsFormSubmitError])
+        }
+    }
 
     function animateWithRandomNumber(myClass, from, to) {
         TweenLite.fromTo(
@@ -52,47 +99,69 @@ const Hero = (props) => {
     }, [])
 
     useEffect(() => {
-        if (index === heroWords.length) return;
-    
-        if ( subIndex === heroWords[index].length + 1 && 
-            index !== heroWords.length - 1 && !reverse ) {
-          setReverse(true);
-          return;
+        if (index === heroWords.length) return
+
+        if (
+            subIndex === heroWords[index].length + 1 &&
+            index !== heroWords.length - 1 &&
+            !reverse
+        ) {
+            setReverse(true)
+            return
         }
-    
+
         if (subIndex === 0 && reverse) {
-          setReverse(false);
-          setIndex((prev) => prev + 1);
-          return;
+            setReverse(false)
+            setIndex((prev) => prev + 1)
+            return
         }
-    
+
         const timeout = setTimeout(() => {
-          setSubIndex((prev) => prev + (reverse ? -1 : 1));
-        }, Math.max(reverse ? 75 : subIndex === heroWords[index].length ? 1000 :
-                    150, parseInt(Math.random() * 150)));
-    
-        return () => clearTimeout(timeout);
-    }, [subIndex, index, reverse]);
+            setSubIndex((prev) => prev + (reverse ? -1 : 1))
+        }, Math.max(reverse ? 75 : subIndex === heroWords[index].length ? 1000 : 150, parseInt(Math.random() * 150)))
+
+        return () => clearTimeout(timeout)
+    }, [subIndex, index, reverse])
 
     useEffect(() => {
         const timeout2 = setTimeout(() => {
-        setBlink((prev) => !prev);
-        }, 200);
-        return () => clearTimeout(timeout2);
-    }, [blink]);
+            setBlink((prev) => !prev)
+        }, 200)
+        return () => clearTimeout(timeout2)
+    }, [blink])
 
     return (
         <div className={styles.heroHome}>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
             <div className={styles.heroContent}>
-                <p className={styles.heroTitle}>{`${heroWords[index].substring(0, subIndex)}${blink ? "|" : ""}`}</p>
+                <p className={styles.heroTitle}>{`${heroWords[index].substring(
+                    0,
+                    subIndex
+                )}${blink ? "|" : ""}`}</p>
                 <div className={styles.heroWrapper}>
-                    <p className={styles.heroSubTitle}>Preencha o formulário abaixo para entrar em contato conosco!</p>
-                    <form className={styles.heroForm}>
-                        <input className={styles.nameInput} type="text" placeholder="Nome*"/>
-                        <input className={styles.emailInput} type="text" placeholder="E-mail*"/>
-                        <input type="submit" value="Enviar" className={styles.submitInput}/>
-                    </form>
+                    <p className={styles.heroSubTitle}>
+                        Preencha o formulário abaixo para entrar em contato
+                        conosco!
+                    </p>
+                    <div className={styles.heroForm}>
+                        <input
+                            className={styles.nameInput}
+                            type="text"
+                            placeholder="Nome*"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                        />
+                        <input
+                            className={styles.emailInput}
+                            type="text"
+                            placeholder="E-mail*"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
+                        <button className={getButtonStyle()} onClick={sendForm}>
+                            {buttonLabel}
+                        </button>
+                    </div>
                 </div>
             </div>
             <svg

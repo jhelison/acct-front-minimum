@@ -255,6 +255,39 @@
   width: 100%;
 }
 
+.leadsFormSubmitSucess {
+  font: inherit;
+  font-size: 110%;
+  font-weight: bold;
+
+  padding: 5px 19px;
+  border: 2px solid green;
+  margin: 10px auto;
+  border-radius: 3px;
+  background: #fff;
+  color: green;
+  text-transform: capitalize;
+  display: block;
+  cursor: pointer;
+  width: 100%;
+}
+.leadsFormSubmitError {
+  font: inherit;
+  font-size: 110%;
+  font-weight: bold;
+
+  padding: 5px 19px;
+  border: 2px solid red;
+  margin: 10px auto;
+  border-radius: 3px;
+  background: #fff;
+  color: red;
+  text-transform: capitalize;
+  display: block;
+  cursor: pointer;
+  width: 100%;
+}
+
 .leadsFormSubmit:hover {
   color: #fff;
   background: #5974c7;
