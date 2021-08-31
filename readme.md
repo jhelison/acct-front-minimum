@@ -3,24 +3,24 @@
 </h1>
 
 <h3 align="center">
-  Desafio final - Grupo 19 - ACCT
+	Final Challenge - Group 19 - ACCT
 </h3>
 
 <p align="center">
-  <a href="#sobre o projeto">Sobre o projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#iniciando">Iniciando</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#funcionalidades">Funcionalidades</a>
+  <a href="#sobre o projeto">About the Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#tecnologias">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#iniciando">Starting</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#funcionalidades">Functionalities</a>
 </p>
 
-## 👨🏻‍💻 Sobre o projeto
+## 👨🏻‍💻 About the project
 
-- Desafio final do Hiring Coders 2021
-- Documentação 
+- Hiring Coders 2021 Ultimate Challenge
+- Specific documentation
 	- [**Front-end**](https://github.com/jhelison/acct-front-minimum)
 	- [**AWS Lambda**](https://github.com/jhelison/http-crud-leads-function)
 
-### 💻 Desenvolvedores
+### 💻 Developers
 - [Alessandro Amelio](https://github.com/alessandro-amelio)
 - [Aline Soliman](https://github.com/AlineSoliman)
 - [Carlos Betiol](https://github.com/carlosbetiol)
@@ -34,25 +34,25 @@
 
 
 
-## 🚀 Tecnologias
+## 🚀 Technologies
 
-Tecnologias que utilizamos para desenvolver esta API Rest:
+Technologies we use to develop this API Rest:
 
 - [VTEX IO](https://vtex.io/)
 - [Node.js](https://nodejs.org/en/)
 - [React](https://nodejs.org/en/)
 
 
-## 💻 Iniciando
+## 💻 Starting
 
-- As instruções irão te guiar para execução do projeto no workspace do VTEX IO
+- The instructions will guide you to run the project in the VTEX IO workspace
 
-### Pré-requisitos
+### Prerequisites
 
-- Uma conta no ambiente do [VTEX IO](https://vtex.io/)
+- An account in the environment of [VTEX IO](https://vtex.io/)
 - [Toolbelt CLI](https://github.com/vtex/toolbelt) 
 
-**Clone o projeto e acesse a pasta**
+**Clone the project and access the folder**
 
 ```bash
 $ git clone https://github.com/jhelison/acct-front-minimum
@@ -60,32 +60,32 @@ $ cd acct-front-minimum
 ```
 
 ```bash
-# Realizar login na sua conta
+# Log in to your account
 $ vtex login {nome_conta}
 
-# Crie um workspace de sua preferencia
+# Create a workspace of your own
 $ vtex create workspace {nome_workspace}
 
-# Entre no workspace
+# Enter the workspace
 $ vtex use {nome_wokspace}
 
-# Solicite build da aplicação
+# Request application build
 $ vtex link
 ```
 
-Pronto! <br>
-O toolbet irá abrir automaticamente no browser seu workspace!
+Ready! <br>
+The toolbet will automatically open your workspace in your browser!
 
-## ⚙️ Funcionalidades
-Funcionalidades que o sistema oferece:
+## ⚙️ Functionalities
+Features that the system offers:
 - Formulario de interesse (Leads)
-- Contratação de Serviços (Carrinho)
-- Indentificação quando Lead se torna Cliente
-- Serviços
-	- Enpoint's disponível (API VTEX)
-	- Proxy API externa (AWS)
-- Documentação dos endpoints
+- Contracting Services (Carrinho)
+- Identification when Lead becomes a Customer
+- Services
+	- Enpoints available (API VTEX)
+	- External API proxy(AWS)
+- Endpoint documentation
 
-## 📄 Licença
+## 📄 License
 
-Este projeto está sob a licença de (HC2).
+This project is under the license of (HC2).
