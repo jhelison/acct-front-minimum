@@ -38,23 +38,26 @@ This API perfom calls to **AWS** gateway API and VTEX IO API to the routes bello
 
 - **AWS Gateway** (to do: authetication)
 https://g0deojz10k.execute-api.us-east-2.amazonaws.com//lead/leads
+
 https://g0deojz10k.execute-api.us-east-2.amazonaws.com//lead/{email}
 
 
 - **VTEX IO API** (this endpoints need VTEX authentications)
 https://some-vtex-account.myvtex.com/api/catalog_system/pub/products/variations/{productId}
+
 https://some-vtex-account.myvtex.com/api/catalog/pvt/product/{productId}
+
 https://some-vtex-account.myvtex.com/api/catalog_system/pvt/products/{productId}/specification
+
 https://some-vtex-account.myvtex.com/api/catalog_system/pub/specification/fieldGet/{fieldId}
+
 https://some-vtex-account.myvtex.com/api/catalog/pvt/category/{categoryId}
+
 https://some-vtex-account.myvtex.com/api/catalog_system/pvt/products/GetProductAndSkuIds?_from={from}_to={to}
+
 https://some-vtex-account.myvtex.com/api/api/catalog/pvt/category/{categoryId}
 
 
-https://myworkspace--some-vtex-account.myvtex.com/_v/categories/
-https://myworkspace--some-vtex-account.myvtex.com/_v/products/{categoryid}
-https://myworkspace--some-vtex-account.myvtex.com/_v/specifications/{productid}
- 
  
 ## Acess to the server
 Inside our API server, we have the link https://myworkspace--some-vtex-account.myvtex.com, were we make the request to our routes.
@@ -538,6 +541,7 @@ Returns the products by category with the following structure:
 ]```
 
 #### Status codes
+
 - [200](https://httpstatuses.com/200).
 - [404](https://httpstatuses.com/404).
 
@@ -585,6 +589,7 @@ Returns the specifications by product id with the following structure:
         "Name": "Nome do Campo 01"
     }
 ]
+
 #### Status codes
 - [200](https://httpstatuses.com/200).
 - [404](https://httpstatuses.com/404).
