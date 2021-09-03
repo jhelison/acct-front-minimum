@@ -3,7 +3,7 @@
 </h1>
 
 <h3 align="center">
-	Final Challenge - Group 19 - ACCT
+	Winning Project - Hiring Coders/Vtex - Final Challenge - Group 19 - ACCT
 </h3>
 
 <p align="center">
