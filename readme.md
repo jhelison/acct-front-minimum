@@ -80,7 +80,7 @@ The toolbet will automatically open your workspace in your browser!
 
 ## ⚙️ Functionalities
 Features that the system offers:
-- Formulario de interesse (Leads)
+- Interest form (Leads)
 - Contracting Services (Carrinho)
 - Identification when Lead becomes a Customer
 - Services
